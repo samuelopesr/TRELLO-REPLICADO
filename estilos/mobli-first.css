@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+}
+header{
+    background-color: aqua;
+    width: 100vw;
+}
+#lista{
+    display: flex;
+    
+}
+#trello-menu1{
+    display: block;
+    background-color: blue;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+}
+#trello-menu-principal{
+    display: block;
+    background-color: azure;
+    margin: 5px;
+    height: 45px;
+    width: 115px;
+}
+#mais{
+    background-color: brown;
+    display: block;
+    margin: 5px;
+    height: 45px;
+    width: 110px;
+}
+#mais > #btn-mais{
+    background-color: aquamarine;
+    margin-right: 5px;
+    margin-top: -13px;
+    width: 35px;
+    height: 35px;
+    float: right;
+}
+#pequisa-sino-conta{
+    display: flex;
+    margin-left: 65px;
+    
+}
+#pequisa-sino-conta > #pesquisa{
+    background-color: blueviolet;
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+
+}
+#pequisa-sino-conta > #sino {
+    background-color: cadetblue;
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+}
+#pequisa-sino-conta > #conta {
+    background-color: crimson;
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+}
