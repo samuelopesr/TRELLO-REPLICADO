@@ -50,6 +50,7 @@ header{
 #pequisa-sino-conta{
     display: flex;
     margin-left: 65px;
+    margin-top: 5px;
     
 }
 #pequisa-sino-conta > #pesquisa{
@@ -70,4 +71,125 @@ header{
     margin: 5px;
     width: 35px;
     height: 35px;
+}
+#visualizado-recentemente{
+    display: block;
+    background-color: blueviolet;
+    padding-bottom: 15px;
+}
+#visualizado-recentemente > #visualizado{
+    position: absolute;
+    background-color: antiquewhite;
+    height: 35px;
+    width: 35px;
+    margin-top: 10px;
+    
+}
+#visualizado-recentemente > h2{
+    font-size: 1.4em;
+    margin: 10px;
+    margin-top: 25px;
+    margin-left: 40px;
+    padding-top: 15px ;
+}
+#visualizado-recentemente > #trabalho-visualizado{
+    background-color: cadetblue;
+    margin: 10px;
+    margin-top: 25px;
+    height: 150px;
+    width: 250px;
+}
+#suas-areas-de-trabalho{
+    margin-top: 35px;
+    margin-left: 10px;
+}
+#suas-areas-de-trabalho > h3{
+    background-color: coral;
+    font-size: 1.2em;
+}
+#work-area{
+    background-color: wheat;
+    height: 50px;
+    margin-bottom: 5px;
+}
+#work-area > #Area1-EX{
+    background-color: rgb(252, 171, 171);
+    height: 50px;
+}
+#work-area > #Area1-EX > #ex-img{
+    position: absolute;
+    background-color: crimson;
+    margin: 2px;
+    width: 45px;
+    height: 45px;
+}
+#work-area > #Area1-EX > p{
+   position: absolute;
+   margin-left: 55px;
+   margin-top: 12px;
+   font-size: 1.3em;
+   font-weight: bolder;
+    
+}
+#quadros-views-members-cfg-att{
+    width: 500px;
+    height: 260px;
+    display: ;
+    
+}
+#quadros-views-members-cfg-att > #quadros{
+    background-color: yellow;
+    display: flex;
+    height: 45px;
+    padding: 3px;
+    margin: 5px 0px 5px 0px;
+}
+#quadros-views-members-cfg-att > #quadros > img{
+    background-color: blanchedalmond;
+    width: 40px;
+    margin-left: 5px;
+}
+#quadros-views-members-cfg-att > #quadros > p{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#quadros-views-members-cfg-att > #vizualizacao{
+    background-color: blue;
+    display: flex;
+    height: 45px;
+    padding: 3px;
+    margin: 5px 0px 5px 0px;
+}
+#quadros-views-members-cfg-att > #vizualizacao > p{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#quadros-views-members-cfg-att > #vizualizacao > img{
+    background-color: blanchedalmond;
+    width: 40px;
+    margin-left: 5px;
+}
+#quadros-views-members-cfg-att > #membros{
+    background-color: violet;
+    display: flex;
+    height: 40px;
+    padding: 3px;
+    margin: 5px 0px 5px 0px;
+
+}
+#quadros-views-members-cfg-att > #membros > p{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#quadros-views-members-cfg-att > #membros > img{
+    background-color: blanchedalmond;
+    width: 40px;
+    margin-left: 5px;
+}
+#quadros-views-members-cfg-att > #config{
+    background-color: cornflowerblue;
+    display: flex;
+    height: 45px;
+    padding: 3px;
+    margin: 5px 0px 5px 0px;
 }
