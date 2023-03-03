@@ -208,3 +208,29 @@ header{
     left: 230px;
     top: 479px;
 }
+#quadros-views-members-cfg-att > #config > p{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#quadros-views-members-cfg-att > #config > img{
+    background-color: blanchedalmond;
+    width: 40px;
+    margin-left: 5px;
+}
+#quadros-views-members-cfg-att > #atualizar{
+    background-color: rgb(9, 255, 0);
+    display: flex;
+    height: 45px;
+    padding: 3px;
+    margin: 5px 0px 5px 0px;
+    width: 190px;
+}
+#quadros-views-members-cfg-att > #atualizar > p{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#quadros-views-members-cfg-att > #atualizar > img{
+    background-color: blanchedalmond;
+    width: 40px;
+    margin-left: 5px;
+}
