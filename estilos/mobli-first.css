@@ -49,7 +49,7 @@ header{
 }
 #pequisa-sino-conta{
     display: flex;
-    margin-left: 65px;
+    margin-left: 50px;
     margin-top: 5px;
     
 }
@@ -76,6 +76,8 @@ header{
     display: block;
     background-color: blueviolet;
     padding-bottom: 15px;
+    width: 100vw;
+    margin: auto;
 }
 #visualizado-recentemente > #visualizado{
     position: absolute;
@@ -105,11 +107,13 @@ header{
 }
 #suas-areas-de-trabalho > h3{
     background-color: coral;
-    font-size: 1.2em;
+    font-size: 1.2em; 
+    width: 410px;
 }
 #work-area{
-    background-color: wheat;
+    background-color: rgb(255, 166, 0);
     height: 50px;
+    width: 410px;
     margin-bottom: 5px;
 }
 #work-area > #Area1-EX{
@@ -132,9 +136,8 @@ header{
     
 }
 #quadros-views-members-cfg-att{
-    width: 500px;
-    height: 260px;
-    display: ;
+    width: 440px;
+    height: 260px;  
     
 }
 #quadros-views-members-cfg-att > #quadros{
@@ -143,6 +146,7 @@ header{
     height: 45px;
     padding: 3px;
     margin: 5px 0px 5px 0px;
+    width: 190px;
 }
 #quadros-views-members-cfg-att > #quadros > img{
     background-color: blanchedalmond;
@@ -159,6 +163,7 @@ header{
     height: 45px;
     padding: 3px;
     margin: 5px 0px 5px 0px;
+    width: 190px;
 }
 #quadros-views-members-cfg-att > #vizualizacao > p{
     margin-left: 10px;
@@ -172,9 +177,14 @@ header{
 #quadros-views-members-cfg-att > #membros{
     background-color: violet;
     display: flex;
-    height: 40px;
+    height: 46px;
     padding: 3px;
     margin: 5px 0px 5px 0px;
+    width: 190px;
+
+    position: absolute;
+    left: 230px;
+    top: 428px;
 
 }
 #quadros-views-members-cfg-att > #membros > p{
@@ -192,4 +202,9 @@ header{
     height: 45px;
     padding: 3px;
     margin: 5px 0px 5px 0px;
+    width: 190px;
+
+    position: absolute;
+    left: 230px;
+    top: 479px;
 }
