@@ -5,6 +5,11 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    
+}
+::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
 }
 main{
     height: 100vh;
@@ -75,9 +80,9 @@ header{
 #visualizado-recentemente{
     display: block;
     background-color: blueviolet;
-    padding-bottom: 15px;
     width: 100vw;
-    margin: auto;
+    height: 190px;
+    
 }
 #visualizado-recentemente > #visualizado{
     position: absolute;
@@ -85,35 +90,35 @@ header{
     height: 35px;
     width: 35px;
     margin-top: 10px;
+    margin-left: 10px;
     
 }
 #visualizado-recentemente > h2{
     font-size: 1.4em;
     margin: 10px;
     margin-top: 25px;
-    margin-left: 40px;
+    margin-left: 50px;
     padding-top: 15px ;
 }
 #visualizado-recentemente > #trabalho-visualizado{
     background-color: cadetblue;
     margin: 10px;
-    margin-top: 25px;
-    height: 150px;
+    height: 120px;
     width: 250px;
 }
 #suas-areas-de-trabalho{
-    margin-top: 35px;
+    margin-top: 20px;
     margin-left: 10px;
 }
 #suas-areas-de-trabalho > h3{
     background-color: coral;
     font-size: 1.2em; 
-    width: 410px;
+    width: 440px;
 }
 #work-area{
     background-color: rgb(255, 166, 0);
     height: 50px;
-    width: 410px;
+    width: 440px;
     margin-bottom: 5px;
 }
 #work-area > #Area1-EX{
@@ -136,8 +141,12 @@ header{
     
 }
 #quadros-views-members-cfg-att{
-    width: 440px;
-    height: 260px;  
+    width: 100vw;
+    height: 170px;
+    padding: 10px; 
+    margin: 5px 0px 15px 0px;
+    columns: 2;
+    background-color: darkslategrey; 
     
 }
 #quadros-views-members-cfg-att > #quadros{
@@ -145,7 +154,6 @@ header{
     display: flex;
     height: 45px;
     padding: 3px;
-    margin: 5px 0px 5px 0px;
     width: 190px;
 }
 #quadros-views-members-cfg-att > #quadros > img{
@@ -182,9 +190,7 @@ header{
     margin: 5px 0px 5px 0px;
     width: 190px;
 
-    position: absolute;
-    left: 230px;
-    top: 428px;
+    
 
 }
 #quadros-views-members-cfg-att > #membros > p{
@@ -204,9 +210,7 @@ header{
     margin: 5px 0px 5px 0px;
     width: 190px;
 
-    position: absolute;
-    left: 230px;
-    top: 479px;
+    
 }
 #quadros-views-members-cfg-att > #config > p{
     margin-left: 10px;
@@ -233,4 +237,9 @@ header{
     background-color: blanchedalmond;
     width: 40px;
     margin-left: 5px;
+}
+#areas-como-convidado{
+    background-color: rgb(209, 190, 152);
+    width: 100vw;
+    height: 200px;
 }
