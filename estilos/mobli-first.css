@@ -16,19 +16,19 @@ main{
     width: 100vw;
 }
 header{
-    background-color: aqua;
+    background-color: #026AA7;
     width: 100vw;
 }
 #lista{
     display: flex;
-    
+    list-style: none;    
 }
 #trello-menu1{
     display: block;
-    background-color: blue;
     width: 45px;
     height: 45px;
-    margin: 5px;
+    margin: 10px 0px 0px 10px;
+    
 }
 #trello-menu-principal{
     display: block;
@@ -241,5 +241,6 @@ header{
 #areas-como-convidado{
     background-color: rgb(209, 190, 152);
     width: 100vw;
-    height: 200px;
+    height: 30vh;
 }
+
