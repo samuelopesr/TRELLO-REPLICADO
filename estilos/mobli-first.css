@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: "Charlie";
+    src: url(font/Charlie-www.Dfonts.org/Charlie.otf) format('opentype');
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -32,10 +36,10 @@ header{
 }
 #trello-menu-principal{
     display: block;
-    background-color: azure;
     margin: 5px;
     height: 45px;
     width: 115px;
+
 }
 #mais{
     background-color: brown;
