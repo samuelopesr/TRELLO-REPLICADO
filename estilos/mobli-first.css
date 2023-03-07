@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: "Charlie";
-    src: url(font/Charlie-www.Dfonts.org/Charlie.otf) format('opentype');
+    font-family: "tommy";
+    src: url(../font/tommy-soft/MADE\ Tommy\ Soft\ Black\ PERSONAL\ USE.otf) format('opentype');
 }
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif, Arial
     
 }
 ::-webkit-scrollbar{
@@ -34,12 +34,29 @@ header{
     margin: 10px 0px 0px 10px;
     
 }
+#trello-menu1 > img{
+    margin-top: 5px;
+}
 #trello-menu-principal{
     display: block;
     margin: 5px;
     height: 45px;
     width: 115px;
 
+}
+#trello-menu-principal > img{
+    margin-top: 10px;
+}
+#trello-menu-principal > p{
+    text-align: center;
+    margin-top: -30px;
+    margin-left: 10px;
+    font-weight: bolder;
+    font-family: tommy;
+    font-size: 1.4em;
+    color: white;
+
+    
 }
 #mais{
     background-color: brown;
