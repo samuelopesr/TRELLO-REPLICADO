@@ -146,6 +146,7 @@ header{
     margin: 10px;
     margin-top: 25px;
     margin-left: 50px;
+    margin-bottom: 25px;
     padding-top: 15px ;
 }
 #visualizado-recentemente > #trabalho-visualizado > a > img{
@@ -162,19 +163,34 @@ header{
     margin-left: 10px;
 }
 #suas-areas-de-trabalho > h3{
-    background-color: coral;
+    color: rgb(135, 135, 145);
     font-size: 1.2em; 
     width: 440px;
 }
 #work-area{
-    background-color: rgb(255, 166, 0);
+    
     height: 50px;
-    width: 440px;
+    width: 100vw;
     margin-bottom: 5px;
 }
 #work-area > #Area1-EX{
-    background-color: rgb(252, 171, 171);
+    
     height: 50px;
+}
+#icone-inicial{
+    background-color: darkslategray;
+    position: absolute;
+    width: 45px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 5%;
+    text-align: center;
+}
+#icone-inicial > p{
+    margin-top: 7px;
+    font-weight: bolder;
+    font-size: 1.4em;
+    color: white;
 }
 #work-area > #Area1-EX > #ex-img{
     position: absolute;
@@ -185,7 +201,7 @@ header{
 }
 #work-area > #Area1-EX > p{
    position: absolute;
-   margin-left: 55px;
+   margin-left: 65px;
    margin-top: 12px;
    font-size: 1.3em;
    font-weight: bolder;
@@ -197,7 +213,6 @@ header{
     padding: 10px; 
     margin: 5px 0px 15px 0px;
     columns: 2;
-    background-color: darkslategrey; 
     
 }
 #quadros-views-members-cfg-att > #quadros{
