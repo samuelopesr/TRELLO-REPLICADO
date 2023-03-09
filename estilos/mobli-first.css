@@ -216,7 +216,6 @@ header{
     
 }
 #quadros-views-members-cfg-att > #quadros{
-    background-color: yellow;
     display: flex;
     height: 45px;
     padding: 3px;
@@ -224,15 +223,19 @@ header{
 }
 #quadros-views-members-cfg-att > #quadros > img{
     background-color: blanchedalmond;
-    width: 40px;
+    width: 24px;
+    height: 24px;
     margin-left: 5px;
+    margin-top: 7px;
 }
-#quadros-views-members-cfg-att > #quadros > p{
+#quadros-views-members-cfg-att > #quadros > a{
     margin-left: 10px;
     margin-top: 10px;
+    color: rgb(81, 81, 95);
+    text-decoration: none;
+    
 }
 #quadros-views-members-cfg-att > #vizualizacao{
-    background-color: blue;
     display: flex;
     height: 45px;
     padding: 3px;
@@ -242,34 +245,35 @@ header{
 #quadros-views-members-cfg-att > #vizualizacao > p{
     margin-left: 10px;
     margin-top: 10px;
+    color: rgb(81, 81, 95);
 }
 #quadros-views-members-cfg-att > #vizualizacao > img{
     background-color: blanchedalmond;
-    width: 40px;
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
     margin-left: 5px;
 }
 #quadros-views-members-cfg-att > #membros{
-    background-color: violet;
     display: flex;
-    height: 46px;
+    height: 30px;
     padding: 3px;
     margin: 5px 0px 5px 0px;
-    width: 190px;
-
-    
+    width: 190px
 
 }
 #quadros-views-members-cfg-att > #membros > p{
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 4px;
+    color: rgb(81, 81, 95);
 }
 #quadros-views-members-cfg-att > #membros > img{
-    background-color: blanchedalmond;
-    width: 40px;
+    height: 24px;
+    width: 24px;
     margin-left: 5px;
 }
 #quadros-views-members-cfg-att > #config{
-    background-color: cornflowerblue;
+
     display: flex;
     height: 45px;
     padding: 3px;
@@ -281,28 +285,35 @@ header{
 #quadros-views-members-cfg-att > #config > p{
     margin-left: 10px;
     margin-top: 10px;
+    color: rgb(81, 81, 95);
 }
 #quadros-views-members-cfg-att > #config > img{
-    background-color: blanchedalmond;
-    width: 40px;
+    width: 24px;
+    height: 24px;
     margin-left: 5px;
+    margin-top: 5px;
 }
 #quadros-views-members-cfg-att > #atualizar{
-    background-color: rgb(9, 255, 0);
+    background-color: #c5bdc9;
     display: flex;
     height: 45px;
     padding: 3px;
     margin: 5px 0px 5px 0px;
     width: 190px;
+    border-radius: 2%;
 }
 #quadros-views-members-cfg-att > #atualizar > p{
     margin-left: 10px;
     margin-top: 10px;
+    color: rgb(81, 81, 95);
 }
 #quadros-views-members-cfg-att > #atualizar > img{
-    background-color: blanchedalmond;
-    width: 40px;
+    background-color: #89609E;
+    width: 32px;
+    height: 32px;
     margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 10%;
 }
 #areas-como-convidado{
     background-color: rgb(209, 190, 152);
