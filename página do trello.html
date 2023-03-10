@@ -5,8 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="estilos/estilo-pagina-trello.css">
 </head>
 <body>
-    <h1>Página do trello</h1>
+    <main id="main">
+        <header id="header">
+            <menu>
+                <ul id="lista" >
+                    <li><div id="trello-menu1" >
+                        <img src="imagens/dots-menu.png" alt="trello-menu">
+                    </div>
+                    <li><div id="trello-menu-principal">
+                        <img src="imagens/trello.png" alt="trello-menu2">
+                        <p>Trello</p>
+                    </div>
+                    <li><div id="mais">
+                        <p>Mais</p>
+                        <div id="mostrar-mais">
+                            <img src="imagens/down-arrow.png" alt="mostrar-mais">
+                        </div>
+                        <div id="btn-mais">
+                            <img src="imagens/plus.png" alt="button-mais">
+                        </div>
+                        </div>
+                        
+                    <li><div id="pequisa-sino-conta">
+                        <div id="pesquisa">
+                            <img src="imagens/search-interface-symbol.png" alt="icon-pesquisa">
+                        </div>
+                        <div id="sino">
+                            <img src="imagens/bell.png" alt="sino-icon">
+                        </div>
+                        <div id="conta">
+                            <h1>SL</h1>
+                        </div>
+                    </div>
+                </ul>
+            </menu>
+        </header>
+        <h1>Conteudo de exemplo</h1>
+        <div>
+            <a href="#" id="btn-abrir" onclick="abrirMenu()">&rarr;Abrir</a>
+        </div>
+        <nav id="menu-abrir-fechar">
+            <a href="#" id="btn-fechar" onclick="fecharMenu()">&rarr;Fechar</a>
+            <div>
+                <span id="simbol-f">F</span> <h1>Fundação Educere</h1>
+            </div>
+            <h2>Seus quadros</h2>
+            <div>
+                <h3>PROGRAMAÇÃO PROJETO EDUCERE</h3>
+            </div>
+        </nav>
+    </main>
+
+    <script src="JavaScript/pagina-trello.js"></script>
 </body>
 </html>
