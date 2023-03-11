@@ -10,9 +10,8 @@ function diminuirMenu(){
     const novaAltura = window.innerHeight 
 
     const viewport = document.querySelector("meta[name=viewport]");
-    viewport.setAttribute("menu-lateral",`width=${novaLargura}, height=${novaAltura}`);
+    viewport.setAttribute("menu-lateral",`width=${novaLargura}, height=${novaAltura}`);  
 
-    //verificação da largura da viewport e se é maior que 769px e mostra o conteúdo
     const menuLateral = document.querySelector("#menu-lateral");
     if (novaLargura >= 769){
         menuLateral.style.overflow = "visible";
@@ -22,17 +21,15 @@ function diminuirMenu(){
         menuLateral.style.overflow = "hidden";
     }
 
-    console.log("resizeViewport() foi chamada!");
+    console.log("a função foi chamada!");
 
 }
 
-//chama a função diminuirMenu() quando a viewport for maior ou igual a 769px
 const mediaQuery =  window.matchMedia("(min-width: 769px)");
 if(mediaQuery.matches){
     diminuirMenu();
 }
 
-//chama a mesma função quando a viewport é redimensionada e dor maior ou igual a 769px
 window.addEventListener("resize", () => {
     if(mediaQuery.matches){
         diminuirMenu();

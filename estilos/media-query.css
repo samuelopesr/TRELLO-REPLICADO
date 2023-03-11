@@ -4,6 +4,7 @@
     }
     #menu-lateral{
         display: inline-flex;
+        position: fixed;
         background-color: rgb(161, 161, 161);
         height: 100%;
         width: 30%;
