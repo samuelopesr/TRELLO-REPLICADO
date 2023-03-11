@@ -29,9 +29,7 @@
         margin-top: 60px;
     }
     #quadros-modelo-inicio > #quadros-ml{
-        margin: 40px 0px 15px -100px;
-        text-align: center;
-    
+        margin: 40px 0px 5px 20px;
     }
     #quadros-modelo-inicio > #quadros-ml > img{
         width: 20px;
@@ -39,9 +37,38 @@
     }
     #quadros-modelo-inicio > #quadros-ml > a{
         text-decoration: none;
-        position: fixed;
+        position: absolute;
         color: rgb(32, 49, 49);
         font-family: 'tommy';
+    }
+    #quadros-modelo-inicio > #modelos-ml{
+        margin: 17px 0px 15px 15px;
+    }
+    #quadros-modelo-inicio > #modelos-ml > img{
+        width: 26px;
+    }
+    #quadros-modelo-inicio > #modelos-ml > a{
+        text-decoration: none;
+        position: absolute;
+        color: rgb(32, 49, 49);
+        font-family: 'tommy';
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    #quadros-modelo-inicio > #inicio-ml{
+        margin: 0px 0px 15px 15px;
+    }
+    #quadros-modelo-inicio > #inicio-ml > img{
+        width: 32px;
+        margin-right: 4px;
+    }
+    #quadros-modelo-inicio > #inicio-ml > a{
+        text-decoration: none;
+        position: absolute;
+        color: rgb(32, 49, 49);
+        font-family: 'tommy';
+        margin-top: 5px;
+        margin-left: 5px;
     }
     #conteudo-geral{
         position: absolute;
