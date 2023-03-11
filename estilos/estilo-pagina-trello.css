@@ -46,6 +46,10 @@ header{
     width: 115px;
 
 }
+#link-home{
+    text-decoration: none;
+    
+}
 #trello-menu-principal > img{
     margin-top: 10px;
 }

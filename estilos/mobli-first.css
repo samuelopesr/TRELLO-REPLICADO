@@ -61,11 +61,15 @@ header{
 #trello-menu-principal > p{
     text-align: center;
     margin-top: -30px;
-    margin-left: 10px;
+    margin-left: 15px;
     font-weight: bolder;
     font-family: tommy;
     font-size: 1.4em;
     color: white;
+}
+#link-home{
+    text-decoration: none;
+        
 }
 #mais{
     display: block;
