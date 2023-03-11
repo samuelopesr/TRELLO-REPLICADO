@@ -76,6 +76,9 @@ header{
     text-decoration: none;
     
 }
+#áreas-de-trabalho{
+    display: none;
+}
 
 #mais{
     display: block;

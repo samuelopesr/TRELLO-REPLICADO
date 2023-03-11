@@ -1,11 +1,19 @@
 @media screen and (min-width: 769px) and (max-width: 992px){
-    #header{
-        
+    #áreas-de-trabalho{
+        display: flex;
+        margin: 20px 15px 0px 0px;   
+    }
+    #áreas-de-trabalho > img{
+        margin-left: 7px;
+        margin-right: 8px;
+        margin-top: -2px;
+    }
+    #áreas-de-trabalho > p{
+        color: white;
     }
     #menu-lateral{
         display: inline-flex;
         position: fixed;
-        background-color: rgb(161, 161, 161);
         height: 100%;
         width: 30%;
     }
@@ -25,5 +33,6 @@
         margin-left: 20px;
         left: 80%;
     }
+    
 
 }
