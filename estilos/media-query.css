@@ -1,6 +1,28 @@
 @media screen and (min-width: 769px) and (max-width: 992px){
+    #header{
+        
+    }
     #menu-lateral{
-        display: block;
+        display: inline-flex;
+        background-color: rgb(161, 161, 161);
+        height: 100%;
+        width: 30%;
+    }
+    #menu-lateral > #quadros-modelo-inicio{
+        margin-top: 60px;
+    }
+    #conteudo-geral{
+        position: absolute;
+        left: 32%;
+        top: 5%;
+    }
+    #quadros-views-members-cfg-att{
+        width: 380px;
+    }
+    #pequisa-sino-conta{
+        position: absolute;
+        margin-left: 20px;
+        left: 80%;
     }
 
 }
