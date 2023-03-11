@@ -1,3 +1,11 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "tommy";
+    src: url(../font/tommy-soft/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf) format('opentype');
+}
+
+
 @media screen and (min-width: 769px) and (max-width: 992px){
     #áreas-de-trabalho{
         display: flex;
@@ -19,6 +27,21 @@
     }
     #menu-lateral > #quadros-modelo-inicio{
         margin-top: 60px;
+    }
+    #quadros-modelo-inicio > #quadros-ml{
+        margin: 40px 0px 15px -100px;
+        text-align: center;
+    
+    }
+    #quadros-modelo-inicio > #quadros-ml > img{
+        width: 20px;
+        margin-right: 4px;
+    }
+    #quadros-modelo-inicio > #quadros-ml > a{
+        text-decoration: none;
+        position: fixed;
+        color: rgb(32, 49, 49);
+        font-family: 'tommy';
     }
     #conteudo-geral{
         position: absolute;
