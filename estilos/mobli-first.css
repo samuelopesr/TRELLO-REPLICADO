@@ -359,5 +359,8 @@ header{
     margin-left: 85px;
     margin-top: 10px;
 }
+#menu-lateral{
+    display: none;
+}
 
 
