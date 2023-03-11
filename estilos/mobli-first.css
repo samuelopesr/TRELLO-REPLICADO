@@ -47,21 +47,26 @@ header{
 }
 #trello-menu1 > img{
     margin-top: 5px;
+   
 }
 #trello-menu-principal{
     display: block;
-    margin: 5px 0px 0px 0px;
+    margin: 5px 10px 0px 0px;
     height: 45px;
-    width: 115px;
-
+    width: 100px;
+}
+#trello-menu-principal:hover{
+    background-color: #3a5975;
+    border-radius: 6%;
 }
 #trello-menu-principal > img{
     margin-top: 10px;
+    margin-left: 8px;
 }
 #trello-menu-principal > p{
     text-align: center;
     margin-top: -30px;
-    margin-left: 15px;
+    margin-left: 27px;
     font-weight: bolder;
     font-family: tommy;
     font-size: 1.4em;
@@ -69,8 +74,9 @@ header{
 }
 #link-home{
     text-decoration: none;
-        
+    
 }
+
 #mais{
     display: block;
     margin: 7px 0px 0px 0px;
