@@ -7,6 +7,9 @@
 
 
 @media screen and (min-width: 769px) and (max-width: 992px){
+    #pequisa-sino-conta{
+        
+    }
     #áreas-de-trabalho{
         display: flex;
         margin: 20px 15px 0px 0px;   
@@ -84,10 +87,31 @@
         left: 80%;
     }
     #areas-de-trabalho-menu-lateral{
-        display: block;
-        background-color: black;
-        width: 120px;
-        height: 100px;
+        display: flex;
+        position: inherit;
+        width: 160px;
+        height: 40px;
+        margin-top: 10px;
+        top: 230px;
+        left: 15px;
+    }
+    #areas-de-trabalho-menu-lateral > #add-trabalho-quadro{
+        height: 40px;
+        
+    }
+    #areas-de-trabalho-menu-lateral > #add-trabalho-quadro > a > img{
+        position: absolute;
+        height: 24px;
+        left: 135px;
+        top: 0px; 
+    }
+    #areas-de-trabalho-menu-lateral > #add-trabalho-quadro > a{
+        text-decoration: none;
+    }
+    #areas-de-trabalho-menu-lateral > #add-trabalho-quadro > a > p{
+        color: rgb(32, 41, 44);
+        margin-top: 1px;
+        font-family: "tommy";
     }
     
 

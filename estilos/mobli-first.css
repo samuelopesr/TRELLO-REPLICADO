@@ -51,7 +51,7 @@ header{
 }
 #trello-menu-principal{
     display: block;
-    margin: 5px 10px 0px 0px;
+    margin: 5px 10px 0px -10px;
     height: 45px;
     width: 100px;
 }
@@ -128,6 +128,9 @@ header{
     width: 35px;
     height: 35px;
 
+}
+#pequisa-sino-conta > #pesquisa > #ibuscar{
+    display: none;
 }
 #pequisa-sino-conta > #sino {
     margin-top: 10px;
