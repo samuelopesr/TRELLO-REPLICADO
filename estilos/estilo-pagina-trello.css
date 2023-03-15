@@ -194,12 +194,41 @@ header{
 }
 #par > p{
     position: absolute;
-    margin-left: 50px;
-    margin-top: 10px;
+    margin-left: 40px;
     font-size: 1.3em;
     font-family: tommy;
     color: #eaf0fc;
     background-color: #809baa;
-
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 5px;
 }
+
+#fav-title{
+    display: flex;
+    width: 700px;
+}
+#fav-title > h1{
+    color: #eaf0fc;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+#fav{
+    cursor: pointer;
+    background-color: #eaf0fc6b;
+    margin-top: 10px;
+    margin-left: 12px;
+    display: block;
+    width: 27px;
+    height: 27px;
+    padding-top: 1.5px;
+    border-radius: 5px;
+    text-align: center;
+}
+#fav:hover{
+    background: url();
+}
+
 
