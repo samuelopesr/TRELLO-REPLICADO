@@ -15,12 +15,19 @@
     width: 0px;
     height: 0px;
 }
+body,html{
+    background-color: #131b31;
+}
 main{
     height: 100vh;
     width: 100vw;
 }
 header{
-    background-color: #026AA7;
+    background: rgba( 74, 144, 226, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     width: 100vw;
 }
 #lista{
@@ -94,8 +101,7 @@ header{
     width: 120px;
     margin-top: 5px;
     margin-left: 9px;
-    left:75%;
-    
+    left:80%; 
 }
 #pequisa-sino-conta > #pesquisa{
     margin-top: 10px;
@@ -127,11 +133,59 @@ header{
 #menu-abrir-fechar{
     height: 100%;
     width: 0;
-    background-color: #026AA7;
+    background: rgba( 74, 144, 226, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;
     transition: 0.3s;
+}
+#abrirMenu{
+    background-color: #809baa;
+    border: none;
+    width: 40px;
+    height: 40px;
+    
+}
+#abrirMenu:hover{
+    background-color: rgb(115, 134, 151);
+}
+#btn-abrir{
+    font-size: 20px;
+    height: 25px;
+    width: 35px;
+    text-decoration: none;
+    border: none;
+    color: #131b31;
+}
+#buttonFechar{
+    display: block;
+    background-color: #809baa;
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin-left: 210px;
+    float: right;
+    
+}
+#closewin{
+    position: absolute;
+    color: white;
+    font-family: "tommy";
+    font-size: 1.2em;
+    left: 20px;
+    top:7px;
+}
+#btn-fechar{
+    font-size: 20px;
+    height: 25px;
+    width: 35px;
+    text-decoration: none;
+    border: none;
+    color: #131b31;
 }
 
