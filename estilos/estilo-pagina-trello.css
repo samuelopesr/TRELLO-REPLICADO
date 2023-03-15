@@ -101,7 +101,7 @@ header{
     width: 120px;
     margin-top: 5px;
     margin-left: 9px;
-    left:80%; 
+    left:78%; 
 }
 #pequisa-sino-conta > #pesquisa{
     margin-top: 10px;
@@ -175,11 +175,15 @@ header{
 #closewin{
     position: absolute;
     color: white;
+    background-color: #809baa;
+    height: 40px;
+    width: 210px;
     font-family: "tommy";
-    font-size: 1.2em;
-    left: 20px;
-    top:7px;
+    font-size: 1.3em;
+    padding-top: 5px;
+    padding-left: 3px;
 }
+
 #btn-fechar{
     font-size: 20px;
     height: 25px;
@@ -187,5 +191,15 @@ header{
     text-decoration: none;
     border: none;
     color: #131b31;
+}
+#par > p{
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 1.3em;
+    font-family: tommy;
+    color: #eaf0fc;
+    background-color: #809baa;
+
 }
 
