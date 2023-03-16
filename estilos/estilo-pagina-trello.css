@@ -215,6 +215,7 @@ header{
     margin-top: 10px;
     margin-left: 5px;
     margin-bottom: 10px;
+    
 }
 #fav{
     cursor: pointer;
@@ -227,9 +228,14 @@ header{
     padding-top: 1.5px;
     border-radius: 5px;
     text-align: center;
+    
 }
-#fav:hover{
-    background: url();
+.star1, .star2{
+    position: absolute;
+    left: 460px;
+    top: 12.3%;
 }
+
+
 
 
