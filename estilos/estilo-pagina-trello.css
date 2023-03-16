@@ -16,14 +16,17 @@
     height: 0px;
 }
 body,html{
-    background-color: #131b31;
+    background: url(../imagens/pexels-lukas-574070.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 main{
     height: 100vh;
     width: 100vw;
 }
 header{
-    background: rgba( 74, 144, 226, 0.2 );
+    background: rgba(54, 127, 211, 0.582);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 20px );
     -webkit-backdrop-filter: blur( 20px );
@@ -131,12 +134,13 @@ header{
     color: white;
 }
 #menu-abrir-fechar{
+    z-index: 999;
     height: 100%;
     width: 0;
     background: rgba( 74, 144, 226, 0.2 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 20px );
-    -webkit-backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 10px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     position: fixed;
     top: 0;
@@ -145,7 +149,7 @@ header{
     transition: 0.3s;
 }
 #abrirMenu{
-    background-color: #809baa;
+    background-color: #809baa65;
     border: none;
     width: 40px;
     height: 40px;
@@ -173,6 +177,7 @@ header{
     
 }
 #closewin{
+    text-shadow: 1px 1px 5px #131b31;
     position: absolute;
     color: white;
     background-color: #809baa;
@@ -193,13 +198,13 @@ header{
     color: #131b31;
 }
 #par > p{
-    
+    text-shadow: 1px 1px 5px #131b31;
     position: absolute;
     margin-left: 40px;
     font-size: 1.3em;
     font-family: tommy;
     color: #ecf2ff;
-    background-color: #809baa;
+    background-color: #809baa5d;
     height: 40px;
     width: 100%;
     padding-left: 10px;
@@ -211,15 +216,16 @@ header{
     width: 700px;
 }
 #fav-title > h1{
-    color: #eaf0fc;
+    color: #ffffff;
     margin-top: 10px;
     margin-left: 5px;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.466);
     
 }
 #fav{
     cursor: pointer;
-    background-color: #eaf0fc6b;
+    background-color: #4e49016b;
     margin-top: 10px;
     margin-left: 12px;
     display: block;
@@ -228,6 +234,7 @@ header{
     padding-top: 1.5px;
     border-radius: 5px;
     text-align: center;
+    box-shadow: 1px 1px 5px #060911;
     
 }
 .star1, .star2{
@@ -235,6 +242,38 @@ header{
     left: 460px;
     top: 12.3%;
 }
+#work-visible > #visible-area{
+    display: flex;
+    position: absolute;
+    background: rgba( 148, 169, 202, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba(29, 30, 41, 0.637);
+    backdrop-filter: blur( 15.5px );
+    -webkit-backdrop-filter: blur( 15.5px );
+    border-radius: 4px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height: 35px;
+    width: 220px;
+    transition: .5s;
+   
+}
+#work-visible > #visible-area:hover{
+    background: rgba(255, 255, 255, 0.514);
+    transition: .5s;
+}
+#work-visible > #visible-area > img{
+    height: 24px;
+    width: 24px;
+    margin-top: 4px;
+    margin-left: 2px;
+}
+#visible-area > p{
+    cursor: pointer;
+    margin-top: 5px;
+    margin: auto;
+    color: white;
+    text-shadow: 1px 1px 10px #060911;
+}
+
 
 
 

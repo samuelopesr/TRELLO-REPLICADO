@@ -26,3 +26,7 @@ star2.addEventListener('mouseleave', () => {
     star1.style.display = 'block';
     star2.style.display = 'none';
 })
+
+function noPage(){
+    alert('no page')
+}
