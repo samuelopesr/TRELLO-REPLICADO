@@ -27,6 +27,9 @@ star2.addEventListener('mouseleave', () => {
     star2.style.display = 'none';
 })
 
-function noPage(){
-    alert('no page')
+function abrirJanelaAreaDeTrbalho(){
+    document.getElementById('abrir-janela-visivel-area-de-trabalho').style.display = 'block';
+}
+function fecharJanelaAreaDeTrbalho(){
+    document.getElementById('abrir-janela-visivel-area-de-trabalho').style.display = 'none';
 }

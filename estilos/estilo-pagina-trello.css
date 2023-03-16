@@ -148,6 +148,24 @@ header{
     overflow: hidden;
     transition: 0.3s;
 }
+#menu-abrir-fechar > #containSuaPagina{
+    display: flex;
+    width: 200px;
+}
+#menu-abrir-fechar > #containSuaPagina > #SuaPagina{
+    background: linear-gradient(45deg, rgb(80, 80, 119), lightblue);
+    height: 47px;
+    width: 50px;
+    margin: 5px 0px 10px 4px;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 50%;
+    border: 1px solid #060911;
+}
+#menu-abrir-fechar > #containSuaPagina > p{
+    margin-top: 20px;
+    margin-left: 10px;
+}
 #abrirMenu{
     background-color: #809baa65;
     border: none;
@@ -273,8 +291,39 @@ header{
     color: white;
     text-shadow: 1px 1px 10px #060911;
 }
+#abrir-janela-visivel-area-de-trabalho{
+    position: fixed;
+    background-color: rgb(243, 243, 243);
+    width: 330px;
+    height: 390px;
+    margin-top: 40px;
+    margin-left: 20px;
+    border-radius: 10px;
+    color: #537181;
+    box-shadow: 2px 2px 10px #060911;
+    display: none;
+}
+#abrir-janela-visivel-area-de-trabalho > h1{
+    text-align: center;
+    padding: 5px;
 
+}
+#abrir-janela-visivel-area-de-trabalho > span{
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
 
+}
+#abrir-janela-visivel-area-de-trabalho > span:hover{
+    color: #131b31;
+}
+#abrir-janela-visivel-area-de-trabalho > h2{
+    margin: 5px 0px 5px 10px;
+}
+#abrir-janela-visivel-area-de-trabalho > p{
+    margin: 0px 0px 0px 10px;
+}
 
 
 

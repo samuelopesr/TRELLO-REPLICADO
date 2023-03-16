@@ -57,8 +57,8 @@
                 Fechar menu lateral
             </p>
             <button id="buttonFechar"><a href="#" id="btn-fechar" onclick="fecharMenu()">&#9776;</a></button>
-            <div>
-                <span id="simbol-f">F</span> <h1>Fundação Educere</h1>
+            <div id="containSuaPagina">
+                <p id="SuaPagina">SP</p> <p>Sua página</p>
             </div>
             <h2>Seus quadros</h2>
             <div>
@@ -78,7 +78,20 @@
                 </div>
                 <div id="work-visible">
                  <div id="visible-area"> 
-                    <img src="imagens/group.png" alt=""><p onclick="noPage()">visivel a área de trabalho</p> 
+                    <img src="imagens/group.png" alt=""><p onclick="abrirJanelaAreaDeTrbalho()">visivel a área de trabalho</p> 
+                 </div>
+                 <div id="abrir-janela-visivel-area-de-trabalho">
+                        <span id="x-workarea" onclick="fecharJanelaAreaDeTrbalho()">X</span>
+                        <h1>visibilidade</h1>
+                        <h2>Particular</h2>
+                        <p>Somente membros do quadro podem ver e editar este quadro.
+                        </p>
+                        <h2>Área de trabalho</h2>
+                        <p>Todos os membros da Área de trabalho podem ver e editar este quadro.</p>
+                        <h2>Organização</h2>
+                        <p>Todos os membros da organização podem ver este quadro. O quadro precisa ser adicionado a uma Área de trabalho da empresa para possibilitar isso.</p>
+                        <h2>Público</h2>
+                        <p>Todos na internet podem ver este quadro. Somente membros do quadro podem editá-lo.</p>
                  </div>
                 <div id="quadro">
                     <h1>Quadro</h1>
