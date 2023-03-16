@@ -160,11 +160,51 @@ header{
     text-align: center;
     padding-top: 15px;
     border-radius: 50%;
-    border: 1px solid #060911;
+    border: 1px solid #707686;
+    color: white;
 }
-#menu-abrir-fechar > #containSuaPagina > p{
+#menu-abrir-fechar > #containSuaPagina > #write{
     margin-top: 20px;
     margin-left: 10px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39);
+}
+#menu-abrir-fechar > h2{
+    margin: 5px 0px 10px 7px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39);
+    color: white;
+    font-size: 1em;
+}
+#h3{
+    cursor: pointer;
+}
+#h3 > p{
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 10px;
+    background: linear-gradient(45deg, rgb(80, 80, 119), lightblue);
+    height: 30px;
+    width: 30px;
+    padding-top: 9px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+    font-size: 0.7em;
+    border-radius: 50%;
+}
+
+#h3 > h3{
+    font-size: 0.8em;
+    background-color: #707686;
+    color: white;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+#h3 > h3:hover{
+    background-color: #2f3138;
 }
 #abrirMenu{
     background-color: #809baa65;
@@ -256,9 +296,9 @@ header{
     
 }
 .star1, .star2{
-    position: absolute;
-    left: 460px;
-    top: 12.3%;
+    position: relative;
+    left: 1px;
+    
 }
 #work-visible > #visible-area{
     display: flex;
@@ -272,6 +312,7 @@ header{
     height: 35px;
     width: 220px;
     transition: .5s;
+    margin-left: 10px;
    
 }
 #work-visible > #visible-area:hover{
@@ -324,6 +365,63 @@ header{
 #abrir-janela-visivel-area-de-trabalho > p{
     margin: 0px 0px 0px 10px;
 }
+#quadrodiv{
+    
+    margin-left: 240px;
+    height: 50px;
+    width: 200px;
+}
+#quadrodiv > #quadro{
+    cursor: pointer;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 1px 1px 5px #060911a6;
+    height: 35px;
+    width: 130px;
+    transition: .5s;
+    margin-left: 10px;
+}
+#quadrodiv > #quadro > img{
+    
+    margin-left: 19px;
+    margin-top: 5px;
+}
+#quadrodiv > #quadro > p{
+    color: #131b31;
+    margin: auto;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+#quadrodiv > #quadro > p:hover{
+    color: #263458;
+}
+#pop-up-quadro{
+    position: fixed;
+    background-color: #ffffff;
+    width: 300px;
+    height: 320px;
+    margin-left: 190px;
+    border-radius: 3%;
+    display: none;
+}
+#pop-up-quadro > .st{
+    font-weight: 600;
+    color: #060911;
+}
+#pop-up-quadro > p{
+    color: #646464;
+    line-height: 40px;
+    margin-left: 5px;
+}
+
+#pop-up-quadro > span{
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+    margin-top: 13px;
+}
+
 
 
 

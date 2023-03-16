@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sua página | Trello</title>
     <link rel="stylesheet" href="estilos/estilo-pagina-trello.css">
 </head>
 <body>
@@ -58,15 +58,16 @@
             </p>
             <button id="buttonFechar"><a href="#" id="btn-fechar" onclick="fecharMenu()">&#9776;</a></button>
             <div id="containSuaPagina">
-                <p id="SuaPagina">SP</p> <p>Sua página</p>
+                <p id="SuaPagina">SP</p> <p id="write">SUA PÁGINA</p>
             </div>
             <h2>Seus quadros</h2>
-            <div>
-                <h3>PROGRAMAÇÃO PROJETO EDUCERE</h3>
+            <div onclick="fecharMenu()" id="h3">
+                <p>SP</p>
+                <h3>Sua página</h3>
             </div>
         </nav>
 
-    <section id="">
+    <section id="secao-info">
         <div id="info">
             <div id="infoin-1">
                 <div id="fav-title">
@@ -79,7 +80,7 @@
                 <div id="work-visible">
                  <div id="visible-area"> 
                     <img src="imagens/group.png" alt=""><p onclick="abrirJanelaAreaDeTrbalho()">visivel a área de trabalho</p> 
-                 </div>
+                </div>
                  <div id="abrir-janela-visivel-area-de-trabalho">
                         <span id="x-workarea" onclick="fecharJanelaAreaDeTrbalho()">X</span>
                         <h1>visibilidade</h1>
@@ -92,10 +93,22 @@
                         <p>Todos os membros da organização podem ver este quadro. O quadro precisa ser adicionado a uma Área de trabalho da empresa para possibilitar isso.</p>
                         <h2>Público</h2>
                         <p>Todos na internet podem ver este quadro. Somente membros do quadro podem editá-lo.</p>
-                 </div>
-                <div id="quadro">
-                    <h1>Quadro</h1>
-                    <button id="quadro"><img src="" alt="arrow-show"></button>
+                </div>
+                <div id="quadrodiv">
+
+                    <button id="quadro" onclick="abrirPopUpQuadro()"><img src="imagens/settings.png" alt="arrow-show"><p>Quadro</p></button>
+                </div>
+                <div id="pop-up-quadro">
+                    <span onclick="fecharPopUpQuadro()">X</span>
+                    <p id="p-popup">Veja seu trabalho de novas maneiras</p>
+
+                     <p class="st"> &#9781; &#9745; Quadro 🔓</p>
+                     <p> &#9781; Tabela 🔒</p>
+                     <p> &#9781; Calendário 🔒</p> 
+                     <p> &#9781; Cronograma 🔒</p> 
+                     <p> &#9781; Painel 🔒</p> 
+                     <p> &#9781; Mapa 🔒</p> 
+
                 </div>
             </div>
             <div id="infoin-2">

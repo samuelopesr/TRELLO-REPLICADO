@@ -29,7 +29,15 @@ star2.addEventListener('mouseleave', () => {
 
 function abrirJanelaAreaDeTrbalho(){
     document.getElementById('abrir-janela-visivel-area-de-trabalho').style.display = 'block';
+    
 }
 function fecharJanelaAreaDeTrbalho(){
     document.getElementById('abrir-janela-visivel-area-de-trabalho').style.display = 'none';
+}
+
+function abrirPopUpQuadro(){
+    document.getElementById('pop-up-quadro').style.display = 'block';
+}
+function fecharPopUpQuadro(){
+    document.getElementById('pop-up-quadro').style.display = 'none';
 }
