@@ -193,11 +193,12 @@ header{
     color: #131b31;
 }
 #par > p{
+    
     position: absolute;
     margin-left: 40px;
     font-size: 1.3em;
     font-family: tommy;
-    color: #eaf0fc;
+    color: #ecf2ff;
     background-color: #809baa;
     height: 40px;
     width: 100%;
