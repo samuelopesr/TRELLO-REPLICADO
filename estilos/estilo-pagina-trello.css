@@ -503,8 +503,6 @@ header{
 }
 #share{
     width: 110px;  
-
-
 }
 #share > img{
     height: 20px;
@@ -516,7 +514,6 @@ header{
     font-size: 1.05em;
     color: white;
     text-shadow:1px 1px 5px #060911ab;
-
 }
 #mostrar-mais{
     width: 40px;
