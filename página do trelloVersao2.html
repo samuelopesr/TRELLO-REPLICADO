@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua página | Trello</title>
+    <link rel="stylesheet" href="estilos/estilo-pagina-trelloVersao2.css">
+</head>
+<body>
+    <main id="main">
+        <header id="header">
+            <menu>
+                <ul id="lista" >
+                    <li><div id="trello-menu1" >
+                        <img src="imagens/dots-menu.png" alt="trello-menu">
+                    </div>
+                    <li><a href="index.html" id="link-home">
+                        <div id="trello-menu-principal">
+                            <img src="imagens/trello.png" alt="trello-menu2">
+                            <p>Trello</p>
+                        </div>
+                    </a>
+                    <li><div id="mais">
+                        <p>Mais</p>
+                        <div id="mostrar-mais">
+                            <img src="imagens/down-arrow.png" alt="mostrar-mais">
+                        </div>
+                        <div id="btn-mais">
+                            <img src="imagens/plus.png" alt="button-mais">
+                        </div>
+                        </div>
+                        
+                    <li><div id="pequisa-sino-conta">
+                        <div id="pesquisa">
+                            <img src="imagens/search-interface-symbol.png" alt="icon-pesquisa">
+                        </div>
+                        <div id="sino">
+                            <img src="imagens/bell.png" alt="sino-icon">
+                        </div>
+                        <div id="conta">
+                            <h1>SL</h1>
+                        </div>
+                    </div>
+                </ul>
+            </menu>
+        </header>
+        <div id="par">
+            <p>Abrir menu lateral</p>
+        </div>
+        <button id="abrirMenu">
+            <a href="#" id="btn-abrir" onclick="abrirMenu()">&#9776;</a>
+        </button>
+        <nav id="menu-abrir-fechar">
+
+            <p id="closewin">
+                Fechar menu lateral
+            </p>
+            <button id="buttonFechar"><a href="#" id="btn-fechar" onclick="fecharMenu()">&#9776;</a></button>
+            <div id="containSuaPagina">
+                <p id="SuaPagina">SP</p> <p id="write">SUA PÁGINA</p>
+            </div>
+            <h2>Seus quadros</h2>
+            <div onclick="fecharMenu()" id="h3">
+                <p>SP</p>
+                <h3>Sua página</h3>
+            </div>
+        </nav>
+
+    <section id="secao-info">
+        <div id="info">
+            <div id="infoin-1">
+                <div id="fav-title">
+                    <h1>PROGRAMAÇÃO PROJETO EDUCERE</h1>
+                    <div id="fav">
+                        <img class="star1" src="imagens/star.png" alt="favorito"> 
+                        <img class="star2" src="imagens/starfull.png" alt="starfull">
+                    </div>
+                </div>
+                <div id="work-visible">
+                 <div id="visible-area"> 
+                    <img src="imagens/group.png" alt=""><p onclick="abrirJanelaAreaDeTrbalho()">visivel a área de trabalho</p> 
+                </div>
+                 <div id="abrir-janela-visivel-area-de-trabalho">
+                        <span id="x-workarea" onclick="fecharJanelaAreaDeTrbalho()">X</span>
+                        <h1>visibilidade</h1>
+                        <h2>Particular</h2>
+                        <p>Somente membros do quadro podem ver e editar este quadro.
+                        </p>
+                        <h2>Área de trabalho</h2>
+                        <p>Todos os membros da Área de trabalho podem ver e editar este quadro.</p>
+                        <h2>Organização</h2>
+                        <p>Todos os membros da organização podem ver este quadro. O quadro precisa ser adicionado a uma Área de trabalho da empresa para possibilitar isso.</p>
+                        <h2>Público</h2>
+                        <p>Todos na internet podem ver este quadro. Somente membros do quadro podem editá-lo.</p>
+                </div>
+                <div id="quadrodiv">
+
+                    <button id="quadro" onclick="abrirPopUpQuadro()"><img src="imagens/settings.png" alt="arrow-show"><p>Quadro</p></button>
+                </div>
+                <div id="pop-up-quadro">
+                    <span onclick="fecharPopUpQuadro()">X</span>
+                    <p id="p-popup">Veja seu trabalho de novas maneiras</p>
+
+                     <p class="st"> &#9781; &#9745; Quadro 🔓</p>
+                     <p> &#9781; Tabela 🔒</p>
+                     <p> &#9781; Calendário 🔒</p> 
+                     <p> &#9781; Cronograma 🔒</p> 
+                     <p> &#9781; Painel 🔒</p> 
+                     <p> &#9781; Mapa 🔒</p> 
+
+                </div>
+            </div>
+            <div id="infoin-2">
+                <button id="powerup"> <img src="imagens/startup.png" alt="powerup"> <p>Power-Ups</p></button>
+                <button id="auto"> <img src="imagens/light.png" alt="automação"> <p>Auto</p></button>
+                <button id="filter"><img src="imagens/sort.png" alt="filtro"><p>Filtro</p></button>
+                <button id="share"><img src="imagens/share.png" alt="share"><p>Compartilhar</p></button>
+                <button id="mostrar-mais"><img src="imagens/more.png" alt="mostrar"></button>
+            </div>
+        </div>
+    </section>
+    <div class="pop-up">
+
+    </div>
+    </main>
+    <script src="JavaScript/pagina-trello.js"></script>
+</body>
+</html>

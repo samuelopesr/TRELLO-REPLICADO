@@ -385,6 +385,9 @@ header{
     box-shadow: 2px 2px 5px rgb(156, 156, 156);
     cursor: pointer;
 }
+#criar-novo-quadro:hover{
+    background-color: #3a5975;
+}
 #criar-novo-quadro > p{
     text-align: center;
     margin-top: 35px;

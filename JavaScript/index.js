@@ -35,3 +35,4 @@ window.addEventListener("resize", () => {
         diminuirMenu();
     }
 });
+
