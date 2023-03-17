@@ -333,6 +333,7 @@ header{
     text-shadow: 1px 1px 10px #060911;
 }
 #abrir-janela-visivel-area-de-trabalho{
+    z-index: 999;
     position: fixed;
     background-color: rgb(243, 243, 243);
     width: 330px;
@@ -397,6 +398,7 @@ header{
     color: #263458;
 }
 #pop-up-quadro{
+    z-index: 999;
     position: fixed;
     background-color: #ffffff;
     width: 300px;
@@ -421,7 +423,104 @@ header{
     margin-right: 10px;
     margin-top: 13px;
 }
+#secao-info{
+    display: flex;
+    position: relative;
+}
+#infoin-2{
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 200px;
+    top: 105px;
+    left: 7px;
+    
+}
+#infoin-2 > button{
+    height: 40px;
+    cursor: pointer;
+    margin-right: 5px;
+    background: rgba( 255, 253, 253, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba(16, 17, 39, 0.37);
+    backdrop-filter: blur( 0.5px );
+    -webkit-backdrop-filter: blur( 0.5px );
+    border-radius: 3px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );  
+    transition: .5s;
+    
+}
+#infoin-2 > button:hover{
+    background-color: #dbdbdbda;
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 30px );
+    box-shadow: none;
+    transform: translate(-4px, -4px);
+}
+#powerup{
+    width: 120px;
+}
+#powerup > img{
+    height: 24px;
+    width: 24px;
+    float: left;
+}
+#powerup > p{
+    font-size: 1.1em;
+    color: white;
+    margin-top: 5px;
+    text-shadow:1px 1px 5px #060911ab;
+}
+#auto{
+    width: 90px;
+}
+#auto > img{
+    float: left;
+    height: 30px;
+    width: 30px;
+}
+#auto > p{
+    font-size: 1.2em;
+    color: white;
+    margin-right: 13px;
+    margin-top: 7px;
+    text-shadow:1px 1px 5px #060911ab;
+}
+#filter{
+    width: 80px;   
+}
+#filter > img{
+    height: 24px;
+    width: 24px;
+    float: left;
+    margin-left: 2px;
+}
+#filter > p{
+    font-size: 1.1em;
+    text-shadow:1px 1px 5px #060911ab;
+    color: white;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+#share{
+    width: 110px;  
 
 
+}
+#share > img{
+    height: 20px;
+    width: 20px;
+    float: left;
+}
+#share > p{
+    margin-top: 3px;
+    font-size: 1.05em;
+    color: white;
+    text-shadow:1px 1px 5px #060911ab;
 
-
+}
+#mostrar-mais{
+    width: 40px;
+}
+#mostrar-mais > img{
+    width: 24px;
+}
