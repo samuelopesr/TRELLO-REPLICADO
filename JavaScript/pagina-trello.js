@@ -41,3 +41,4 @@ function abrirPopUpQuadro(){
 function fecharPopUpQuadro(){
     document.getElementById('pop-up-quadro').style.display = 'none';
 }
+

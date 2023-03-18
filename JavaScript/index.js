@@ -36,3 +36,47 @@ window.addEventListener("resize", () => {
     }
 });
 
+const jsonURL = "links.json"
+
+const maxQuadros = 50;
+
+let links = []
+
+function carregarLinks(){
+    fetch(jsonURL)
+    .then(response => response.json())
+    .then(data => {
+        link = data;
+    })
+    .catch(error => {
+        console.log('erro ao carregar o arquio JSON', error)
+    }
+    );
+}
+
+function criarQuadro(){
+    if(document.querySelectorAll('.quadro').length >= maxQuadros){
+        alert('Número máximo de quadros atingido');
+        return;
+    }
+
+    const quadroDiv = document.createElement('div');
+    quadroDiv.classList.add('quadro');
+    quadro
+
+    let excluirQuadroBtn = document.createElement('button');
+    excluirQuadroBtn.innerText = 'Excluir quadro';
+    excluirQuadroBtn.onclick = function(){
+        quadroDiv.remove();
+    }
+    quadroDiv.appendChild(excluirQuadroBtn);
+
+    let corRandom = Math.floor(Math.random()*16777215).toString(16);
+    quadroDiv.style.backgroundColor = '#' + corRandom;
+
+    let criarQuadroDiv = document.getElementById('criar-quadro');
+    criarQuadroDiv.insertBefore(quadroDiv, criarQuadroDiv.firstChild);
+
+    let link = "https://www.google.com";
+    window.open(link, '_blank');
+}
