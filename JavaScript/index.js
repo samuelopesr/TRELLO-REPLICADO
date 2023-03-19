@@ -132,6 +132,13 @@ function criarNovoQuadro(link){
 
     const quadrosDiv =  document.getElementById("criar-quadro");
     quadrosDiv.insertBefore(quadroDiv, quadrosDiv.firstChild);
+
+    const modalDiv = document.querySelector(".modal");
+    modalDiv.remove();
+}
+
+window.onload = function () {
+    carregarLinks();
 }
 
 function abrirModal(){
@@ -150,4 +157,27 @@ function abrirModal(){
     }
 }
     
-    
+    function criarNovoQuadro(link){
+        const quadroDiv = document.createElement("div");
+        quadroDiv.classList.add("quadro");
+
+        const titulo = document.createElement("h2");
+        titulo.innerText = "novo quadro";
+        quadroDiv.appendChild(titulo);
+
+        const excluirQuadroBtn = document.createElement("button");
+        excluirQuadroBtn.innerText = "Excluir quadro";
+        excluirQuadroBtn.onclick = function () {
+            quadroDiv.remove();
+            removerQuadroDoLocalStorage(quadroDiv.id);
+        };
+        quadroDiv.appendChild(excluirQuadroBtn);
+
+        const linkA = document.createElement("a");
+        linkA.href = link;
+        linkA.target = "_blank";
+        linkA.innerText = "Clique aqui para acessar o link";
+        quadroDiv.appendChild(linkA);
+
+        const corRandom = Ma
+    }    
