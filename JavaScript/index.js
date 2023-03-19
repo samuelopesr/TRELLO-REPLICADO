@@ -90,32 +90,64 @@ function criarQuadro(){
     const modalDiv = document.createElement('div');
     modalDiv.classList.add("modal");
     
-    const titulo = document.createElement('h2');
-    titulo.innerText = "Novo Quadro";
-    quadroDiv.appendChild(titulo);
+    const opcaoQuadro1 = document.createElement("div");
+    opcaoQuadro1.classList.add("opcao-quadro");
+    opcaoQuadro1.innerHTML = `
+        <img src="">
+        <button onclick="criarNovoQuadro('`+links[0]+`')">Selecionar</button>
+    `;
+    modalDiv.appendChild(opcaoQuadro1);
+
+    const opcaoQuadro2 = document.createElement('div');
+    opcaoQuadro2.classList.add("opcao-quadro");
+    opcaoQuadro2.innerHTML = `
+        <img src="">
+        <button onclick="criarNovoQuadro"('`+links[1]+`')">Selcionar</button>
+    `;
+    modalDiv.appendChild(opcaoQuadro2);
+
+    document.body.appendChild(modalDiv);
+
+}
+
+function criarNovoQuadro(link){
+    const quadroDiv = document.createElement("div");
+    quadroDiv.classList.add("quadro");
 
     const excluirQuadroBtn = document.createElement("button");
-    excluirQuadroBtn.innerText = "Excluir quadro";
+    excluirQuadroBtn.innerText = "Excluir Quadro";
     excluirQuadroBtn.onclick = function () {
         quadroDiv.remove();
     };
     quadroDiv.appendChild(excluirQuadroBtn);
 
-    const link = document.createElement('a');
-    link.href = links[0];
-    link.target = "_blank";
-    link.innerText = "Clique aqui para acessar o link";
-    quadroDiv.appendChild(link);
+    const linkA =  document.createElement('a');
+    linkA.href = link;
+    linkA.target = "_blank";
+    linkA.innerText = "Clique aqui para acessar o link";
+    quadroDiv.appendChild(linkA);
 
     const corRandom = Math.floor(Math.random() * 16777215).toString(16);
     quadroDiv.style.backgroundColor = "#" + corRandom;
 
-    const quadrosDiv = document.getElementById("criar-quadro");
+    const quadrosDiv =  document.getElementById("criar-quadro");
     quadrosDiv.insertBefore(quadroDiv, quadrosDiv.firstChild);
 }
 
-window.onload = function () {
-    carregarLinks();
+function abrirModal(){
+    const modal =  document.getElementById("modal");
+    modal.style.display = "block";
+
+    const opcoes = document.getElementsByClassName("opcao-quadro");
+    for (let i = 0; i < opcoes.length; i++){
+        opcoes[i].addEventListener("click", function (event) {
+            if (event.target.tagName === "IMG"){
+                const link =  event.target.getAttribute("data-link");
+                criarNovoQuadro(link);
+                modal.style.display = "none";
+            }
+        });
+    }
 }
     
     
