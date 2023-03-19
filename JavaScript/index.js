@@ -36,6 +36,33 @@ window.addEventListener("resize", () => {
     }
 });
 
+
+
+
+var modal = document.getElementById("quadro-modal");
+
+
+var btn = document.getElementById("criar-quadro-btn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 const jsonURL = "links.json";
 
 const maxQuadros = 50;
@@ -60,8 +87,8 @@ function criarQuadro(){
         return;
     }
 
-    const quadroDiv = document.createElement('div');
-    quadroDiv.classList.add("quadro");
+    const modalDiv = document.createElement('div');
+    modalDiv.classList.add("modal");
     
     const titulo = document.createElement('h2');
     titulo.innerText = "Novo Quadro";
