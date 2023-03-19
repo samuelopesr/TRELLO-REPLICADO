@@ -36,7 +36,7 @@ window.addEventListener("resize", () => {
     }
 });
 
-const jsonURL = "links.json"
+const jsonURL = "links.json";
 
 const maxQuadros = 50;
 
@@ -46,7 +46,7 @@ function carregarLinks(){
     fetch(jsonURL)
     .then(response => response.json())
     .then(data => {
-        link = data;
+        links = data;
     })
     .catch(error => {
         console.log('erro ao carregar o arquio JSON', error)
@@ -55,28 +55,40 @@ function carregarLinks(){
 }
 
 function criarQuadro(){
-    if(document.querySelectorAll('.quadro').length >= maxQuadros){
-        alert('Número máximo de quadros atingido');
+    if(document.querySelectorAll(".quadro").length >= maxQuadros){
+        console.log('Número máximo de quadros atingido');
         return;
     }
 
     const quadroDiv = document.createElement('div');
-    quadroDiv.classList.add('quadro');
-    quadro
+    quadroDiv.classList.add("quadro");
+    
+    const titulo = document.createElement('h2');
+    titulo.innerText = "Novo Quadro";
+    quadroDiv.appendChild(titulo);
 
-    let excluirQuadroBtn = document.createElement('button');
-    excluirQuadroBtn.innerText = 'Excluir quadro';
-    excluirQuadroBtn.onclick = function(){
+    const excluirQuadroBtn = document.createElement("button");
+    excluirQuadroBtn.innerText = "Excluir quadro";
+    excluirQuadroBtn.onclick = function () {
         quadroDiv.remove();
-    }
+    };
     quadroDiv.appendChild(excluirQuadroBtn);
 
-    let corRandom = Math.floor(Math.random()*16777215).toString(16);
-    quadroDiv.style.backgroundColor = '#' + corRandom;
+    const link = document.createElement('a');
+    link.href = links[0];
+    link.target = "_blank";
+    link.innerText = "Clique aqui para acessar o link";
+    quadroDiv.appendChild(link);
 
-    let criarQuadroDiv = document.getElementById('criar-quadro');
-    criarQuadroDiv.insertBefore(quadroDiv, criarQuadroDiv.firstChild);
+    const corRandom = Math.floor(Math.random() * 16777215).toString(16);
+    quadroDiv.style.backgroundColor = "#" + corRandom;
 
-    let link = "https://www.google.com";
-    window.open(link, '_blank');
+    const quadrosDiv = document.getElementById("criar-quadro");
+    quadrosDiv.insertBefore(quadroDiv, quadrosDiv.firstChild);
 }
+
+window.onload = function () {
+    carregarLinks();
+}
+    
+    
