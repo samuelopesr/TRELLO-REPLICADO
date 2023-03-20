@@ -114,10 +114,15 @@ function criarNovoQuadro(link){
     const quadroDiv = document.createElement("div");
     quadroDiv.classList.add("quadro");
 
+    const titulo = document.createElement("h2");
+    titulo.innerText = "Novo Quadro";
+    quadroDiv.appendChild(titulo);
+
     const excluirQuadroBtn = document.createElement("button");
     excluirQuadroBtn.innerText = "Excluir Quadro";
     excluirQuadroBtn.onclick = function () {
         quadroDiv.remove();
+        removerQuadroDoLocalStorage(quadroDiv.id);
     };
     quadroDiv.appendChild(excluirQuadroBtn);
 
@@ -133,12 +138,48 @@ function criarNovoQuadro(link){
     const quadrosDiv =  document.getElementById("criar-quadro");
     quadrosDiv.insertBefore(quadroDiv, quadrosDiv.firstChild);
 
-    const modalDiv = document.querySelector(".modal");
-    modalDiv.remove();
+    adicionarQuadroAoLocalStorage(quadroDiv.id, link);
+}
+
+function adicionarQuadroAoLocalStorage(id) {
+    let quadros = JSON.parse(localStorage.getItem("criar-quadro")) || {};
+
+    quadros[id] = links;
+
+    localStorage.setItem("quadros", JSON.stringify(quadros));
+}
+
+function removerQuadroDoLocalStorage(id) {
+    let quadros = JSON.parse(localStorage.getItem("criar-quadro")) || {};
+
+    delete quadros[id];
+
+    localStorage.setItem("criar-quadro", JSON.stringify(quadros));
 }
 
 window.onload = function () {
+    carregarQuadrosDoLocalStorage();
     carregarLinks();
+}
+
+function carregarQuadrosDoLocalStorage(){
+    const quadros = JSON.parse(localStorage.getItem("criar-quadro")) || {};
+    for (const [id, link] of Object.entries(quadros)) {
+        criarNovoQuadro(link, id);
+    }
+}
+
+const quadrosSalvos = JSON.parse(localStorage.getItem("criar-quadro")) || [];
+
+quadrosSalvos.forEach(element => {
+    const quadroDiv = criarQuadro(quadro.link, quadro.cor);
+    quadrosDiv.appendChild(quadroDiv);
+});
+
+window.onload = function () {
+    carregarLinks();
+
+    const criarQuadroBtn = document.getElementById
 }
 
 function abrirModal(){
@@ -157,27 +198,4 @@ function abrirModal(){
     }
 }
     
-    function criarNovoQuadro(link){
-        const quadroDiv = document.createElement("div");
-        quadroDiv.classList.add("quadro");
-
-        const titulo = document.createElement("h2");
-        titulo.innerText = "novo quadro";
-        quadroDiv.appendChild(titulo);
-
-        const excluirQuadroBtn = document.createElement("button");
-        excluirQuadroBtn.innerText = "Excluir quadro";
-        excluirQuadroBtn.onclick = function () {
-            quadroDiv.remove();
-            removerQuadroDoLocalStorage(quadroDiv.id);
-        };
-        quadroDiv.appendChild(excluirQuadroBtn);
-
-        const linkA = document.createElement("a");
-        linkA.href = link;
-        linkA.target = "_blank";
-        linkA.innerText = "Clique aqui para acessar o link";
-        quadroDiv.appendChild(linkA);
-
-        const corRandom = Ma
-    }    
+   
