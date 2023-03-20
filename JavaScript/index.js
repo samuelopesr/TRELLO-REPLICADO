@@ -179,7 +179,7 @@ quadrosSalvos.forEach(element => {
 window.onload = function () {
     carregarLinks();
 
-    const criarQuadroBtn = document.getElementById("criar-quadro-btn");
+    const criarQuadroBtn = document.getElementById("criar-novo-quadro");
     criarQuadroBtn.addEventListener("click", function () {
         const modal = document.getElementById("modal");
         modal.classList.add("mostrar");
@@ -191,7 +191,7 @@ window.onload = function () {
         modal.classList.remove("mostrar");
     });
     
-    const criarNovoQuadroBtn = document.getElementById("criar-novo-quadro-btn");
+    const criarNovoQuadroBtn = document.getElementById("criar-novo-quadro");
     criarNovoQuadroBtn.addEventListener("click", function () {
         const linkInput = document.getElementById("novo-quadro-link");
         const link = linkInput.value;
