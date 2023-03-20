@@ -273,8 +273,18 @@
         height: 70px;
         margin: 0;
     }
-    #atualizar{
-        height: 90px;
+    #quadros-views-members-cfg-att > #atualizar{
+        background-color: rgba(139, 48, 48, 0);
+        
+        
     }
+    #quadros-views-members-cfg-att > #atualizar > img{
+        margin-left: 10px;
+        
+    }
+    #quadros-views-members-cfg-att > #atualizar > p{
+        margin-top: 15px;
+    }
+    
 
 }
