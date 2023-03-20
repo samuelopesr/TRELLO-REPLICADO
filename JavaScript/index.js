@@ -39,53 +39,49 @@ window.addEventListener("resize", () => {
 
 
 
+let numQuadros = 0;
 
-const jsonURL = "links.json";
+function criarQuadro() {
 
-const maxQuadros = 50;
+  if (numQuadros >= 50) {
+    alert("Limite de quadros atingido!");
+    return;
+  }
+  
+  
+  const quadro = document.createElement("div");
+  quadro.classList.add("quadro");
+  quadro.style.width = "210px";
+  quadro.style.height = "130px";
+  
+  
+  const botaoExcluir = document.createElement("button");
+  botaoExcluir.textContent = "Excluir quadro";
+  botaoExcluir.addEventListener("click", () => {
+    quadro.remove();
+    numQuadros--;
+  });
+  
+ 
+  const texto = document.createElement("h2");
+  texto.textContent = "Novo quadro";
+  
 
-let links = []
+  quadro.appendChild(botaoExcluir);
+  quadro.appendChild(texto);
+  
+ 
+  const container = document.querySelector("#criar-quadro");
+  container.appendChild(quadro);
+  
 
-function carregarLinks(){
-    fetch(jsonURL)
-    .then(response => response.json())
-    .then(data => {
-        links = data;
-    })
-    .catch(error => {
-        console.log('erro ao carregar o arquio JSON', error)
-    }
-    );
+  numQuadros++;
 }
 
-function criarQuadro(){
-    if(document.querySelectorAll(".quadro").length >= maxQuadros){
-        console.log('Número máximo de quadros atingido');
-        return;
-    }
 
-    const modalDiv = document.createElement('div');
-    modalDiv.classList.add("modal");
-    
-    const opcaoQuadro1 = document.createElement("div");
-    opcaoQuadro1.classList.add("opcao-quadro");
-    opcaoQuadro1.innerHTML = `
-        <img src="">
-        <button onclick="criarNovoQuadro('`+links[0]+`')">Selecionar</button>
-    `;
-    modalDiv.appendChild(opcaoQuadro1);
+const botaoCriarQuadro = document.querySelector("#criar-novo-quadro");
+botaoCriarQuadro.addEventListener("click", criarQuadro);
 
-    const opcaoQuadro2 = document.createElement('div');
-    opcaoQuadro2.classList.add("opcao-quadro");
-    opcaoQuadro2.innerHTML = `
-        <img src="">
-        <button onclick="criarNovoQuadro"('`+links[1]+`')">Selcionar</button>
-    `;
-    modalDiv.appendChild(opcaoQuadro2);
-
-    document.body.appendChild(modalDiv);
-
-}
 
 
     
