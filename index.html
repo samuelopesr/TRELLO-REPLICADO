@@ -32,7 +32,7 @@
                         <div id="mostrar-mais">
                             <img src="imagens/down-arrow.png" alt="mostrar-mais">
                         </div>
-                        <div id="btn-mais">
+                        <div onclick="criarQuadro()" id="btn-mais">
                             <img src="imagens/plus.png" alt="button-mais">
                         </div>
                         </div>
@@ -119,12 +119,13 @@
                     <div id="quadro-fundac">
                         <p>PROGRAMAÇÃO EDUCERE</p>
                     </div>
-                    <div onclick="criarQuadro()" id="criar-novo-quadro">
+                    <div id="criar-novo-quadro">
                         <p>Criar novo quadro</p>
                         <img id="criarquadroimg" src="imagens/plus-criar-quadro.png" alt="criarnovoquadro">
                     </div>
-                  
+                
                 </section>
+                <div onclick="excluirTodosQuadros()" id="excluir-todos-os-quadros"><p>Excluir todos os quadros</p></div>
             </section>
         </article>
     </main>

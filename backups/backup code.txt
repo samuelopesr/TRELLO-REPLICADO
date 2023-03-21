@@ -1,0 +1,58 @@
+let numQuadros = 0;
+
+function criarQuadro() {
+
+  if (numQuadros >= 50) {
+    alert("Limite de quadros atingido!");
+    return;
+  }
+  
+  
+  const quadro = document.createElement("div");
+  quadro.classList.add("quadro");
+  quadro.style.width = "210px";
+  quadro.style.height = "130px";
+  quadro.style.backgroundColor = gerarCorAleatoria();
+  
+  const botaoExcluir = document.createElement("button");
+  botaoExcluir.textContent = "Excluir quadro";
+  botaoExcluir.addEventListener("click", () => {
+    quadro.remove();
+    numQuadros--;
+  });
+  
+ 
+  const texto = document.createElement("h2");
+  texto.textContent = "Novo quadro";
+  const titulo = prompt("Digite o título do quadro:");
+  if (!titulo) return;
+  texto.textContent = titulo;
+  
+
+  quadro.appendChild(botaoExcluir);
+  quadro.appendChild(texto);
+  
+ 
+  const container = document.querySelector("#criar-quadro");
+  container.appendChild(quadro);
+  
+
+  numQuadros++;
+}
+
+function excluirTodosQuadros() {
+    if (confirm("Tem certeza que deseja excluir todos os quadros?")) {
+      const quadros = document.querySelectorAll(".quadro");
+      for (let i = 0; i < quadros.length; i++) {
+        quadros[i].remove();
+      }
+      numQuadros = 0;
+    }
+  }
+
+function gerarCorAleatoria() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+  }
