@@ -504,3 +504,6 @@ header{
     padding-top: 10px;
     box-shadow: 2px 2px 5px black;
 }
+#pop-up-personalizar-quadro{
+    display: none;
+}
