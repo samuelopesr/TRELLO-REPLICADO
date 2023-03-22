@@ -133,6 +133,9 @@ header{
     margin-top: 9px;
     color: white;
 }
+#secao-info{
+    position: fixed;
+}
 #menu-abrir-fechar{
     z-index: 999;
     height: 100%;
