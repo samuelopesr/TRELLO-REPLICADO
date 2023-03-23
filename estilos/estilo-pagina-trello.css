@@ -427,6 +427,7 @@ header{
     margin-top: 13px;
 }
 #secao-info{
+    
     display: flex;
     position: relative;
 }
@@ -434,7 +435,7 @@ header{
     display: flex;
     position: absolute;
     width: 100vw;
-    height: 200px;
+    height: 70px;
     top: 105px;
     left: 7px;
     
@@ -529,15 +530,21 @@ header{
     margin-top: 80px;
     margin-left: 20px;
 }
+
 #task div{
-    margin: 20px;
+    margin: 10px;
 }
-#task > #task-diária{
+#task > #task-diaria{
     display: flex;
     background-color: #263458;
-    height: 20px;
+    height: 200px;
     width: 300px;
 
+}
+button#btn-addtask1{
+    cursor: pointer;
+    background-color: #131b31;
+    height: 30px;
 }
 #task > #task-ongoing{
     display: flex;
@@ -551,3 +558,34 @@ header{
     height: 20px;
     width: 300px;
 }
+.tarefa {
+    width: 260px;
+    height: 50px;
+    border-radius: 4px;
+    margin-left: 20px;
+    background-color: #ccc;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tarefa h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .tarefa button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: green;
+    color: white;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .tarefa button:hover {
+    background-color: #006400;
+  }

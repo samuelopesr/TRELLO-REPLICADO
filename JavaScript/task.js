@@ -7,107 +7,101 @@ function gerarCorAleatoria() {
   const b = Math.floor(Math.random() * 256);
   return `rgb(${r}, ${g}, ${b})`;
 }
+
 function criarTarefa() {
   const texto = prompt("Digite o título da tarefa:");
   if (texto) {
     const cor = gerarCorAleatoria();
-    const quadro = document.createElement("div");
-    quadro.classList.add("task");
-    quadro.style.width = "260px";
-    quadro.style.height = "50px";
-    quadro.style.backgroundColor = cor;
+    const tarefa = document.createElement("div");
+    tarefa.classList.add("tarefa"); // renomear a classe para "tarefa"
+    tarefa.style.width = "260px";
+    tarefa.style.height = "50px";
+    tarefa.style.backgroundColor = cor;
 
     const botaoExcluir = document.createElement("button");
-    botaoExcluir.textContent = "Excluir quadro";
+    botaoExcluir.textContent = "Excluir tarefa";
     botaoExcluir.classList.add("btn-excluirTarefa")
     botaoExcluir.addEventListener("click", () => {
-      quadro.remove();
+      tarefa.remove();
       numTarefas--;
       tarefas = tarefas.filter((q) => q.titulo !== texto);
-      salvarTarefa();
+      salvarTarefas();
     });
 
-    quadro.appendChild(botaoExcluir);
+    tarefa.appendChild(botaoExcluir); // adicionar botão dentro da tarefa
 
     const titulo = document.createElement("h2");
     titulo.textContent = texto;
 
-    quadro.appendChild(titulo);
+    tarefa.appendChild(titulo); // adicionar título dentro da tarefa
 
-    const container = document.querySelector("#task-diária");
-    container.appendChild(quadro);
+    const container = document.querySelector("#task-diaria");
+    container.appendChild(tarefa);
 
-    quadros.push({ titulo: texto, cor: cor });
-    numQuadros++;
+    tarefas.push({ titulo: texto, cor: cor }); // adicionar tarefa ao array "tarefas"
+    numTarefas++;
 
-    salvarTarefa();
+    salvarTarefas();
   }
 }
 
-function renderizarQuadros() {
-  const container = document.querySelector("#criar-quadro");
+function renderizarTarefas() {
+  const container = document.querySelector("#task-diaria");
 
-  quadros.forEach((quadroInfo) => {
-    const quadro = document.createElement("div");
-    quadro.classList.add("quadro");
-    quadro.style.width = "210px";
-    quadro.style.height = "130px";
-    quadro.style.backgroundColor = quadroInfo.cor;
+  tarefas.forEach((tarefaInfo) => {
+    const tarefa = document.createElement("div");
+    tarefa.classList.add("tarefa");
+    tarefa.style.width = "260px";
+    tarefa.style.height = "50px";
+    tarefa.style.backgroundColor = tarefaInfo.cor;
 
     const botaoExcluir = document.createElement("button");
-    botaoExcluir.textContent = "Excluir quadro";
+    botaoExcluir.textContent = "Excluir tarefa";
     botaoExcluir.addEventListener("click", () => {
-      quadro.remove();
-      numQuadros--;
-      quadros = quadros.filter((q) => q !== quadroInfo);
-      salvarQuadros();
+      tarefa.remove();
+      numTarefas--;
+      tarefas = tarefas.filter((q) => q !== tarefaInfo);
+      salvarTarefas();
     });
 
     const titulo = document.createElement("h2");
-    titulo.textContent = quadroInfo.titulo;
+    titulo.textContent = tarefaInfo.titulo;
 
-    quadro.appendChild(botaoExcluir);
-    quadro.appendChild(titulo);
+    tarefa.appendChild(botaoExcluir);
+    tarefa.appendChild(titulo);
 
-    container.appendChild(quadro);
+    container.appendChild(tarefa);
   });
 }
 
-function salvarQuadros() {
-  const json = JSON.stringify(quadros);
-  localStorage.setItem("quadros", json);
+function salvarTarefas() {
+  const json = JSON.stringify(tarefas);
+  localStorage.setItem("tarefas", json);
 }
 
-function carregarQuadros() {
-  fetch('quadros.json')
-    .then((response) => response.json())
-    .then((data) => {
-      quadros = data;
-      numQuadros = quadros.length;
-      renderizarQuadros();
-    });
-
-  const quadrosJSON = localStorage.getItem("quadros");
-  if (quadrosJSON) {
-    quadros = JSON.parse(quadrosJSON);
-    numQuadros = quadros.length;
-    renderizarQuadros();
+function carregarTarefas() {
+  const tarefasJSON = localStorage.getItem("tarefas");
+  if (tarefasJSON) {
+    tarefas = JSON.parse(tarefasJSON);
+    numTarefas = tarefas.length;
+    renderizarTarefas();
   }
 }
 
-const botaoCriarQuadro = document.querySelector("#criar-novo-quadro");
-botaoCriarQuadro.addEventListener("click", criarQuadro);
+const botaoCriarTarefa = document.querySelector("#btn-addtask1");
+botaoCriarTarefa.addEventListener("click", criarTarefa);
 
-window.addEventListener("load", carregarQuadros);
+window.addEventListener("load", carregarTarefas);
 
-function excluirTodosQuadros() {
-  if (confirm("Tem certeza que deseja excluir todos os quadros?")) {
-    const quadros = document.querySelectorAll(".quadro");
-    for (let i = 0; i < quadros.length; i++) {
-      quadros[i].remove();
+
+function excluirTodasTarefas() {
+  if (confirm("Tem certeza que deseja excluir todas as tarefas?")) {
+    const tasks = document.querySelectorAll(".task");
+    for (let i = 0; i < tasks.length; i++) {
+      tasks[i].remove();
     }
-    numQuadros = 0;
-    quadros.length = 0; 
-    localStorage.clear();
+    numTarefas = 0;
+    tarefas.length = 0;
+    localStorage.removeItem("tarefas");
   }
 }
