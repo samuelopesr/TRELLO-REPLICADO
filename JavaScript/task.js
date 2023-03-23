@@ -1,5 +1,5 @@
-let quadros = [];
-let numQuadros = 0;
+let tarefas = [];
+let numTarefas = 0;
 
 function gerarCorAleatoria() {
   const r = Math.floor(Math.random() * 256);
@@ -7,23 +7,24 @@ function gerarCorAleatoria() {
   const b = Math.floor(Math.random() * 256);
   return `rgb(${r}, ${g}, ${b})`;
 }
-function criarQuadro() {
-  const texto = prompt("Digite o título do quadro:");
+function criarTarefa() {
+  const texto = prompt("Digite o título da tarefa:");
   if (texto) {
     const cor = gerarCorAleatoria();
     const quadro = document.createElement("div");
-    quadro.classList.add("quadro");
-    quadro.style.width = "210px";
-    quadro.style.height = "130px";
+    quadro.classList.add("task");
+    quadro.style.width = "260px";
+    quadro.style.height = "50px";
     quadro.style.backgroundColor = cor;
 
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "Excluir quadro";
+    botaoExcluir.classList.add("btn-excluirTarefa")
     botaoExcluir.addEventListener("click", () => {
       quadro.remove();
-      numQuadros--;
-      quadros = quadros.filter((q) => q.titulo !== texto);
-      salvarQuadros();
+      numTarefas--;
+      tarefas = tarefas.filter((q) => q.titulo !== texto);
+      salvarTarefa();
     });
 
     quadro.appendChild(botaoExcluir);
@@ -33,13 +34,13 @@ function criarQuadro() {
 
     quadro.appendChild(titulo);
 
-    const container = document.querySelector("#criar-quadro");
+    const container = document.querySelector("#task-diária");
     container.appendChild(quadro);
 
     quadros.push({ titulo: texto, cor: cor });
     numQuadros++;
 
-    salvarQuadros();
+    salvarTarefa();
   }
 }
 

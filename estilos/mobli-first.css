@@ -359,8 +359,8 @@ header{
 }
 #criar-quadro{
     display: flex;
-    height: 120px;
-    width: 100vw;
+    height: 400px;
+    width: 1250px;
 }
 #criar-quadro > #quadro-fundac{
     background-color: #89609E;
@@ -494,7 +494,8 @@ header{
 #excluir-todos-os-quadros{
     cursor: pointer;
     background: linear-gradient(45deg, rgb(68, 19, 19), rgb(197, 92, 92));
-    margin-top: 40px;
+    margin-top: 0px;
+    margin-bottom: 20px;
     height: 40px;
     width: 180px;
     border-radius: 4px;

@@ -524,4 +524,30 @@ header{
 #mostrar-mais > img{
     width: 24px;
 }
+#task{
+    display: flex;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+#task div{
+    margin: 20px;
+}
+#task > #task-diária{
+    display: flex;
+    background-color: #263458;
+    height: 20px;
+    width: 300px;
 
+}
+#task > #task-ongoing{
+    display: flex;
+    background-color: #365826;
+    height: 20px;
+    width: 300px;
+}
+#task > #task-concluida{
+    display: flex;
+    background-color: #582626;
+    height: 20px;
+    width: 300px;
+}
