@@ -47,6 +47,8 @@ function criarTarefa() {
 
 function renderizarTarefas() {
   const container = document.querySelector("#task-diaria");
+  container.style.display = "flex";
+  container.style.flexDirection = "column";
 
   tarefas.forEach((tarefaInfo) => {
     const tarefa = document.createElement("div");

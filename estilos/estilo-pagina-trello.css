@@ -536,15 +536,26 @@ header{
 }
 #task > #task-diaria{
     display: flex;
-    background-color: #263458;
-    height: 200px;
+    height: 600px;
     width: 300px;
 
 }
 button#btn-addtask1{
     cursor: pointer;
-    background-color: #131b31;
-    height: 30px;
+    color: #ffffff;
+    background: linear-gradient(45deg, #0d5d9ad8, #011754bc);
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.402);
+    
+
+}
+button#btn-addtask1:hover{
+    background: linear-gradient(45deg, #1285dda8, #20419a49);
+    
 }
 #task > #task-ongoing{
     display: flex;
