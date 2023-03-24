@@ -54,6 +54,8 @@ function criarQuadro() {
     quadro.classList.add("quadro");
     quadro.style.width = "210px";
     quadro.style.height = "130px";
+    quadro.style.marginLeft = "5px";
+   
     quadro.style.backgroundColor = cor;
 
     const botaoExcluir = document.createElement("button");
@@ -73,6 +75,7 @@ function criarQuadro() {
     quadro.appendChild(titulo);
 
     const container = document.querySelector("#criar-quadro");
+    container.style.flexWrap = "wrap";
     container.appendChild(quadro);
 
     quadros.push({ titulo: texto, cor: cor });
@@ -84,12 +87,14 @@ function criarQuadro() {
 
 function renderizarQuadros() {
   const container = document.querySelector("#criar-quadro");
+  container.style.flexWrap = "wrap";
 
   quadros.forEach((quadroInfo) => {
     const quadro = document.createElement("div");
     quadro.classList.add("quadro");
     quadro.style.width = "210px";
     quadro.style.height = "130px";
+    quadro.style.marginLeft = "5px";
     quadro.style.backgroundColor = quadroInfo.cor;
 
     const botaoExcluir = document.createElement("button");

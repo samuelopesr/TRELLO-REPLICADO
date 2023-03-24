@@ -29,17 +29,17 @@ function criarTarefa() {
       salvarTarefas();
     });
 
-    tarefa.appendChild(botaoExcluir); // adicionar botão dentro da tarefa
+    tarefa.appendChild(botaoExcluir);
 
     const titulo = document.createElement("h2");
     titulo.textContent = texto;
 
-    tarefa.appendChild(titulo); // adicionar título dentro da tarefa
+    tarefa.appendChild(titulo);
 
     const container = document.querySelector("#task-diaria");
     container.appendChild(tarefa);
 
-    tarefas.push({ titulo: texto, cor: cor }); // adicionar tarefa ao array "tarefas"
+    tarefas.push({ titulo: texto, cor: cor });
     numTarefas++;
 
     salvarTarefas();

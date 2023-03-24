@@ -550,6 +550,7 @@ button#btn-addtask1{
     color: #ffffff;
     background: linear-gradient(45deg, #0d5d9ad8, #011754);
     height: 40px;
+    width: 100%;
     border: none;
     border-radius: 5px;
     font-size: 1.1em;

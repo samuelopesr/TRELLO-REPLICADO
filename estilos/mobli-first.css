@@ -358,9 +358,10 @@ header{
     height: 30vh;
 }
 #criar-quadro{
+   
     display: flex;
-    height: 400px;
-    width: 1250px;
+    height: 290px;
+    width: 950px;
 }
 #criar-quadro > #quadro-fundac{
     background-color: #89609E;
@@ -404,10 +405,10 @@ header{
     display: none;
 }
 .quadro {
+    
     width: 210px;
     height: 130px;
     border-radius: 4px;
-    margin-left: 20px;
     background-color: #ccc;
     position: relative;
     overflow: hidden;
