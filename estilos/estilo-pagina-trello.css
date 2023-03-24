@@ -4,6 +4,14 @@
     font-family: "tommy";
     src: url(../font/tommy-soft/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf) format('opentype');
 }
+@font-face {
+    font-family: "kiona";
+    src: url(../font/kiona/Kiona-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: "keepcalm";
+    src: url(../font/keep-calm/KeepCalm-Medium.ttf) format('truetype');
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -545,6 +553,7 @@ header{
 }
 
 button#btn-addtask1{
+    font-family: "keepcalm";
     position: relative;
     cursor: pointer;
     color: #ffffff;
@@ -562,6 +571,7 @@ button#btn-addtask1{
     
 }
 button#btn-addtask2{
+    font-family: "keepcalm";
     position: relative;
     cursor: pointer;
     color: #ffffff;
@@ -578,6 +588,7 @@ button#btn-addtask2{
     display: block;
 }
 button#btn-addtask3{
+    font-family: "keepcalm";
     position: relative;
     cursor: pointer;
     color: #ffffff;
@@ -591,10 +602,35 @@ button#btn-addtask3{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.402);
 }
 #td{
+    font-family: "kiona";
     text-align: center;
     color: #191b20;
     padding: 10px;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    background: rgba(255, 255, 255, 0.493);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 6px );
+-webkit-backdrop-filter: blur( 6px );
+border-radius: 0px 0px 10px 10px;
+}
+#tog{
+    font-family: "kiona";
+    text-align: center;
+    color: #191b20;
+    padding: 10px;
+    font-size: 1.2em;
+    background: rgba(255, 255, 255, 0.493);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 6px );
+-webkit-backdrop-filter: blur( 6px );
+border-radius: 0px 0px 10px 10px;
+}
+#tc{
+    font-family: "kiona";
+    text-align: center;
+    color: #191b20;
+    padding: 10px;
+    font-size: 1.2em;
     background: rgba(255, 255, 255, 0.493);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 6px );
