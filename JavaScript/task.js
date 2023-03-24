@@ -13,13 +13,14 @@ function criarTarefa() {
   if (texto) {
     const cor = gerarCorAleatoria();
     const tarefa = document.createElement("div");
-    tarefa.classList.add("tarefa"); // renomear a classe para "tarefa"
-    tarefa.style.width = "260px";
+    tarefa.classList.add("tarefa");
+    tarefa.style.width = "100%";
     tarefa.style.height = "50px";
+    tarefa.style.position = "relative";
     tarefa.style.backgroundColor = cor;
 
     const botaoExcluir = document.createElement("button");
-    botaoExcluir.textContent = "Excluir tarefa";
+    botaoExcluir.textContent = "X";
     botaoExcluir.classList.add("btn-excluirTarefa")
     botaoExcluir.addEventListener("click", () => {
       tarefa.remove();
@@ -53,12 +54,13 @@ function renderizarTarefas() {
   tarefas.forEach((tarefaInfo) => {
     const tarefa = document.createElement("div");
     tarefa.classList.add("tarefa");
-    tarefa.style.width = "260px";
+    tarefa.style.width = "100%";
     tarefa.style.height = "50px";
+    tarefa.style.position = "relative"
     tarefa.style.backgroundColor = tarefaInfo.cor;
 
     const botaoExcluir = document.createElement("button");
-    botaoExcluir.textContent = "Excluir tarefa";
+    botaoExcluir.textContent = "X";
     botaoExcluir.addEventListener("click", () => {
       tarefa.remove();
       numTarefas--;

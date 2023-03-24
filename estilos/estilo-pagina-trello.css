@@ -526,60 +526,80 @@ header{
     width: 24px;
 }
 #task{
-    display: flex;
+   
+    height: 400px;
+    display:flex;
+    position: relative;
     margin-top: 80px;
     margin-left: 20px;
 }
 
 #task div{
     margin: 10px;
+    height: 350px;
+    width: 300px;
+    
 }
 #task > #task-diaria{
-    display: flex;
-    height: 600px;
-    width: 300px;
-
+    display: block;
 }
+
 button#btn-addtask1{
+    position: relative;
     cursor: pointer;
     color: #ffffff;
-    background: linear-gradient(45deg, #0d5d9ad8, #011754bc);
+    background: linear-gradient(45deg, #0d5d9ad8, #011754);
     height: 40px;
     border: none;
     border-radius: 5px;
     font-size: 1.1em;
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.402);
-    
-
-}
-button#btn-addtask1:hover{
-    background: linear-gradient(45deg, #1285dda8, #20419a49);
-    
 }
 #task > #task-ongoing{
-    display: flex;
-    background-color: #365826;
-    height: 20px;
-    width: 300px;
+    display: block;
+    
+}
+button#btn-addtask2{
+    position: relative;
+    cursor: pointer;
+    color: #ffffff;
+    background: linear-gradient(45deg, #9a300dd8, #540101);
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.402);
 }
 #task > #task-concluida{
-    display: flex;
-    background-color: #582626;
-    height: 20px;
-    width: 300px;
+    display: block;
+}
+button#btn-addtask3{
+    position: relative;
+    cursor: pointer;
+    color: #ffffff;
+    background: linear-gradient(45deg, #0d9a69d8, #015405);
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.402);
 }
 .tarefa {
-    width: 260px;
+    width: 100%;
     height: 50px;
     border-radius: 4px;
-    margin-left: 20px;
     background-color: #ccc;
     position: relative;
     overflow: hidden;
   }
   
   .tarefa h2 {
+    font-size: 0.9em;
     position: absolute;
     top: 50%;
     left: 50%;
