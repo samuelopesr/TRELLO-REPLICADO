@@ -8,10 +8,12 @@ function gerarCorAleatoria() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-function criarTarefa() {
+function criarTarefa(containerId) {
   const texto = prompt("Digite o título da tarefa:");
   if (texto) {
     const cor = gerarCorAleatoria();
+    const container = document.querySelector("#" + containerId);
+
     const tarefa = document.createElement("div");
     tarefa.classList.add("tarefa");
     tarefa.style.width = "100%";
@@ -21,11 +23,12 @@ function criarTarefa() {
 
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "X";
-    botaoExcluir.classList.add("btn-excluirTarefa")
+    botaoExcluir.classList.add("btn-excluirTarefa");
     botaoExcluir.addEventListener("click", () => {
       tarefa.remove();
       numTarefas--;
-      tarefas = tarefas.filter((q) => q.titulo !== texto);
+      const index = tarefas.indexOf(tarefaInfo);
+      tarefas.splice(index, 1);
       salvarTarefas();
     });
 
@@ -36,76 +39,113 @@ function criarTarefa() {
 
     tarefa.appendChild(titulo);
 
-    const container = document.querySelector("#task-diaria");
     container.appendChild(tarefa);
 
-    tarefas.push({ titulo: texto, cor: cor });
+    const id = Date.now().toString(); 
+
+    tarefas.push({ id, titulo: texto, cor: cor, div: container });
     numTarefas++;
 
     salvarTarefas();
+    carregarTarefas();
   }
 }
 
+const botaoCriarTarefaDiaria = document.querySelector("#btn-addtask1");
+botaoCriarTarefaDiaria.addEventListener("click", () => {
+  criarTarefa("task-diaria");
+});
+
+const botaoCriarTarefaOngoing = document.querySelector("#btn-addtask2");
+botaoCriarTarefaOngoing.addEventListener("click", () => {
+  criarTarefa("task-ongoing");
+});
+
+const botaoCriarTarefaConcluida = document.querySelector("#btn-addtask3");
+botaoCriarTarefaConcluida.addEventListener("click", () => {
+  criarTarefa("task-concluida");
+});
+
 function renderizarTarefas() {
-  const container = document.querySelector("#task-diaria");
-  container.style.display = "flex";
-  container.style.flexDirection = "column";
+  const containers = document.querySelectorAll(".task-container");
 
-  tarefas.forEach((tarefaInfo) => {
-    const tarefa = document.createElement("div");
-    tarefa.classList.add("tarefa");
-    tarefa.style.width = "100%";
-    tarefa.style.height = "50px";
-    tarefa.style.position = "relative"
-    tarefa.style.backgroundColor = tarefaInfo.cor;
+  containers.forEach((container) => {
+    container.innerHTML = "";
+    container.style.display = "flex";
+    container.style.flexDirection = "column";
 
-    const botaoExcluir = document.createElement("button");
-    botaoExcluir.textContent = "X";
-    botaoExcluir.addEventListener("click", () => {
-      tarefa.remove();
-      numTarefas--;
-      tarefas = tarefas.filter((q) => q !== tarefaInfo);
-      salvarTarefas();
+    tarefas.forEach((tarefaInfo) => {
+      if (tarefaInfo.div === container.id) {
+        const tarefa = document.createElement("div");
+        tarefa.classList.add("tarefa");
+        tarefa.style.width = "100%";
+        tarefa.style.height = "50px";
+        tarefa.style.position = "relative";
+        tarefa.style.backgroundColor = tarefaInfo.cor;
+
+        const botaoExcluir = document.createElement("button");
+        botaoExcluir.textContent = "X";
+        botaoExcluir.addEventListener("click", () => {
+          tarefa.remove();
+          numTarefas--;
+          tarefas = tarefas.filter((tarefa) => tarefa.id !== tarefaInfo.id);
+          console.log(`Tarefa com id ${tarefaInfo.id} removida com sucesso!`);
+          console.log(`Número de tarefas restantes: ${numTarefas}`);
+        });
+
+        const titulo = document.createElement("h2");
+        titulo.textContent = tarefaInfo.titulo;
+
+        tarefa.appendChild(botaoExcluir);
+        tarefa.appendChild(titulo);
+
+        container.appendChild(tarefa);
+      }
     });
-
-    const titulo = document.createElement("h2");
-    titulo.textContent = tarefaInfo.titulo;
-
-    tarefa.appendChild(botaoExcluir);
-    tarefa.appendChild(titulo);
-
-    container.appendChild(tarefa);
   });
 }
+
+
 
 function salvarTarefas() {
   const json = JSON.stringify(tarefas);
   localStorage.setItem("tarefas", json);
+  console.log("Tarefas salvas no localStorage: ", json);
+  carregarTarefas();
 }
+
 
 function carregarTarefas() {
   const tarefasJSON = localStorage.getItem("tarefas");
   if (tarefasJSON) {
-    tarefas = JSON.parse(tarefasJSON);
-    numTarefas = tarefas.length;
-    renderizarTarefas();
-  }
-}
-
-const botaoCriarTarefa = document.querySelector("#btn-addtask1");
-botaoCriarTarefa.addEventListener("click", criarTarefa);
-
-window.addEventListener("load", carregarTarefas);
-
-
-function excluirTodasTarefas() {
-  if (confirm("Tem certeza que deseja excluir todas as tarefas?")) {
-    const tasks = document.querySelectorAll(".task");
-    for (let i = 0; i < tasks.length; i++) {
-      tasks[i].remove();
+    try {
+      tarefas = JSON.parse(tarefasJSON);
+      numTarefas = tarefas.length;
+      console.log(`Tarefas carregadas do localStorage: ${tarefasJSON}`);
+    } catch (error) {
+      console.error("Erro ao carregar tarefas do localStorage:", error);
     }
-    numTarefas = 0;
-    tarefas.length = 0;
-    localStorage.removeItem("tarefas");
   }
 }
+
+
+window.addEventListener("load", () => {
+  carregarTarefas();
+  renderizarTarefas();
+});
+
+  
+  function excluirTodasTarefas() {
+  if (confirm("Tem certeza que deseja excluir todas as tarefas?")) {
+  const tasks = document.querySelectorAll(".tarefa");
+  for (let i = 0; i < tasks.length; i++) {
+  tasks[i].remove();
+  }
+  numTarefas = 0;
+  tarefas.length = 0;
+  localStorage.removeItem("tarefas");
+  }}
+
+  window.addEventListener("beforeunload", function() {
+    salvarTarefas();
+  });
