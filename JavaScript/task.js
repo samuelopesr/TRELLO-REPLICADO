@@ -18,7 +18,6 @@ function criarTarefa(containerId) {
     tarefa.classList.add("tarefa");
     tarefa.style.width = "100%";
     tarefa.style.height = "50px";
-    tarefa.style.position = "relative";
     tarefa.style.backgroundColor = cor;
 
     const botaoExcluir = document.createElement("button");
@@ -80,7 +79,6 @@ function renderizarTarefas() {
         tarefa.classList.add("tarefa");
         tarefa.style.width = "100%";
         tarefa.style.height = "50px";
-        tarefa.style.position = "relative";
         tarefa.style.backgroundColor = tarefaInfo.cor;
 
         const botaoExcluir = document.createElement("button");
@@ -89,8 +87,8 @@ function renderizarTarefas() {
           tarefa.remove();
           numTarefas--;
           tarefas = tarefas.filter((tarefa) => tarefa.id !== tarefaInfo.id);
-          console.log(`Tarefa com id ${tarefaInfo.id} removida com sucesso!`);
-          console.log(`Número de tarefas restantes: ${numTarefas}`);
+          console.debug(`Tarefa com id ${tarefaInfo.id} removida com sucesso!`);
+          console.debug(`Número de tarefas restantes: ${numTarefas}`);
         });
 
         const titulo = document.createElement("h2");
@@ -110,7 +108,7 @@ function renderizarTarefas() {
 function salvarTarefas() {
   const json = JSON.stringify(tarefas);
   localStorage.setItem("tarefas", json);
-  console.log("Tarefas salvas no localStorage: ", json);
+  console.debug("Tarefas salvas no localStorage: ", json);
   carregarTarefas();
 }
 
@@ -121,15 +119,17 @@ function carregarTarefas() {
     try {
       tarefas = JSON.parse(tarefasJSON);
       numTarefas = tarefas.length;
-      console.log(`Tarefas carregadas do localStorage: ${tarefasJSON}`);
+      console.debug(`Tarefas carregadas do localStorage: ${tarefasJSON}`);
     } catch (error) {
       console.error("Erro ao carregar tarefas do localStorage:", error);
     }
   }
+  renderizarTarefas();
 }
 
 
-window.addEventListener("load", () => {
+
+document.addEventListener("DOMContentLoaded", () => {
   carregarTarefas();
   renderizarTarefas();
 });
