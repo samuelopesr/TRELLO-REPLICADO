@@ -140,3 +140,18 @@ function salvarTarefas() {
   console.debug("Tarefas salvas no localStorage: ", json);
   carregarTarefas();
 }
+
+function excluirTodasTarefas() {
+  if (confirm("Tem certeza que deseja excluir todas as tarefas?")) {
+  const tasks = document.querySelectorAll(".tarefa");
+  for (let i = 0; i < tasks.length; i++) {
+  tasks[i].remove();
+  numTarefas = 0;
+  tarefas.length = 0;
+  localStorage.removeItem("tarefas");
+  }}
+
+  window.addEventListener("beforeunload", function() {
+    salvarTarefas();
+  });
+}
