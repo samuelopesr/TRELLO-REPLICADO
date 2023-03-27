@@ -672,10 +672,12 @@ border-radius: 0px 0px 10px 10px;
   .btnEditar{
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    left: 10px;
+    width: 50px;
     background-color: green;
     color: white;
     border: 1px solid black;
     padding: 5px;
     cursor: pointer;
+    
   }
