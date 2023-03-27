@@ -1,4 +1,4 @@
-let tarefas = [];
+let tarefas = {};
 let numTarefas = 0;
 
 function gerarCorAleatoria() {
@@ -71,8 +71,8 @@ function criarTarefa(containerId) {
     botaoExcluir.addEventListener("click", () => {
       tarefa.remove();
       numTarefas--;
-      const index = tarefas.indexOf(tarefaInfo);
-      tarefas.splice(index, 1);
+      const id = tarefa.dataset.id;
+      delete tarefas[id];
       salvarTarefas();
     });
 
@@ -93,7 +93,7 @@ function criarTarefa(containerId) {
 
     const id = Date.now().toString(); 
 
-    tarefas.push({ id, titulo: texto, cor: cor, div: container });
+    tarefas[id] = { id, titulo: texto, cor: cor, div: containerId };
     numTarefas++;
 
     salvarTarefas();
@@ -124,79 +124,50 @@ function renderizarTarefas() {
     container.style.display = "flex";
     container.style.flexDirection = "column";
 
-    tarefas.forEach((tarefaInfo) => {
+    Object.values(tarefas).forEach((tarefaInfo) => {
       if (tarefaInfo.div === container.id) {
         const tarefa = document.createElement("div");
         tarefa.classList.add("tarefa");
         tarefa.style.width = "100%";
         tarefa.style.height = "50px";
         tarefa.style.backgroundColor = tarefaInfo.cor;
+        tarefa.dataset.id = tarefaInfo.id;
 
         const botaoExcluir = document.createElement("button");
         botaoExcluir.textContent = "X";
         botaoExcluir.addEventListener("click", () => {
           tarefa.remove();
           numTarefas--;
-          tarefas = tarefas.filter((tarefa) => tarefa.id !== tarefaInfo.id);
-          console.debug(`Tarefa com id ${tarefaInfo.id} removida com sucesso!`);
+          const id = tarefa.dataset.id;
+          delete tarefas[id];
+          console.debug(`Tarefa com id ${id} removida com sucesso!`);
           console.debug(`Número de tarefas restantes: ${numTarefas}`);
         });
 
-        const titulo = document.createElement("h2");
-        titulo.textContent = tarefaInfo.titulo;
+        const titulo = document.createElement("titulo.textContent = tarefaInfo.titulo;")
 
         tarefa.appendChild(botaoExcluir);
         tarefa.appendChild(titulo);
-
+    
         container.appendChild(tarefa);
       }
     });
+
   });
 }
-
-
 
 function salvarTarefas() {
-  const json = JSON.stringify(tarefas);
-  localStorage.setItem("tarefas", json);
-  console.debug("Tarefas salvas no localStorage: ", json);
-  carregarTarefas();
-}
-
-
-function carregarTarefas() {
-  const tarefasJSON = localStorage.getItem("tarefas");
-  if (tarefasJSON) {
-    try {
-      tarefas = JSON.parse(tarefasJSON);
-      numTarefas = tarefas.length;
-      console.debug(`Tarefas carregadas do localStorage: ${tarefasJSON}`);
-    } catch (error) {
-      console.error("Erro ao carregar tarefas do localStorage:", error);
-    }
+  localStorage.setItem("tarefas", JSON.stringify(tarefas));
   }
-  renderizarTarefas();
-}
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  carregarTarefas();
-  renderizarTarefas();
-});
-
   
-  function excluirTodasTarefas() {
-  if (confirm("Tem certeza que deseja excluir todas as tarefas?")) {
-  const tasks = document.querySelectorAll(".tarefa");
-  for (let i = 0; i < tasks.length; i++) {
-  tasks[i].remove();
+  function carregarTarefas() {
+  const tarefasSalvas = localStorage.getItem("tarefas");
+  
+  if (tarefasSalvas) {
+  tarefas = JSON.parse(tarefasSalvas);
+  numTarefas = Object.keys(tarefas).length;
+  renderizarTarefas();
   }
-  numTarefas = 0;
-  tarefas.length = 0;
-  localStorage.removeItem("tarefas");
-  }}
-
-  window.addEventListener("beforeunload", function() {
-    salvarTarefas();
-  });
+  }
+  
+  carregarTarefas();
