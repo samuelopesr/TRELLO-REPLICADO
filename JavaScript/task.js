@@ -8,51 +8,6 @@ function gerarCorAleatoria() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-function mostrarModal() {
-  const modalContainer = document.querySelector("#modal-container");
-  modalContainer.innerHTML = `
-    <div class="modal">
-      <input type="text" id="texto-editar" />
-      <button id="btn-salvar">Salvar</button>
-      <button id="btn-cancelar">Cancelar</button>
-    </div>
-  `;
-  const inputEditar = document.querySelector("#texto-editar");
-  const btnSalvar = document.querySelector("#btn-salvar");
-  const btnCancelar = document.querySelector("#btn-cancelar");
-
-  btnSalvar.addEventListener("click", () => {
-    const novoTexto = inputEditar.value;
-    const tarefa = document.querySelector(".tarefa.editando");
-    tarefa.querySelector("h2").textContent = novoTexto;
-    const tarefaInfo = tarefas.find((t) => t.id === tarefa.id);
-    tarefaInfo.titulo = novoTexto;
-    salvarTarefas();
-    fecharModal();
-  });
-
-  btnCancelar.addEventListener("click", () => {
-    fecharModal();
-  });
-
-  const fecharModal = () => {
-    modalContainer.innerHTML = "";
-    document.body.classList.remove("modal-aberto");
-  };
-
-  inputEditar.value = textoAntigo;
-  document.body.classList.add("modal-aberto");
-  inputEditar.focus();
-}
-
-function editarTarefa(tarefa) {
-  const textoAntigo = tarefa.querySelector("h2").textContent;
-
-  tarefa.classList.add("editando");
-  mostrarModal(textoAntigo);
-}
-
-
 function criarTarefa(containerId) {
   const texto = prompt("Digite o título da tarefa:");
   if (texto) {
@@ -75,14 +30,16 @@ function criarTarefa(containerId) {
       delete tarefas[id];
       salvarTarefas();
     });
+    tarefa.appendChild(botaoExcluir);
 
-    const botaoEditar =  document.createElement("button");
-    botaoEditar.textContent = "E";
-    botaoEditar.classList.add("btn-editarTarefa");
+    const botaoEditar = document.createElement("button");
+    botaoEditar.textContent = "Editar";
+    botaoEditar.classList.add("btnEditar");
     botaoEditar.addEventListener("click", () => {
+      console.log("Botão clicado")
     })
 
-    tarefa.appendChild(botaoExcluir);
+    tarefa.appendChild(botaoEditar);
 
     const titulo = document.createElement("h2");
     titulo.textContent = texto;
@@ -116,6 +73,26 @@ botaoCriarTarefaConcluida.addEventListener("click", () => {
   criarTarefa("task-concluida");
 });
 
+function carregarTarefas() {
+  const tarefasJSON = localStorage.getItem("tarefas");
+  if (tarefasJSON) {
+    try {
+      tarefas = JSON.parse(tarefasJSON);
+      numTarefas = tarefas.length;
+      console.debug(`Tarefas carregadas do localStorage: ${tarefasJSON}`);
+    } catch (error) {
+      console.error("Erro ao carregar tarefas do localStorage:", error);
+    }
+  localStorage.setItem("tarefas", JSON.stringify(tarefas));
+  }
+  renderizarTarefas();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  carregarTarefas();
+  renderizarTarefas();
+});
+
 function renderizarTarefas() {
   const containers = document.querySelectorAll(".task-container");
 
@@ -144,6 +121,7 @@ function renderizarTarefas() {
           console.debug(`Número de tarefas restantes: ${numTarefas}`);
         });
 
+
         const titulo = document.createElement("titulo.textContent = tarefaInfo.titulo;")
 
         tarefa.appendChild(botaoExcluir);
@@ -157,17 +135,8 @@ function renderizarTarefas() {
 }
 
 function salvarTarefas() {
-  localStorage.setItem("tarefas", JSON.stringify(tarefas));
-  }
-  
-  function carregarTarefas() {
-  const tarefasSalvas = localStorage.getItem("tarefas");
-  
-  if (tarefasSalvas) {
-  tarefas = JSON.parse(tarefasSalvas);
-  numTarefas = Object.keys(tarefas).length;
-  renderizarTarefas();
-  }
-  }
-  
+  const json = JSON.stringify(tarefas);
+  localStorage.setItem("tarefas", json);
+  console.debug("Tarefas salvas no localStorage: ", json);
   carregarTarefas();
+}
