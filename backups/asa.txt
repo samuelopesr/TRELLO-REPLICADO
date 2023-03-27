@@ -1,0 +1,10 @@
+Adicionar um botão de "Editar" em cada tarefa criada
+Quando o botão "Editar" for clicado, abrir um modal com o título da tarefa atual e um input de texto para o usuário editar o título da tarefa
+Quando o usuário clicar em "Salvar" no modal, atualizar o título da tarefa e salvar as informações no array de tarefas
+Adicionar um modal para cada tarefa criada
+Para adicionar a funcionalidade de criar um modal para cada tarefa, vamos fazer o seguinte:
+
+Quando uma nova tarefa for criada, criar um novo modal para essa tarefa
+Esse modal deve ser adicionado ao final do body e estar no centro da página
+O modal deve ter um input de texto ou qualquer outra funcionalidade em que o usuário possa escrever livremente
+Para evitar repetição de código, vamos criar uma nova função criarModal que irá criar um modal para uma tarefa específica. Essa função será chamada dentro da função criarTarefa sempre que uma nova tarefa for criada.
