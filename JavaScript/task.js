@@ -32,13 +32,38 @@ function criarTarefa(containerId) {
     });
     tarefa.appendChild(botaoExcluir);
 
+    const divDentro =  document.createElement("div");
+    divDentro.style.height = "450px";
+    divDentro.style.width = "450px";
+
     const botaoEditar = document.createElement("button");
     botaoEditar.textContent = "Editar";
     botaoEditar.classList.add("btnEditar");
     botaoEditar.addEventListener("click", () => {
-      console.log("Botão clicado")
-    })
+      const titulo = tarefa.querySelector("h2");
+      const input = document.createElement("input");
+      input.type = "text";
+      input.style.width = "350px";
+      input.style.height = "350px";
+      input.value = titulo.textContent;
+      input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          titulo.textContent = input.value;
+          tarefas[tarefa.dataset.id].titulo = input.value;
+          salvarTarefas();
+        }
+      });
+      input.addEventListener("blur", () => {
+        titulo.textContent = input.value;
+        tarefas[tarefa.dataset.id].titulo = input.value;
+        salvarTarefas();
+      });
+      tarefa.replaceChild(input, titulo);
+      input.focus();
+    });
 
+    
+  
     tarefa.appendChild(botaoEditar);
 
     const titulo = document.createElement("h2");
