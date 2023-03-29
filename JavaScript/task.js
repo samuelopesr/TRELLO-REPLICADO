@@ -10,35 +10,7 @@ function gerarCorAleatoria() {
 
 
 
-const botaoEditar = document.createElement("button");
-botaoEditar.textContent = "Editar";
-botaoEditar.classList.add("btnEditar");
-botaoEditar.addEventListener("click", () => {
-  const divCentro = document.createElement("div");
-  divCentro.textContent = "Div teste";
-  divCentro.style.background = "#19233d9a";
-  divCentro.style.boxShadow = "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )";
-  divCentro.style.backdropFilter = "blur( 10px )";
-  
-  divCentro.style.border = "border: 1px solid rgba( 255, 255, 255, 0.18 )";
-  divCentro.style.borderRadius = "10px"
-  divCentro.style.position = "fixed";
-  divCentro.style.height = "90vh";
-  divCentro.style.width = "80vw";
-  divCentro.style.top = "50%";
-  divCentro.style.left = "50%";
-  divCentro.style.transform = "translate(-50%, -50%)";
 
-  const btnFechar =  document.createElement("button");
-  btnFechar.textContent = "Fechar";
-  btnFechar.addEventListener("click", () =>{
-      divCentro.style.display = "none";
-  })
-
-  divCentro.appendChild(btnFechar);
-
-  document.body.appendChild(divCentro);
-})
 
 function criarTarefa(containerId) {
   const texto = prompt("Digite o título da tarefa:");
@@ -63,7 +35,43 @@ function criarTarefa(containerId) {
       salvarTarefas();
     });
 
+    const botaoEditar = document.createElement("button");
+botaoEditar.textContent = "Editar";
+botaoEditar.classList.add("btnEditar");
+botaoEditar.addEventListener("click", () => {
 
+  const divCentro = document.createElement("div");
+  divCentro.style.background = "#19233d9a";
+  divCentro.style.boxShadow = "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )";
+  divCentro.style.backdropFilter = "blur( 10px )";
+  
+  divCentro.style.border = "border: 1px solid rgba( 255, 255, 255, 0.18 )";
+  divCentro.style.borderRadius = "10px"
+  divCentro.style.position = "fixed";
+  divCentro.style.height = "90vh";
+  divCentro.style.width = "80vw";
+  divCentro.style.top = "50%";
+  divCentro.style.left = "50%";
+  divCentro.style.transform = "translate(-50%, -50%)";
+
+  const titulo = document.createElement("h1");
+  titulo.textContent = "Personalize suas tarefas";
+  titulo.style.textAlign = "center";
+  titulo.style.fontSize = "1.6em";
+  titulo.style.color = "white";
+
+  const btnFechar =  document.createElement("button");
+  btnFechar.textContent = "X";
+  btnFechar.style.float = "right";
+  btnFechar.style.margin = "10px";
+  btnFechar.addEventListener("click", () =>{
+      divCentro.style.display = "none";
+  })
+
+  divCentro.appendChild(btnFechar);
+
+  document.body.appendChild(divCentro);
+});
 
     tarefa.appendChild(botaoExcluir);
  
