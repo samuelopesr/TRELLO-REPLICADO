@@ -8,6 +8,22 @@ function gerarCorAleatoria() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
+
+
+const botaoEditar = document.createElement("button");
+botaoEditar.textContent = "Editar";
+botaoEditar.classList.add("btnEditar");
+botaoEditar.addEventListener("click", () => {
+  const divCentro = document.createElement("div");
+  divCentro.textContent = "Div teste";
+  divCentro.style.backgroundColor = "red";
+  divCentro.style.position = "fixed";
+  divCentro.style.top = "50%";
+  divCentro.style.left = "50%";
+  divCentro.style.transform = "translate(-50%, -50%)";
+  document.body.appendChild(divCentro);
+})
+
 function criarTarefa(containerId) {
   const texto = prompt("Digite o título da tarefa:");
   if (texto) {
@@ -30,40 +46,11 @@ function criarTarefa(containerId) {
       delete tarefas[id];
       salvarTarefas();
     });
+
+
+
     tarefa.appendChild(botaoExcluir);
-
-    const divDentro =  document.createElement("div");
-    divDentro.style.height = "450px";
-    divDentro.style.width = "450px";
-
-    const botaoEditar = document.createElement("button");
-    botaoEditar.textContent = "Editar";
-    botaoEditar.classList.add("btnEditar");
-    botaoEditar.addEventListener("click", () => {
-      const titulo = tarefa.querySelector("h2");
-      const input = document.createElement("input");
-      input.type = "text";
-      input.style.width = "350px";
-      input.style.height = "350px";
-      input.value = titulo.textContent;
-      input.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-          titulo.textContent = input.value;
-          tarefas[tarefa.dataset.id].titulo = input.value;
-          salvarTarefas();
-        }
-      });
-      input.addEventListener("blur", () => {
-        titulo.textContent = input.value;
-        tarefas[tarefa.dataset.id].titulo = input.value;
-        salvarTarefas();
-      });
-      tarefa.replaceChild(input, titulo);
-      input.focus();
-    });
-
-    
-  
+ 
     tarefa.appendChild(botaoEditar);
 
     const titulo = document.createElement("h2");
@@ -147,7 +134,8 @@ function renderizarTarefas() {
         });
 
 
-        const titulo = document.createElement("titulo.textContent = tarefaInfo.titulo;")
+        const titulo = document.createElement("h2");
+        titulo.textContent = tarefaInfo.titulo;
 
         tarefa.appendChild(botaoExcluir);
         tarefa.appendChild(titulo);
