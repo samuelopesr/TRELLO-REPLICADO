@@ -18,9 +18,20 @@ botaoEditar.addEventListener("click", () => {
   divCentro.textContent = "Div teste";
   divCentro.style.backgroundColor = "red";
   divCentro.style.position = "fixed";
+  divCentro.style.height = "800px";
+  divCentro.style.width = "800px";
   divCentro.style.top = "50%";
   divCentro.style.left = "50%";
   divCentro.style.transform = "translate(-50%, -50%)";
+
+  const btnFechar =  document.createElement("button");
+  btnFechar.textContent = "Fechar";
+  btnFechar.addEventListener("click", () =>{
+      divCentro.style.display = "none";
+  })
+
+  divCentro.appendChild(btnFechar);
+
   document.body.appendChild(divCentro);
 })
 
