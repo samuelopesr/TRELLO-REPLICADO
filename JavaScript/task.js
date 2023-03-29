@@ -54,11 +54,22 @@ botaoEditar.addEventListener("click", () => {
   divCentro.style.left = "50%";
   divCentro.style.transform = "translate(-50%, -50%)";
 
+  const inputTexto = document.createElement("input")
+  inputTexto.type = "text";
+  inputTexto.style.width = "60vw";
+  inputTexto.style.height = "60vh";
+  inputTexto.style.position = "absolute";
+  inputTexto.style.top = "50%";
+  inputTexto.style.left = "50%";
+  inputTexto.style.transform = "translate(-50%, -50%)";
+
+
   const titulo = document.createElement("h1");
   titulo.textContent = "Personalize suas tarefas";
   titulo.style.textAlign = "center";
   titulo.style.fontSize = "1.6em";
   titulo.style.color = "white";
+  titulo.style.marginTop = "20px";
 
   const btnFechar =  document.createElement("button");
   btnFechar.textContent = "X";
@@ -67,8 +78,12 @@ botaoEditar.addEventListener("click", () => {
   btnFechar.addEventListener("click", () =>{
       divCentro.style.display = "none";
   })
+  
+  divCentro.appendChild(inputTexto);
 
   divCentro.appendChild(btnFechar);
+
+  divCentro.appendChild(titulo);
 
   document.body.appendChild(divCentro);
 });
