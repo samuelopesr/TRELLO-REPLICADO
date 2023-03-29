@@ -16,10 +16,15 @@ botaoEditar.classList.add("btnEditar");
 botaoEditar.addEventListener("click", () => {
   const divCentro = document.createElement("div");
   divCentro.textContent = "Div teste";
-  divCentro.style.backgroundColor = "red";
+  divCentro.style.background = "#19233d9a";
+  divCentro.style.boxShadow = "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )";
+  divCentro.style.backdropFilter = "blur( 10px )";
+  
+  divCentro.style.border = "border: 1px solid rgba( 255, 255, 255, 0.18 )";
+  divCentro.style.borderRadius = "10px"
   divCentro.style.position = "fixed";
-  divCentro.style.height = "800px";
-  divCentro.style.width = "800px";
+  divCentro.style.height = "90vh";
+  divCentro.style.width = "80vw";
   divCentro.style.top = "50%";
   divCentro.style.left = "50%";
   divCentro.style.transform = "translate(-50%, -50%)";
