@@ -8,6 +8,10 @@ function gerarCorAleatoria() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
+
+
+
+
 function criarTarefa(containerId) {
   const texto = prompt("Digite o título da tarefa:");
   if (texto) {
@@ -30,26 +34,47 @@ function criarTarefa(containerId) {
       delete tarefas[id];
       salvarTarefas();
     });
-    tarefa.appendChild(botaoExcluir);
-
-    const divDentro =  document.createElement("div");
-    divDentro.style.height = "450px";
-    divDentro.style.width = "450px";
 
     const botaoEditar = document.createElement("button");
-    botaoEditar.textContent = "Editar";
-    botaoEditar.classList.add("btnEditar");
-    botaoEditar.addEventListener("click", () => {
-      const titulo = tarefa.querySelector("h2");
-      const input = document.createElement("input");
-      input.type = "text";
-      input.style.width = "350px";
-      input.style.height = "350px";
-      
-    });
+botaoEditar.textContent = "Editar";
+botaoEditar.classList.add("btnEditar");
+botaoEditar.addEventListener("click", () => {
 
-    
+  const divCentro = document.createElement("div");
+  divCentro.style.background = "#19233d9a";
+  divCentro.style.boxShadow = "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )";
+  divCentro.style.backdropFilter = "blur( 10px )";
   
+  divCentro.style.border = "border: 1px solid rgba( 255, 255, 255, 0.18 )";
+  divCentro.style.borderRadius = "10px"
+  divCentro.style.position = "fixed";
+  divCentro.style.height = "90vh";
+  divCentro.style.width = "80vw";
+  divCentro.style.top = "50%";
+  divCentro.style.left = "50%";
+  divCentro.style.transform = "translate(-50%, -50%)";
+
+  const titulo = document.createElement("h1");
+  titulo.textContent = "Personalize suas tarefas";
+  titulo.style.textAlign = "center";
+  titulo.style.fontSize = "1.6em";
+  titulo.style.color = "white";
+
+  const btnFechar =  document.createElement("button");
+  btnFechar.textContent = "X";
+  btnFechar.style.float = "right";
+  btnFechar.style.margin = "10px";
+  btnFechar.addEventListener("click", () =>{
+      divCentro.style.display = "none";
+  })
+
+  divCentro.appendChild(btnFechar);
+
+  document.body.appendChild(divCentro);
+});
+
+    tarefa.appendChild(botaoExcluir);
+ 
     tarefa.appendChild(botaoEditar);
 
     const titulo = document.createElement("h2");
@@ -133,7 +158,8 @@ function renderizarTarefas() {
         });
 
 
-        const titulo = document.createElement("titulo.textContent = tarefaInfo.titulo;")
+        const titulo = document.createElement("h2");
+        titulo.textContent = tarefaInfo.titulo;
 
         tarefa.appendChild(botaoExcluir);
         tarefa.appendChild(titulo);
