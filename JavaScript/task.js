@@ -1,5 +1,6 @@
 let tarefas = {};
 let numTarefas = 0;
+let divEdicaoAberta = null;
 
 function gerarCorAleatoria() {
   const r = Math.floor(Math.random() * 256);
@@ -20,10 +21,6 @@ function criarTarefa(containerId) {
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
 
-    // const atividades = document.createElement("div");
-    // atividades.style.display = "none";
-    // atividades.style.height = "none";
-    // atividades.style.width = "75vw";
 
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "X";
@@ -41,6 +38,10 @@ function criarTarefa(containerId) {
     botaoEditar.classList.add("btnEditar");
     botaoEditar.addEventListener("click", () => {
 
+      if (divEdicaoAberta) {
+        return;
+      }
+
   const divCentro = document.createElement("div");
   divCentro.style.background = "#19233d9a";
   divCentro.style.boxShadow = "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )";
@@ -55,33 +56,17 @@ function criarTarefa(containerId) {
   divCentro.style.left = "50%";
   divCentro.style.transform = "translate(-50%, -50%)";
 
-  // const inputTexto = document.createElement("textarea")
-  // inputTexto.style.display = "flex";
-  // inputTexto.style.width = "900px";
-  // inputTexto.style.height = "95px";
-  // inputTexto.style.resize = "none";
-  // inputTexto.style.marginLeft = "45px";
-  // inputTexto.addEventListener("input", () => {
-  //   inputTexto.style.height = "auto";
-  //   inputTexto.style.height = `${inputTexto.scrollHeight}px`;
-  // });
-  // inputTexto.addEventListener("keydown", (event) => {
-  //   if (event.key === "Enter") {
-  //     event.preventDefault();
-  //     inputTexto.value += "\n";
-  //   }
-  // });
-
+  
   const btnCriarInput = document.createElement("button");
   btnCriarInput.textContent = "Criar Atividade";
+  btnCriarInput.style.marginLeft = "20px";
+  btnCriarInput.style.marginTop = "25px";
   btnCriarInput.addEventListener("click", criarAtividade)
 
-  // const btnRemoveInput = document.createElement("button");
-  // btnRemoveInput.textContent = "Remover Atividade";
-  // btnRemoveInput.addEventListener("click", () =>{
-  //       atividades.style.display = "none"
-  // })
-
+  function fecharDivEdicao() {
+    divCentro.remove();
+    divEdicaoAberta = null;
+  }
 
 //codigo base de exemplo -- inicio
 let atividade = [];
@@ -101,7 +86,7 @@ function criarAtividade(){
   inputTexto.style.width = "65vw";
   inputTexto.style.height = "95px";
   inputTexto.style.resize = "none";
-  inputTexto.style.marginLeft = "50px";
+  inputTexto.style.marginLeft = "40px";
   inputTexto.addEventListener("input", () => {
     inputTexto.style.height = "auto";
     inputTexto.style.height = `${inputTexto.scrollHeight}px`;
@@ -116,13 +101,15 @@ function criarAtividade(){
 const mainTitle =  document.createElement("h2");
   mainTitle.textContent = tituloH2;
   mainTitle.style.position = "relative";
-  mainTitle.style.textAlign = "center";
+  mainTitle.style.marginLeft = "38%";
   mainTitle.style.fontSize = "0.9em";
   mainTitle.style.color = "white";
-  mainTitle.style.marginTop = "10px";
+  mainTitle.style.marginBottom = "10px";
 
   const btnRemoveInput = document.createElement("button");
   btnRemoveInput.textContent = "Remover Atividade";
+  btnRemoveInput.style.marginLeft = "25px";
+  btnRemoveInput.style.marginTop = "25px";
   btnRemoveInput.addEventListener("click", () =>{
        atividade.remove();
        numAtividade--;
@@ -150,9 +137,8 @@ const mainTitle =  document.createElement("h2");
   btnFechar.textContent = "X";
   btnFechar.style.float = "right";
   btnFechar.style.margin = "10px";
-  btnFechar.addEventListener("click", () =>{
-      divCentro.style.display = "none";
-  })
+  btnFechar.style.cursor = "pointer";
+  btnFechar.addEventListener("click", fecharDivEdicao)
 
   document.body.appendChild(divCentro);
 
@@ -165,7 +151,7 @@ const mainTitle =  document.createElement("h2");
  
 
 });
-
+  
     tarefa.appendChild(botaoExcluir);
  
     tarefa.appendChild(botaoEditar);
