@@ -14,18 +14,16 @@ function criarTarefa(containerId) {
     const cor = gerarCorAleatoria();
     const container = document.querySelector("#" + containerId);
 
-   
-
     const tarefa = document.createElement("div");
     tarefa.classList.add("tarefa");
     tarefa.style.width = "100%";
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
 
-    const atividades = document.createElement("div");
-    atividades.style.display = "none";
-    atividades.style.height = "none";
-    atividades.style.width = "75vw";
+    // const atividades = document.createElement("div");
+    // atividades.style.display = "none";
+    // atividades.style.height = "none";
+    // atividades.style.width = "75vw";
 
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "X";
@@ -57,14 +55,53 @@ function criarTarefa(containerId) {
   divCentro.style.left = "50%";
   divCentro.style.transform = "translate(-50%, -50%)";
 
-      
+  // const inputTexto = document.createElement("textarea")
+  // inputTexto.style.display = "flex";
+  // inputTexto.style.width = "900px";
+  // inputTexto.style.height = "95px";
+  // inputTexto.style.resize = "none";
+  // inputTexto.style.marginLeft = "45px";
+  // inputTexto.addEventListener("input", () => {
+  //   inputTexto.style.height = "auto";
+  //   inputTexto.style.height = `${inputTexto.scrollHeight}px`;
+  // });
+  // inputTexto.addEventListener("keydown", (event) => {
+  //   if (event.key === "Enter") {
+  //     event.preventDefault();
+  //     inputTexto.value += "\n";
+  //   }
+  // });
 
-  const inputTexto = document.createElement("textarea")
+  const btnCriarInput = document.createElement("button");
+  btnCriarInput.textContent = "Criar Atividade";
+  btnCriarInput.addEventListener("click", criarAtividade)
+
+  // const btnRemoveInput = document.createElement("button");
+  // btnRemoveInput.textContent = "Remover Atividade";
+  // btnRemoveInput.addEventListener("click", () =>{
+  //       atividades.style.display = "none"
+  // })
+
+
+//codigo base de exemplo -- inicio
+let atividade = [];
+let numAtividade = 0;
+
+function criarAtividade(){
+  const tituloH2 = prompt("digite o titulo da atividade:")
+
+    const atividades = document.createElement("div");
+    atividades.style.display = "block";
+    atividades.style.height = "none";
+    atividades.style.width = "75vw";
+
+    const inputTexto = document.createElement("textarea")
   inputTexto.style.display = "flex";
-  inputTexto.style.width = "900px";
+  inputTexto.style.position = "relative";
+  inputTexto.style.width = "65vw";
   inputTexto.style.height = "95px";
   inputTexto.style.resize = "none";
-  inputTexto.style.marginLeft = "45px";
+  inputTexto.style.marginLeft = "120px";
   inputTexto.addEventListener("input", () => {
     inputTexto.style.height = "auto";
     inputTexto.style.height = `${inputTexto.scrollHeight}px`;
@@ -76,23 +113,30 @@ function criarTarefa(containerId) {
     }
   });
 
-
-
-
-  
-  const btnCriarInput = document.createElement("button");
-  btnCriarInput.textContent = "Criar Atividade";
-  btnCriarInput.addEventListener("click", () => {
-      atividades.style.display = "flex";
-  })
+const mainTitle =  document.createElement("h2");
+  mainTitle.textContent = tituloH2;
+  mainTitle.style.textAlign = "center";
+  mainTitle.style.fontSize = "0.9em";
+  mainTitle.style.color = "white";
+  mainTitle.style.marginTop = "20px";
 
   const btnRemoveInput = document.createElement("button");
   btnRemoveInput.textContent = "Remover Atividade";
   btnRemoveInput.addEventListener("click", () =>{
-        atividades.style.display = "none"
+       atividade.remove();
+       numAtividade--;
   })
 
- 
+    atividades.appendChild(mainTitle);
+    atividades.appendChild(inputTexto);
+    atividades.appendChild(btnRemoveInput);
+    atividade.push(atividades);
+    divCentro.appendChild(atividades);
+
+    numAtividade++;
+
+}
+//codigo base de exemplo -- final
 
   const titulo = document.createElement("h1");
   titulo.textContent = texto;
@@ -108,6 +152,7 @@ function criarTarefa(containerId) {
   btnFechar.addEventListener("click", () =>{
       divCentro.style.display = "none";
   })
+
   document.body.appendChild(divCentro);
 
   divCentro.appendChild(btnFechar);
@@ -116,11 +161,7 @@ function criarTarefa(containerId) {
 
   divCentro.appendChild(btnCriarInput);
 
-  divCentro.appendChild(atividades);
-
-  atividades.appendChild(btnRemoveInput);
-
-  atividades.appendChild(inputTexto);
+ 
 
 });
 

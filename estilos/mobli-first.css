@@ -58,6 +58,10 @@ header{
 .trello1, .trello2{
     position: relative;
 }
+img.trello2{
+    height: 24px;
+    width: 24px;
+}
 #trello-menu-principal:hover{
     background-color: #3a5975;
     border-radius: 6%;

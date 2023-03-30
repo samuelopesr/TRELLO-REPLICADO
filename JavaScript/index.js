@@ -168,6 +168,5 @@ trello1.addEventListener('mouseenter', () => {
 trello2.addEventListener('mouseleave', () => {
     trello1.style.display = 'block';
     trello2.style.display = 'none';
-    const paragraf = document.getElementById("titulo-trello-menu")
-    paragraf.style.display = "none";
+    
 })
