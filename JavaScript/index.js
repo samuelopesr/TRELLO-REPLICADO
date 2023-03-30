@@ -154,3 +154,20 @@ function excluirTodosQuadros() {
     localStorage.clear();
   }
 }
+
+
+const trello1 = document.querySelector('.trello1');
+const trello2 =  document.querySelector('.trello2');
+
+
+trello1.addEventListener('mouseenter', () => {
+    trello1.style.display = "none";
+    trello2.style.display = "block";
+})
+
+trello2.addEventListener('mouseleave', () => {
+    trello1.style.display = 'block';
+    trello2.style.display = 'none';
+    const paragraf = document.getElementById("titulo-trello-menu")
+    paragraf.style.display = "none";
+})
