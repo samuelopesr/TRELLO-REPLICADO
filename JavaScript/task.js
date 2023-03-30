@@ -93,7 +93,7 @@ function criarAtividade(){
     const atividades = document.createElement("div");
     atividades.style.display = "block";
     atividades.style.height = "none";
-    atividades.style.width = "75vw";
+    atividades.style.width = "100vw";
 
     const inputTexto = document.createElement("textarea")
   inputTexto.style.display = "flex";
@@ -101,7 +101,7 @@ function criarAtividade(){
   inputTexto.style.width = "65vw";
   inputTexto.style.height = "95px";
   inputTexto.style.resize = "none";
-  inputTexto.style.marginLeft = "120px";
+  inputTexto.style.marginLeft = "50px";
   inputTexto.addEventListener("input", () => {
     inputTexto.style.height = "auto";
     inputTexto.style.height = `${inputTexto.scrollHeight}px`;
@@ -115,10 +115,11 @@ function criarAtividade(){
 
 const mainTitle =  document.createElement("h2");
   mainTitle.textContent = tituloH2;
+  mainTitle.style.position = "relative";
   mainTitle.style.textAlign = "center";
   mainTitle.style.fontSize = "0.9em";
   mainTitle.style.color = "white";
-  mainTitle.style.marginTop = "20px";
+  mainTitle.style.marginTop = "10px";
 
   const btnRemoveInput = document.createElement("button");
   btnRemoveInput.textContent = "Remover Atividade";
