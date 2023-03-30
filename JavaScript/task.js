@@ -14,11 +14,18 @@ function criarTarefa(containerId) {
     const cor = gerarCorAleatoria();
     const container = document.querySelector("#" + containerId);
 
+   
+
     const tarefa = document.createElement("div");
     tarefa.classList.add("tarefa");
     tarefa.style.width = "100%";
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
+
+    const atividades = document.createElement("div");
+    atividades.style.display = "none";
+    atividades.style.height = "none";
+    atividades.style.width = "75vw";
 
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "X";
@@ -50,15 +57,42 @@ function criarTarefa(containerId) {
   divCentro.style.left = "50%";
   divCentro.style.transform = "translate(-50%, -50%)";
 
-  const inputTexto = document.createElement("input")
-  inputTexto.type = "text";
-  inputTexto.style.width = "60vw";
-  inputTexto.style.height = "40px";
-  inputTexto.style.position = "absolute";
-  inputTexto.style.top = "50%";
-  inputTexto.style.left = "50%";
-  inputTexto.style.transform = "translate(-50%, -50%)";
+      
 
+  const inputTexto = document.createElement("textarea")
+  inputTexto.style.display = "flex";
+  inputTexto.style.width = "900px";
+  inputTexto.style.height = "95px";
+  inputTexto.style.resize = "none";
+  inputTexto.style.marginLeft = "45px";
+  inputTexto.addEventListener("input", () => {
+    inputTexto.style.height = "auto";
+    inputTexto.style.height = `${inputTexto.scrollHeight}px`;
+  });
+  inputTexto.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      inputTexto.value += "\n";
+    }
+  });
+
+
+
+
+  
+  const btnCriarInput = document.createElement("button");
+  btnCriarInput.textContent = "Criar Atividade";
+  btnCriarInput.addEventListener("click", () => {
+      atividades.style.display = "flex";
+  })
+
+  const btnRemoveInput = document.createElement("button");
+  btnRemoveInput.textContent = "Remover Atividade";
+  btnRemoveInput.addEventListener("click", () =>{
+        atividades.style.display = "none"
+  })
+
+ 
 
   const titulo = document.createElement("h1");
   titulo.textContent = texto;
@@ -74,14 +108,20 @@ function criarTarefa(containerId) {
   btnFechar.addEventListener("click", () =>{
       divCentro.style.display = "none";
   })
-  
-  divCentro.appendChild(inputTexto);
+  document.body.appendChild(divCentro);
 
   divCentro.appendChild(btnFechar);
 
   divCentro.appendChild(titulo);
 
-  document.body.appendChild(divCentro);
+  divCentro.appendChild(btnCriarInput);
+
+  divCentro.appendChild(atividades);
+
+  atividades.appendChild(btnRemoveInput);
+
+  atividades.appendChild(inputTexto);
+
 });
 
     tarefa.appendChild(botaoExcluir);
