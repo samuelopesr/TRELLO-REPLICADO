@@ -8,10 +8,6 @@ function gerarCorAleatoria() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-
-
-
-
 function criarTarefa(containerId) {
   const texto = prompt("Digite o título da tarefa:");
   if (texto) {
@@ -36,9 +32,9 @@ function criarTarefa(containerId) {
     });
 
     const botaoEditar = document.createElement("button");
-botaoEditar.textContent = "Editar";
-botaoEditar.classList.add("btnEditar");
-botaoEditar.addEventListener("click", () => {
+    botaoEditar.textContent = "Editar";
+    botaoEditar.classList.add("btnEditar");
+    botaoEditar.addEventListener("click", () => {
 
   const divCentro = document.createElement("div");
   divCentro.style.background = "#19233d9a";
@@ -57,7 +53,7 @@ botaoEditar.addEventListener("click", () => {
   const inputTexto = document.createElement("input")
   inputTexto.type = "text";
   inputTexto.style.width = "60vw";
-  inputTexto.style.height = "60vh";
+  inputTexto.style.height = "40px";
   inputTexto.style.position = "absolute";
   inputTexto.style.top = "50%";
   inputTexto.style.left = "50%";
@@ -65,7 +61,7 @@ botaoEditar.addEventListener("click", () => {
 
 
   const titulo = document.createElement("h1");
-  titulo.textContent = "Personalize suas tarefas";
+  titulo.textContent = texto;
   titulo.style.textAlign = "center";
   titulo.style.fontSize = "1.6em";
   titulo.style.color = "white";
