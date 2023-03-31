@@ -36,11 +36,12 @@ function criarTarefa(containerId) {
     const botaoEditar = document.createElement("button");
     botaoEditar.textContent = "Editar";
     botaoEditar.classList.add("btnEditar");
+    let isDivCentroOpen = false;
     botaoEditar.addEventListener("click", () => {
 
-      if (divEdicaoAberta) {
-        return;
-      }
+  if (!isDivCentroOpen) {
+    isDivCentroOpen = true;
+    botaoEditar.disabled = true;
 
   const divCentro = document.createElement("div");
   divCentro.style.background = "#19233d9a";
@@ -63,11 +64,13 @@ function criarTarefa(containerId) {
   btnCriarInput.style.marginTop = "25px";
   btnCriarInput.addEventListener("click", criarAtividade)
 
-  function fecharDivEdicao() {
-    divCentro.remove();
-    divEdicaoAberta = null;
+  function closeDivCentro() {
+    if (isDivCentroOpen) {
+      isDivCentroOpen = false;
+      document.body.removeChild(divCentro);
+      botaoEditar.disabled = false;
+    }
   }
-
 //codigo base de exemplo -- inicio
 let atividade = [];
 let numAtividade = 0;
@@ -138,7 +141,7 @@ const mainTitle =  document.createElement("h2");
   btnFechar.style.float = "right";
   btnFechar.style.margin = "10px";
   btnFechar.style.cursor = "pointer";
-  btnFechar.addEventListener("click", fecharDivEdicao)
+  btnFechar.addEventListener("click", closeDivCentro)
 
   document.body.appendChild(divCentro);
 
@@ -148,7 +151,9 @@ const mainTitle =  document.createElement("h2");
 
   divCentro.appendChild(btnCriarInput);
 
- 
+  }
+
+
 
 });
   
