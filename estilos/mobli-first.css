@@ -118,6 +118,10 @@ header{
     color: white;
     margin-top:7px;
 }
+#recente-menu{
+    display: none;
+    
+}
 #pequisa-sino-conta{
     display: flex;
     position: absolute;

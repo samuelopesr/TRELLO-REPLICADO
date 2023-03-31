@@ -7,6 +7,17 @@
 
 
 @media screen and (min-width: 769px) and (max-width: 992px){
+    #recente-menu{
+        display: flex;
+        margin: 20px 20px 0px 0px;
+    }
+    #recente-menu > img{
+        margin-left: 5px;
+        margin-top: -2px;
+    }
+    #recente-menu > p{
+        color: white;
+    }
     #pequisa-sino-conta > #pesquisa > img{
         position: absolute;
         right: 100px;
@@ -135,6 +146,17 @@
 }
 
 @media screen and (min-width: 993px){
+    #recente-menu{
+        display: flex;
+        margin: 20px 20px 0px 0px;
+    }
+    #recente-menu > img{
+        margin-left: 5px;
+        margin-top: -2px;
+    }
+    #recente-menu > p{
+        color: white;
+    }
     #pequisa-sino-conta > #pesquisa > img{
         position: absolute;
         right: 100px;

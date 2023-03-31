@@ -20,7 +20,7 @@ function criarTarefa(containerId) {
     tarefa.style.width = "100%";
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
-
+    tarefa.setAttribute("draggable", "true");
 
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "X";
@@ -47,7 +47,6 @@ function criarTarefa(containerId) {
   divCentro.style.background = "#19233d9a";
   divCentro.style.boxShadow = "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )";
   divCentro.style.backdropFilter = "blur( 10px )";
-  
   divCentro.style.border = "border: 1px solid rgba( 255, 255, 255, 0.18 )";
   divCentro.style.borderRadius = "10px"
   divCentro.style.position = "fixed";
@@ -56,7 +55,6 @@ function criarTarefa(containerId) {
   divCentro.style.top = "50%";
   divCentro.style.left = "50%";
   divCentro.style.transform = "translate(-50%, -50%)";
-
   
   const btnCriarInput = document.createElement("button");
   btnCriarInput.textContent = "Criar Atividade";
