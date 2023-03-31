@@ -62,9 +62,13 @@ header{
     top: 35px;
 }
 .trello1 > img{
-    margin-top: 5px;
+    margin-left: -8px;
+    margin-top: 6px;
+    height: 37px;
+    width: 111px;
 }
 .trello2 > img{
+    margin-top: 13px;
     height: 20px;
     width: 90px;
 }
