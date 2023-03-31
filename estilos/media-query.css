@@ -157,6 +157,28 @@
     #recente-menu > p{
         color: white;
     }
+    #marcado-com-estrela{
+        display: flex;
+        margin: 20px 20px 0px 0px;
+    }
+    #marcado-com-estrela > img{
+        margin-left: 5px;
+        margin-top: -2px;
+    }
+    #marcado-com-estrela > p{
+        color: white;
+    }
+    #modelos{
+        display: flex;
+        margin: 20px 20px 0px 0px;
+    }
+    #modelos > img{
+        margin-left: 5px;
+        margin-top: -2px;
+    }
+    #modelos > p{
+        color: white;
+    }
     #pequisa-sino-conta > #pesquisa > img{
         position: absolute;
         right: 100px;
