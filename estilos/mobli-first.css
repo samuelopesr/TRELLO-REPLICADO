@@ -58,26 +58,19 @@ header{
 .trello1, .trello2{
     position: relative;
 }
-img.trello2{
-    height: 24px;
-    width: 24px;
+#textoTello{
+    top: 35px;
+}
+.trello1 > img{
+    margin-top: 5px;
+}
+.trello2 > img{
+    height: 20px;
+    width: 90px;
 }
 #trello-menu-principal:hover{
     background-color: #3a5975;
     border-radius: 6%;
-}
-#trello-menu-principal > img{
-    margin-top: 10px;
-    margin-left: 8px;
-}
-#trello-menu-principal > p{
-    text-align: center;
-    margin-top: -30px;
-    margin-left: 27px;
-    font-weight: bolder;
-    font-family: tommy;
-    font-size: 1.4em;
-    color: white;
 }
 #link-home{
     text-decoration: none;
