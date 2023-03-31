@@ -122,6 +122,14 @@ header{
     display: none;
     
 }
+#marcado-com-estrela{
+    display: none;
+  
+}
+#modelos{
+    display: none;
+    
+}
 #pequisa-sino-conta{
     display: flex;
     position: absolute;

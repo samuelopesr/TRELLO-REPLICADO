@@ -7,6 +7,14 @@
 
 
 @media screen and (min-width: 769px) and (max-width: 992px){
+    #marcado-com-estrela{
+        display: none;
+      
+    }
+    #modelos{
+        display: none;
+        
+    }
     #recente-menu{
         display: flex;
         margin: 20px 20px 0px 0px;
