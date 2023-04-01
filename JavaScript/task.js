@@ -1,6 +1,6 @@
 let tarefas = {};
 let numTarefas = 0;
-let divEdicaoAberta = null;
+
 
 function gerarCorAleatoria() {
   const r = Math.floor(Math.random() * 256);

@@ -25,19 +25,16 @@
     }
     #recente-menu > p{
         color: white;
-    }
-    #pequisa-sino-conta > #pesquisa > img{
-        position: absolute;
-        right: 100px;
-        top: 14px;
-        z-index: 999;
-        height: 20px;
+    }   
+    #pequisa-sino-conta > #pesquisa img{
+        display: none;
     }
     #pequisa-sino-conta > #pesquisa > #ibuscar{
-        display: flex;
-        position: absolute;
-        right: 95px;
-        top: 9px;
+        display: block;
+        position: relative;
+        width: 15vw;
+        right: 11vw;
+        top: 1px;
         height: 30px;
         border-radius: 5px;
         border: none;
@@ -153,7 +150,7 @@
 
 }
 
-@media screen and (min-width: 993px){
+@media screen and (min-width: 1000px){
     #recente-menu{
         display: flex;
         margin: 20px 20px 0px 0px;
