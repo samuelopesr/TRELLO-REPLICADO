@@ -49,13 +49,31 @@ function gerarCorAleatoria() {
 function criarQuadro() {
   const texto = prompt("Digite o título do quadro:");
   if (texto) {
+    const modal = document.createElement("div");
+    modal.style.height = "600px";
+    modal.style.width = "500px";
+    modal.style.backgroundColor = "rgb(208, 208, 209)";
+    modal.style.position = "fixed";
+    modal.style.top = "50%";
+    modal.style.left = "50%";
+    modal.style.transform = "translate(-50%, -50%";
+    modal.textContent = "Escolha seu estilo de Quadro!";
+    modal.style.textAlign = "center";
+    modal.style.fontFamily = "";
+    modal.style.borderRadius = "10px";
+    modal.style.boxShadow = "1px 2px 6px rgb(143, 142, 142)";
+    
+    const btnXmodal = document.createElement("button");
+    btnXmodal.textContent("X");
+
+
+
     const cor = gerarCorAleatoria();
     const quadro = document.createElement("div");
     quadro.classList.add("quadro");
     quadro.style.width = "210px";
     quadro.style.height = "130px";
     quadro.style.marginLeft = "5px";
-   
     quadro.style.backgroundColor = cor;
 
     const botaoExcluir = document.createElement("button");
@@ -76,6 +94,8 @@ function criarQuadro() {
 
     const container = document.querySelector("#criar-quadro");
     container.style.flexWrap = "wrap";
+
+    document.body.appendChild(modal);
     container.appendChild(quadro);
 
     quadros.push({ titulo: texto, cor: cor });
