@@ -65,9 +65,9 @@ function criarQuadro() {
     
     const btnXmodal = document.createElement("button");
     btnXmodal.textContent("X");
-
-
-
+    btnXmodal.style.float = "right";
+    
+    
     const cor = gerarCorAleatoria();
     const quadro = document.createElement("div");
     quadro.classList.add("quadro");
@@ -96,6 +96,9 @@ function criarQuadro() {
     container.style.flexWrap = "wrap";
 
     document.body.appendChild(modal);
+
+    modal.appendChild(btnXmodal);
+
     container.appendChild(quadro);
 
     quadros.push({ titulo: texto, cor: cor });
