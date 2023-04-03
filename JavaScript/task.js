@@ -22,6 +22,7 @@ function criarTarefa(containerId) {
     tarefa.style.backgroundColor = cor;
     tarefa.setAttribute("draggable", "true");
 
+
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "X";
     botaoExcluir.classList.add("btn-excluirTarefa");
