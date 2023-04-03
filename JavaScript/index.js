@@ -59,15 +59,9 @@ function criarQuadro() {
     modal.style.transform = "translate(-50%, -50%";
     modal.textContent = "Escolha seu estilo de Quadro!";
     modal.style.textAlign = "center";
-    modal.style.fontFamily = "";
     modal.style.borderRadius = "10px";
     modal.style.boxShadow = "1px 2px 6px rgb(143, 142, 142)";
-    
-    const btnXmodal = document.createElement("button");
-    btnXmodal.textContent("X");
-    btnXmodal.style.float = "right";
-    
-    
+  
     const cor = gerarCorAleatoria();
     const quadro = document.createElement("div");
     quadro.classList.add("quadro");
@@ -75,6 +69,14 @@ function criarQuadro() {
     quadro.style.height = "130px";
     quadro.style.marginLeft = "5px";
     quadro.style.backgroundColor = cor;
+
+    const botaoFechar = document.createElement("button");
+    botaoFechar.textContent = "fechar";
+    botaoFechar.style.position = "fixed";
+    botaoFechar.style.height = "30px";
+    botaoFechar.style.width = "60px";
+    botaoFechar.style.marginLeft = "70px";
+    
 
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "Excluir quadro";
@@ -97,7 +99,7 @@ function criarQuadro() {
 
     document.body.appendChild(modal);
 
-    modal.appendChild(btnXmodal);
+    modal.appendChild(botaoFechar);
 
     container.appendChild(quadro);
 
