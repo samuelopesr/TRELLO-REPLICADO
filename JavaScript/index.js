@@ -49,6 +49,18 @@ function gerarCorAleatoria() {
 function criarQuadro() {
   const texto = prompt("Digite o título do quadro:");
   if (texto) {
+
+    const overlay = document.createElement("div");
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; // Transparência para ver o modal
+    overlay.style.zIndex = "9999"; // Garantir que o overlay esteja acima de tudo
+    document.body.appendChild(overlay);
+    
+  
     const modal = document.createElement("div");
     modal.style.height = "600px";
     modal.style.width = "500px";
@@ -61,7 +73,10 @@ function criarQuadro() {
     modal.style.textAlign = "center";
     modal.style.borderRadius = "10px";
     modal.style.boxShadow = "1px 2px 6px rgb(143, 142, 142)";
-  
+
+    overlay.appendChild(modal);
+
+
     const cor = gerarCorAleatoria();
     const quadro = document.createElement("div");
     quadro.classList.add("quadro");
@@ -76,6 +91,10 @@ function criarQuadro() {
     botaoFechar.style.height = "30px";
     botaoFechar.style.width = "60px";
     botaoFechar.style.marginLeft = "70px";
+    botaoFechar.addEventListener("click", () => {
+      modal.remove();
+      overlay.remove();
+    });
     
 
     const botaoExcluir = document.createElement("button");
@@ -97,7 +116,7 @@ function criarQuadro() {
     const container = document.querySelector("#criar-quadro");
     container.style.flexWrap = "wrap";
 
-    document.body.appendChild(modal);
+  
 
     modal.appendChild(botaoFechar);
 
