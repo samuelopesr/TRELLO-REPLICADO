@@ -18,9 +18,11 @@ function criarTarefa(containerId) {
     const tarefa = document.createElement("div");
     tarefa.classList.add("tarefa");
     tarefa.style.width = "100%";
+    tarefa.style.cursor = "move";
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
     tarefa.setAttribute("draggable", "true");
+    
 
 
     const botaoExcluir = document.createElement("button");
