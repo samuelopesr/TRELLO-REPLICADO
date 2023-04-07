@@ -153,6 +153,7 @@ header{
 }
 #pequisa-sino-conta{
     display: flex;
+    float: right;
     position: absolute;
     width: 120px;
     margin-top: 5px;
