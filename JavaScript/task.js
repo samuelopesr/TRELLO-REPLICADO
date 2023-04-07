@@ -22,6 +22,12 @@ function criarTarefa(containerId) {
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
     tarefa.setAttribute("draggable", "true");
+    const cards = document.querySelector('.tarefa');
+    cards.forEach(tarefa => {
+      tarefa.addEventListener('dragstart',dragstart);
+      tarefa.addEventListener('drag',drag);
+      tarefa.addEventListener('dragend',dragend);
+    });
     
     
     function dragstart(){
