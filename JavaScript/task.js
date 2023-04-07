@@ -22,27 +22,40 @@ function criarTarefa(containerId) {
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
     tarefa.setAttribute("draggable", "true");
-    const cards = document.querySelector('.tarefa');
-    const dropzones =  document.querySelector('.');
-
-
-
-    cards.forEach(tarefa => {
-      tarefa.addEventListener('dragstart',dragstart);
-      tarefa.addEventListener('drag',drag);
-      tarefa.addEventListener('dragend',dragend);
+    const dropzones = document.querySelectorAll('.dropzone');
+    document.addEventListener("dragstart", (e) => {
+      e.target.classList.add("dragging");
     });
-    
-    
-    function dragstart(){
-      console.log("tarefa: começou o arrasto")
+    document.addEventListener("dragend", (e) => {
+      e.target.classList.remove("dragging"); 
+    })
+    dropzones.forEach((item) => {
+      const dragging = document.querySelector(".dragging");
+      const applyAfter = getNewPosition(item, e.clientY);
+
+      if (applyAfter){
+        applyAfter.insertAdjacentElement("adterend", dragging)
+      }else{
+        item.prepend(dragging);
+      }
+    });
+
+    function getNewPosition(collum, posY) {
+      const cards = collum.querySelectorAll(".item:not(.dragging)");
+      let result;
+
+      for (let refer_card of cards){
+        const box = refer_card.getBoundingClientRect();
+        const boxCenterY = box.y + box.height / 2;
+
+        if (posY >= boxCenterY) result = refer_card;
+      }
+
+      return result;
+
     }
-    function drag(){
-      console.log("tarefa: sendo carreagado")
-    }
-    function dragend(){
-      console.log("tarefa: parou o arrasto")
-    }
+
+
 
 
     const botaoExcluir = document.createElement("button");

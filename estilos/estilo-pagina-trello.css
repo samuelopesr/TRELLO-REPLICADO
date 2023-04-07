@@ -637,6 +637,7 @@ border-radius: 0px 0px 10px 10px;
     background-color: #ccc;
     position: relative;
     overflow: hidden;
+    transition: .4s;
   }
   
   .tarefa h2 {
@@ -691,3 +692,13 @@ border-radius: 0px 0px 10px 10px;
   #btn-ExcluirAlltask:hover{
     background: linear-gradient(45deg,rgba(197, 119, 73, 0.637), rgb(131, 63, 24), rgba(92, 56, 1, 0.842));
   }
+
+.destaque{
+    transition: .4s;
+}
+  .is-dragging{
+   cursor: move;
+  }
+  .over {
+    background-color: #4cd13711;
+}
