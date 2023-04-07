@@ -33,10 +33,15 @@ header{
 }
 
 #lista{
+    cursor: pointer;
     display: flex;
     list-style: none;  
     width: 70vw;  
 
+}
+#lista > li .divHover:hover{
+    background-color: #3a5975;
+    height: 30px;
 }
 #trello-menu1{
     display: block;

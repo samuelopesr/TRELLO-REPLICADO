@@ -159,6 +159,8 @@
         display: block;
         margin-left: 5px;
         margin-top: -2px;
+        width: 24px;
+        height: 24px;
     }
     #recente-menu > p{
         color: white;
@@ -182,6 +184,8 @@
         margin: 20px 20px 0px 0px;
     }
     #modelos > img{
+        width: 24px;
+        height: 24px;
         margin-left: 5px;
         margin-top: -2px;
     }
