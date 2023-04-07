@@ -22,11 +22,7 @@ function criarTarefa(containerId) {
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
     tarefa.setAttribute("draggable", "true");
-    forEach(tarefa => {
-        tarefa.addEventListener('dragstart', dragstart);
-        tarefa.addEventListener('drag', drag);
-        tarefa.addEventListener('dragend',dragend);
-    });
+    
     
     function dragstart(){
       console.log("tarefa: começou o arrasto")
