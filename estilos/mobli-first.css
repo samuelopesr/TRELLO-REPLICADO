@@ -39,6 +39,10 @@ header{
     width: 70vw;  
 
 }
+#mais p:hover{
+    background-color: #3a5975;
+    border-radius: 5px;
+}
 .divHover{
     padding-left: 11px;
     height: 20px;
@@ -110,6 +114,7 @@ header{
     position: absolute;
     margin-top: 13px;
     color: white;
+    
 }
 #mais > #mostrar-mais{
     position: absolute;
