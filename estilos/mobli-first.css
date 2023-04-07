@@ -36,27 +36,7 @@ header{
     cursor: pointer;
     display: flex;
     list-style: none;  
-    width: 70vw;  
-
-}
-#mais p:hover{
-    background-color: #3a5975;
-    border-radius: 5px;
-}
-.divHover{
-    padding-left: 11px;
-    height: 20px;
-    
-}
-#lista > li > .divHover:hover{
-    background-color: #3a5975;
-    position: relative;
-    padding-left: 11px;
-    height: 20px;
-    border-radius: 5px;
-
-
-
+    width: 70vw; 
 }
 #trello-menu1{
     display: block;
