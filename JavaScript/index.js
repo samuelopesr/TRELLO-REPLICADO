@@ -56,8 +56,8 @@ function criarQuadro() {
     overlay.style.left = "0";
     overlay.style.width = "100%";
     overlay.style.height = "100%";
-    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; // Transparência para ver o modal
-    overlay.style.zIndex = "9999"; // Garantir que o overlay esteja acima de tudo
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    overlay.style.zIndex = "9999"; 
     document.body.appendChild(overlay);
     
   

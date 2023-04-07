@@ -60,10 +60,32 @@ header{
 }
 #trello-menu-principal{
     display: block;
-    margin: 5px 0px 0px 0px;
+    margin: 5px 15px 0px 0px;
+    padding-left: 5px;
     height: 45px;
-    width: 115px;
+    width: 100px;
 
+}
+.trello1, .trello2{
+    position: relative;
+}
+#textoTello{
+    top: 35px;
+}
+.trello1 > img{
+    margin-left: -8px;
+    margin-top: 6px;
+    height: 37px;
+    width: 111px;
+}
+.trello2 > img{
+    margin-top: 13px;
+    height: 20px;
+    width: 90px;
+}
+#trello-menu-principal:hover{
+    background-color: #3a5975;
+    border-radius: 6%;
 }
 #link-home{
     text-decoration: none;

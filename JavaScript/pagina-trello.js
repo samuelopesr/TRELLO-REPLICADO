@@ -42,3 +42,17 @@ function fecharPopUpQuadro(){
     document.getElementById('pop-up-quadro').style.display = 'none';
 }
 
+const trello1 = document.querySelector('.trello1');
+const trello2 =  document.querySelector('.trello2');
+
+
+trello1.addEventListener('mouseenter', () => {
+    trello1.style.display = "none";
+    trello2.style.display = "block";
+})
+
+trello2.addEventListener('mouseleave', () => {
+    trello1.style.display = 'block';
+    trello2.style.display = 'none';
+    
+})
