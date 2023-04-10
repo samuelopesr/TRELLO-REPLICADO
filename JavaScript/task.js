@@ -21,43 +21,7 @@ function criarTarefa(containerId) {
     tarefa.style.cursor = "move";
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
-    tarefa.setAttribute("draggable", "true");
-    const dropzones = document.querySelectorAll('.dropzone');
-    document.addEventListener("dragstart", (e) => {
-      e.target.classList.add("dragging");
-    });
-    document.addEventListener("dragend", (e) => {
-      e.target.classList.remove("dragging"); 
-    })
-    dropzones.forEach((item) => {
-      const dragging = document.querySelector(".dragging");
-      const applyAfter = getNewPosition(item, e.clientY);
-
-      if (applyAfter){
-        applyAfter.insertAdjacentElement("adterend", dragging)
-      }else{
-        item.prepend(dragging);
-      }
-    });
-
-    function getNewPosition(collum, posY) {
-      const cards = collum.querySelectorAll(".item:not(.dragging)");
-      let result;
-
-      for (let refer_card of cards){
-        const box = refer_card.getBoundingClientRect();
-        const boxCenterY = box.y + box.height / 2;
-
-        if (posY >= boxCenterY) result = refer_card;
-      }
-
-      return result;
-
-    }
-
-
-
-
+    
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "X";
     botaoExcluir.classList.add("btn-excluirTarefa");
