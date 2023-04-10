@@ -15,6 +15,19 @@ function criarTarefa(containerId) {
     const cor = gerarCorAleatoria();
     const container = document.querySelector("#" + containerId);
 
+    function allowDrop(ev){
+      ev.preventDefault();
+    }
+    function drag(ev){
+      ev.dataTransfer.setData("div", ev.target.id);
+    }
+    function drop(ev){
+      ev.dataTransfer.dropEffect = "move";
+      var data = ev.dataTransfer.getData("div");
+
+      ev.target.appendChild(document.getElementById(data))
+    }
+
     const tarefa = document.createElement("div");
     tarefa.classList.add("tarefa");
     tarefa.style.width = "100%";
@@ -22,6 +35,7 @@ function criarTarefa(containerId) {
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
     tarefa.setAttribute("draggable","true");
+    tarefa.addEventListener('dragstart', drag)
     
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "X";
