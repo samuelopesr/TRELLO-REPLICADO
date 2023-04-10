@@ -1,7 +1,6 @@
 let tarefas = {};
 let numTarefas = 0;
 
-
 function gerarCorAleatoria() {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
