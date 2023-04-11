@@ -86,9 +86,7 @@ function criarQuadro() {
     const opcao2 = document.createElement("div")
     opcao2.classList.add("opcaomodal2")
 
-    modal.appendChild(opcao1)
-    modal.appendChild(opcao2)
-
+  
     const cor = gerarCorAleatoria();
     const quadro = document.createElement("div");
     quadro.classList.add("quadro");
@@ -132,6 +130,10 @@ function criarQuadro() {
   
 
     modal.appendChild(botaoFechar);
+
+    modal.appendChild(opcao1)
+    
+    modal.appendChild(opcao2)
 
     container.appendChild(quadro);
 
