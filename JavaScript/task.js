@@ -15,7 +15,6 @@ function criarTarefa(containerId) {
     const cor = gerarCorAleatoria();
     const container = document.querySelector("#" + containerId);
 
-
     const tarefa = document.createElement("div");
     tarefa.classList.add("tarefa");
     tarefa.style.width = "100%";

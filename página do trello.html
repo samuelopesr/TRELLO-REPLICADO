@@ -127,7 +127,7 @@
     <script src="JavaScript/pagina-trello.js"></script>
     <script src="JavaScript/task.js"></script>
     <script>
-         function allowDrop(ev){
+    function allowDrop(ev){
       ev.preventDefault();
     }
 
@@ -140,7 +140,6 @@
       ev.preventDefault();
       var data = ev.dataTransfer.getData("div");
       ev.target.appendChild(document.createRange().createContextualFragment(data));
-    
     }
     </script>
 </body>
