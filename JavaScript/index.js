@@ -110,7 +110,12 @@ function criarQuadro() {
     opBlack.style.top = "55%";
     opBlack.style.width = "100px";
     opBlack.style.height = "30px"
-    opBlack.style.backgroundColor = "red";
+    opBlack.style.backgroundColor = "black";
+    opBlack.style.color = "white"
+    opBlack.style.border = "none";
+    opBlack.style.borderRadius = "5px";
+    opBlack.style.cursor = "pointer";
+
 
     
 

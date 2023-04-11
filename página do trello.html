@@ -142,10 +142,13 @@
     }
    
     function drop(ev){
-  ev.preventDefault();
-  var divId = ev.dataTransfer.getData("divId");
-  var div = document.getElementById(divId);
-  ev.target.appendChild(div);
+    ev.preventDefault();
+    var divId = ev.dataTransfer.getData("divId");
+    var div = document.getElementById(divId);
+    ev.target.appendChild(div);
+    if (ev.target !== divId){
+        
+    }
 }
     </script>
 </body>
