@@ -61,7 +61,7 @@ function criarTarefa(containerId) {
   divCentro.style.boxShadow = "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )";
   divCentro.style.backdropFilter = "blur( 10px )";
   divCentro.style.border = "border: 1px solid rgba( 255, 255, 255, 0.18 )";
-  divCentro.style.borderRadius = "10px"
+  divCentro.style.borderRadius = "10px";
   divCentro.style.position = "fixed";
   divCentro.style.height = "90vh";
   divCentro.style.width = "80vw";
@@ -69,6 +69,7 @@ function criarTarefa(containerId) {
   divCentro.style.left = "50%";
   divCentro.style.transform = "translate(-50%, -50%)";
   divCentro.style.zIndex = "9999"; 
+  divCentro.style.overflow = "hidden";
     
   const btnCriarInput = document.createElement("button");
   btnCriarInput.textContent = "Criar Atividade";
@@ -97,21 +98,21 @@ function criarAtividade(){
     atividades.style.width = "100vw";
 
     const inputTexto = document.createElement("textarea")
-  inputTexto.style.display = "flex";
-  inputTexto.style.position = "relative";
-  inputTexto.style.width = "72vw";
-  inputTexto.style.height = "95px";
-  inputTexto.style.resize = "none";
-  inputTexto.style.marginLeft = "40px";
-  inputTexto.addEventListener("input", () => {
-    inputTexto.style.height = "auto";
-    inputTexto.style.height = `${inputTexto.scrollHeight}px`;
-  });
-  inputTexto.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      inputTexto.value += "\n";
-    }
+    inputTexto.style.display = "flex";
+    inputTexto.style.position = "relative";
+    inputTexto.style.width = "72vw";
+    inputTexto.style.height = "95px";
+    inputTexto.style.resize = "none";
+    inputTexto.style.marginLeft = "40px";
+    inputTexto.addEventListener("input", () => {
+      inputTexto.style.height = "auto";
+      inputTexto.style.height = `${inputTexto.scrollHeight}px`;
+    });
+    inputTexto.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        inputTexto.value += "\n";
+      }
   });
 
 const mainTitle =  document.createElement("h2");
