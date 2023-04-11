@@ -75,7 +75,6 @@ function criarQuadro() {
 
     overlay.appendChild(modal);
 
-
     const tituloModal = document.createElement("h1")
     tituloModal.classList.add("tituloModal")
     tituloModal.textContent = "Personalize seu quadro";
@@ -83,8 +82,12 @@ function criarQuadro() {
 
     const opcao1 = document.createElement("div")
     opcao1.classList.add("opcaomodal1")
+    
     const opcao2 = document.createElement("div")
     opcao2.classList.add("opcaomodal2")
+
+   
+  
 
   
     const cor = gerarCorAleatoria();
@@ -132,7 +135,7 @@ function criarQuadro() {
     modal.appendChild(botaoFechar);
 
     modal.appendChild(opcao1)
-    
+
     modal.appendChild(opcao2)
 
     container.appendChild(quadro);
