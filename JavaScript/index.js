@@ -76,6 +76,19 @@ function criarQuadro() {
     overlay.appendChild(modal);
 
 
+    const tituloModal = document.createElement("h1")
+    tituloModal.classList.add("tituloModal")
+    tituloModal.textContent = "Personalize seu quadro";
+    modal.appendChild(tituloModal);
+
+    const opcao1 = document.createElement("div")
+    opcao1.classList.add("opcaomodal1")
+    const opcao2 = document.createElement("div")
+    opcao2.classList.add("opcaomodal2")
+
+    modal.appendChild(opcao1)
+    modal.appendChild(opcao2)
+
     const cor = gerarCorAleatoria();
     const quadro = document.createElement("div");
     quadro.classList.add("quadro");
@@ -83,13 +96,14 @@ function criarQuadro() {
     quadro.style.height = "130px";
     quadro.style.marginLeft = "5px";
     quadro.style.backgroundColor = cor;
+    
 
     const botaoFechar = document.createElement("button");
-    botaoFechar.textContent = "fechar";
-    botaoFechar.style.position = "fixed";
+    botaoFechar.textContent = "X";
+    botaoFechar.style.position = "relative";
     botaoFechar.style.height = "30px";
-    botaoFechar.style.width = "60px";
-    botaoFechar.style.marginLeft = "70px";
+    botaoFechar.style.width = "30px";
+    botaoFechar.style.marginLeft = "85%";
     botaoFechar.addEventListener("click", () => {
       modal.remove();
       overlay.remove();

@@ -129,11 +129,17 @@
     <script>
     function allowDrop(ev){
       ev.preventDefault();
+      
     }
 
     function drag(ev){
       ev.dataTransfer.setData("divId", ev.target.id);
       ev.dataTransfer.effectAllowed = "move";
+
+    }
+
+    function dragEnd(ev){
+        this.style.opacity = "0.5";
     }
    
     function drop(ev){
@@ -141,6 +147,8 @@
   var divId = ev.dataTransfer.getData("divId");
   var div = document.getElementById(divId);
   ev.target.appendChild(div);
+
+ 
 }
     </script>
 </body>
