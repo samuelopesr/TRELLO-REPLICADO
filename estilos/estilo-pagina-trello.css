@@ -700,5 +700,5 @@ border-radius: 0px 0px 10px 10px;
    cursor: move;
   }
   .over {
-    background-color: #4cd13711;
+    border: 3px dotted #666;
 }
