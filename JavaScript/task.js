@@ -46,6 +46,16 @@ function criarTarefa(containerId) {
     isDivCentroOpen = true;
     botaoEditar.disabled = true;
 
+    const overlay = document.createElement("div");
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+    overlay.style.zIndex = "100"; 
+    document.body.appendChild(overlay);
+
   const divCentro = document.createElement("div");
   divCentro.style.background = "#19233d9a";
   divCentro.style.boxShadow = "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )";
@@ -58,6 +68,7 @@ function criarTarefa(containerId) {
   divCentro.style.top = "50%";
   divCentro.style.left = "50%";
   divCentro.style.transform = "translate(-50%, -50%)";
+  divCentro.style.zIndex = "9999"; 
     
   const btnCriarInput = document.createElement("button");
   btnCriarInput.textContent = "Criar Atividade";
@@ -70,6 +81,7 @@ function criarTarefa(containerId) {
       isDivCentroOpen = false;
       document.body.removeChild(divCentro);
       botaoEditar.disabled = false;
+      overlay.remove();
     }
   }
 //codigo base de exemplo -- inicio
@@ -87,7 +99,7 @@ function criarAtividade(){
     const inputTexto = document.createElement("textarea")
   inputTexto.style.display = "flex";
   inputTexto.style.position = "relative";
-  inputTexto.style.width = "65vw";
+  inputTexto.style.width = "72vw";
   inputTexto.style.height = "95px";
   inputTexto.style.resize = "none";
   inputTexto.style.marginLeft = "40px";
@@ -115,8 +127,9 @@ const mainTitle =  document.createElement("h2");
   btnRemoveInput.style.marginLeft = "25px";
   btnRemoveInput.style.marginTop = "25px";
   btnRemoveInput.addEventListener("click", () =>{
-       atividade.remove();
-       numAtividade--;
+       atividades.remove();
+      
+    
   })
 
     atividades.appendChild(mainTitle);
@@ -151,6 +164,8 @@ const mainTitle =  document.createElement("h2");
   divCentro.appendChild(titulo);
 
   divCentro.appendChild(btnCriarInput);
+
+
 
   }
 
