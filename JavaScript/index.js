@@ -86,10 +86,34 @@ function criarQuadro() {
     const opcao2 = document.createElement("div")
     opcao2.classList.add("opcaomodal2")
 
-   
-  
 
-  
+
+    const opWhite = document.createElement("button")
+    opWhite.textContent = "Tema claro";
+    opWhite.style.display = "block";
+    opWhite.style.position = "absolute";
+    opWhite.style.top  = "55%";
+    opWhite.style.left  = "15%";
+    opWhite.style.width = "100px";
+    opWhite.style.height = "30px"
+    opWhite.style.backgroundColor = "white";
+    opWhite.style.color = "black";
+    opWhite.style.border = "none";
+    opWhite.style.borderRadius = "5px";
+    opWhite.style.cursor = "pointer";
+
+    const opBlack = document.createElement("button")
+    opBlack.textContent = "Tema escuro";
+    opBlack.style.display = "block";
+    opBlack.style.position = "absolute";
+    opBlack.style.right = "15%";
+    opBlack.style.top = "55%";
+    opBlack.style.width = "100px";
+    opBlack.style.height = "30px"
+    opBlack.style.backgroundColor = "red";
+
+    
+
     const cor = gerarCorAleatoria();
     const quadro = document.createElement("div");
     quadro.classList.add("quadro");
@@ -130,7 +154,9 @@ function criarQuadro() {
     const container = document.querySelector("#criar-quadro");
     container.style.flexWrap = "wrap";
 
-  
+    modal.appendChild(opWhite)
+
+    modal.appendChild(opBlack)
 
     modal.appendChild(botaoFechar);
 
