@@ -96,13 +96,14 @@ function criarQuadro() {
     opWhite.style.left  = "15%";
     opWhite.style.width = "100px";
     opWhite.style.height = "30px"
-    opWhite.style.backgroundColor = "white";
+    opWhite.style.backgroundColor = "rgb(165, 165, 165)";
     opWhite.style.color = "black";
     opWhite.style.border = "none";
     opWhite.style.borderRadius = "5px";
     opWhite.style.cursor = "pointer";
 
     const opBlack = document.createElement("button")
+    opBlack.classList.add("tema-escuro")
     opBlack.textContent = "Tema escuro";
     opBlack.style.display = "block";
     opBlack.style.position = "absolute";
