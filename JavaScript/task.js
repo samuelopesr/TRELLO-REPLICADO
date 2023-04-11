@@ -129,18 +129,15 @@ const mainTitle =  document.createElement("h2");
   btnRemoveInput.style.marginTop = "25px";
   btnRemoveInput.addEventListener("click", () =>{
        atividades.remove();
-      
-    
   })
 
     atividades.appendChild(mainTitle);
     atividades.appendChild(inputTexto);
     atividades.appendChild(btnRemoveInput);
-    atividade.push(atividades);
+    // atividade.push(atividades);
     divCentro.appendChild(atividades);
 
     numAtividade++;
-
 }
 //codigo base de exemplo -- final
 
