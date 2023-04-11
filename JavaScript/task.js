@@ -1,6 +1,7 @@
 let tarefas = {};
 let numTarefas = 0;
 
+
 function gerarCorAleatoria() {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
@@ -14,18 +15,6 @@ function criarTarefa(containerId) {
     const cor = gerarCorAleatoria();
     const container = document.querySelector("#" + containerId);
 
-    function allowDrop(ev){
-      ev.preventDefault();
-    }
-    function drag(ev){
-      ev.dataTransfer.setData("div", ev.target.id);
-    }
-    function drop(ev){
-      ev.dataTransfer.dropEffect = "move";
-      var data = ev.dataTransfer.getData("div");
-
-      ev.target.appendChild(document.getElementById(data))
-    }
 
     const tarefa = document.createElement("div");
     tarefa.classList.add("tarefa");
@@ -69,7 +58,7 @@ function criarTarefa(containerId) {
   divCentro.style.top = "50%";
   divCentro.style.left = "50%";
   divCentro.style.transform = "translate(-50%, -50%)";
-  
+    
   const btnCriarInput = document.createElement("button");
   btnCriarInput.textContent = "Criar Atividade";
   btnCriarInput.style.marginLeft = "20px";

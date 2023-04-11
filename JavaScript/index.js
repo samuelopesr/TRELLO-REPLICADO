@@ -140,7 +140,7 @@ function renderizarQuadros() {
     quadro.style.height = "130px";
     quadro.style.marginLeft = "5px";
     quadro.style.backgroundColor = quadroInfo.cor;
-
+    
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "Excluir quadro";
     botaoExcluir.addEventListener("click", () => {
