@@ -69,7 +69,6 @@ function criarQuadro() {
     modal.style.top = "50%";
     modal.style.left = "50%";
     modal.style.transform = "translate(-50%, -50%";
-    modal.textContent = "Escolha seu estilo de Quadro!";
     modal.style.textAlign = "center";
     modal.style.borderRadius = "10px";
     modal.style.boxShadow = "1px 2px 6px rgb(143, 142, 142)";

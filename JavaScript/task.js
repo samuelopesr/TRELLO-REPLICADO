@@ -22,7 +22,9 @@ function criarTarefa(containerId) {
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
     tarefa.setAttribute("draggable","true");
+    tarefa.id = "tarefa-" + Date.now();
     tarefa.addEventListener('dragstart', drag)
+    
     
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "X";
