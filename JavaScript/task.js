@@ -9,6 +9,7 @@ function gerarCorAleatoria() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
+
 function criarTarefa(containerId) {
   const texto = prompt("Digite o título da tarefa:");
   if (texto) {
@@ -23,7 +24,19 @@ function criarTarefa(containerId) {
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
     tarefa.setAttribute("draggable","true");
-    tarefa.addEventListener('dragstart', drag)
+
+    function DragStart(e){
+      this.style.opacity = '0.4';
+    }
+    function DragEnd(e){
+      this.style.opacity = '1';
+    }
+    
+    let items = document.querySelectorAll('.dropzone .tarefa');
+      items.forEach(function(item){
+      item.addEventListener('dragstart', DragStart)
+      item.addEventListener('dragend', DragEnd)
+    });
     
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "X";
