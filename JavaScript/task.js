@@ -134,7 +134,7 @@ const mainTitle =  document.createElement("h2");
     atividades.appendChild(mainTitle);
     atividades.appendChild(inputTexto);
     atividades.appendChild(btnRemoveInput);
-    // atividade.push(atividades);
+    atividade.push(atividades);
     divCentro.appendChild(atividades);
 
     numAtividade++;
