@@ -86,7 +86,7 @@ function criarQuadro() {
     const opcao2 = document.createElement("div")
     opcao2.classList.add("opcaomodal2")
 
-    let selectButton = null;
+    let divSelect = null;
 
     const opWhite = document.createElement("button")
     opWhite.textContent = "Tema claro";
@@ -103,18 +103,14 @@ function criarQuadro() {
     opWhite.style.borderRadius = "5px";
     opWhite.style.cursor = "pointer";
     opWhite.addEventListener("click", () => {
-    if (selectButton !== opWhite) {
-        opcao1.style.border = "solid"
-        opcao1.style.borderColor = "black"
-        opcao1.style.borderWidth = "10px"
-
-        selectButton = opWhite
-    }
+    if (divSelect !== opcao1) {
+        divSelect = opcao1;
+        opcao1.classList.add("selected1")
+      }else{
+        
+      }
     })
     
-
-
-
     const opBlack = document.createElement("button")
     opBlack.classList.add("tema-escuro")
     opBlack.textContent = "Tema escuro";
@@ -130,13 +126,11 @@ function criarQuadro() {
     opBlack.style.borderRadius = "5px";
     opBlack.style.cursor = "pointer";
     opBlack.addEventListener("click", () => {
-    
-    if (selectButton === opBlack){ 
-      opcao2.style.border = "solid"
-      opcao2.style.borderColor = "rgb(165, 165, 165)"
-      opcao2.style.borderWidth = "10px"
-      selectButton = opBlack;
-    }
+      if (divSelect !== opcao2){
+        divSelect = opcao2
+        opcao2.classList.add("selected2")
+        opcao1.classList.remove("selected2")
+      }
     })
 
 

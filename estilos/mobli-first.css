@@ -527,3 +527,10 @@ header{
     background-position: center center;
     background-size: cover;
 }
+
+.selected1{
+    border: 9px solid black;
+}
+.selected2{
+    border: 9px solid rgb(146, 146, 146);
+}
