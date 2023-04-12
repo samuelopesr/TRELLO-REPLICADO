@@ -140,11 +140,11 @@ function criarQuadro() {
     btnConfirm.style.position = "absolute"
     btnConfirm.style.bottom = "40px"
     btnConfirm.style.left = "150px"
+    btnConfirm.style.borderRadius = "9px"
+    btnConfirm.style.backgroundColor = "#0d5d9ad8"
+    btnConfirm.style.color = "white"
+    btnConfirm.style.cursor = "pointer"
     
-
-
-    
-
     modal.appendChild(btnConfirm);
 
     const cor = gerarCorAleatoria();
