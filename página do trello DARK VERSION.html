@@ -57,7 +57,7 @@
                     <h1>PROGRAMAÇÃO PROJETO EDUCERE</h1>
                     <div id="fav">
                         <img class="star1" src="imagens/star.png" alt="favorito"> 
-                        <img class="star2" src="imagens/starfull.png" alt="starfull">
+                        <img id="star2-" class="star2" src="imagens/starfull.png" alt="starfull">
                     </div>
                 </div>
                 <div id="work-visible">
@@ -106,20 +106,20 @@
     <button id="btn-ExcluirAlltask" onclick="excluirTodasTarefas()">Excluir todas as tarefas</button>
     <section id="task">
         
-        <div ondrop="drop(event)" ondragover="allowDrop(event)"  id="task-diaria" class="dropzone">
-                <button id="btn-addtask1">Adicionar um cartão</button>
-                <h2 id="td">Tasks diárias</h2>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"   id="task-diaria" class="dropzone">
+                <button class="noDrop" id="btn-addtask1">Adicionar um cartão</button>
+                <h2  class="noDrop" id="td">Tasks diárias</h2>
         </div>
         
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="task-ongoing" class="dropzone">
-            <button 
+        <div  ondrop="drop(event)" ondragover="allowDrop(event)" id="task-ongoing" class="dropzone">
+            <button  class="noDrop"
             id="btn-addtask2">Adicionar um cartão</button>
-            <h2 id="tog">Tasks On-going</h2>
+            <h2 class="noDrop" id="tog">Tasks On-going</h2>
         </div>
        
         <div ondrop="drop(event)" ondragover="allowDrop(event)" id="task-concluida" class="dropzone">
-            <button id="btn-addtask3">Adicionar um cartão</button>
-            <h2 id="tc">Tasks Concluidas</h2>
+            <button  class="noDrop" id="btn-addtask3">Adicionar um cartão</button>
+            <h2  class="noDrop" id="tc">Tasks Concluidas</h2>
         </div>
     </section>
    
@@ -127,31 +127,50 @@
     <script src="JavaScript/pagina-trello.js"></script>
     <script src="JavaScript/task.js"></script>
     <script>
-    function allowDrop(ev){
-      ev.preventDefault();
-      
-    }
-
-    function drag(ev){
-      ev.dataTransfer.setData("divId", ev.target.id);
-      ev.dataTransfer.effectAllowed = "move";
-    }
-
-    function dragEnd(ev){
-        this.style.opacity = "0.5";
-    }
-   
-    function drop(ev){
-    ev.preventDefault();
-    var divId = ev.dataTransfer.getData("divId");
-    var div = document.getElementById(divId);
-    ev.target.appendChild(div);
-    if (ev.target !== divId){
-        
-    }else{
-
-    }
+   function allowDrop(ev){
+  ev.preventDefault(); 
 }
+
+function drag(ev){
+  ev.dataTransfer.setData("divId", ev.target.id);
+  ev.dataTransfer.effectAllowed = "move";
+}
+
+function dragEnd(ev){
+  this.style.opacity = "0.5";
+}
+
+function dragEnter(ev) {
+  ev.preventDefault();
+  if (ev.target.classList.contains('dropzone') || ev.target.id === 'task-diaria' || ev.target.id == 'task-ongoing' || ev.target.id === 'task-concluida') {
+    ev.target.classList.add('drag-over');
+  }
+}
+
+function dragLeave(ev) {
+  ev.preventDefault();
+  if (ev.target.classList.contains('dropzone') || ev.target.id === 'task-diaria' || ev.target.id == 'task-ongoing' || ev.target.id === 'task-concluida') {
+    ev.target.classList.remove('drag-over');
+  }
+}
+
+function drop(ev){
+  ev.preventDefault();
+  var divId = ev.dataTransfer.getData("divId");
+  var div = document.getElementById(divId);
+  
+  if (ev.target.classList.contains('no-drop')) {
+    return;
+  }
+
+  if (ev.target.classList.contains("dropzone") || ev.target.id === "task-diaria" || ev.target.id === "task-ongoing" || ev.target.id === "task-concluida") {
+    ev.target.appendChild(div);
+  } else {
+    var dropzone = document.getElementById(div.dataset.dropzone);
+    dropzone.appendChild(div);
+  }
+}
+
     </script>
 </body>
 </html>

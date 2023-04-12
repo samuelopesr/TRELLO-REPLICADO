@@ -75,7 +75,7 @@ header{
 
 }
 .trello1, .trello2{
-    position: relative;
+    position: absolute;
 }
 .trello1 > img{
     margin-left: -8px;
@@ -300,10 +300,10 @@ header{
     
 }
 .star1, .star2{
-    position: relative;
-    left: 1px;
-    
+    position: absolute;
+    left: 2;   
 }
+
 #work-visible > #visible-area{
     display: flex;
     position: absolute;
