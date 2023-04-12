@@ -106,8 +106,7 @@ function criarQuadro() {
     if (divSelect !== opcao1) {
         divSelect = opcao1;
         opcao1.classList.add("selected1")
-      }else{
-        
+        opcao2.classList.remove("selected2")
       }
     })
     
@@ -129,15 +128,24 @@ function criarQuadro() {
       if (divSelect !== opcao2){
         divSelect = opcao2
         opcao2.classList.add("selected2")
-        opcao1.classList.remove("selected2")
+        opcao1.classList.remove("selected1")
       }
     })
 
+    const btnConfirm = document.createElement("button")
+    btnConfirm.textContent = "CONFIRMAR"
+    btnConfirm.style.width = "200px"
+    btnConfirm.style.height = "90px"
+    btnConfirm.style.display = "block"
+    btnConfirm.style.position = "absolute"
+    btnConfirm.style.bottom = "40px"
+    btnConfirm.style.left = "150px"
+    
 
 
+    
 
-
-  
+    modal.appendChild(btnConfirm);
 
     const cor = gerarCorAleatoria();
     const quadro = document.createElement("div");
