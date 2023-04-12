@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sua página | Trello</title>
-    <link rel="stylesheet" href="estilos/estilo-pagina-trelloVersao2.css">
+    <link rel="stylesheet" href="estilos/estilo-pagina-trello-dark-version.css">
 </head>
 <body>
     <main id="main">
@@ -17,31 +17,14 @@
                     </div>
                     <li><a href="index.html" id="link-home">
                         <div id="trello-menu-principal">
-                            <img src="imagens/trello.png" alt="trello-menu2">
-                            <p>Trello</p>
+                            <div class="trello1" id="divMenuTrello">
+                                <img src="imagens/trelloIMG.PNG" alt="trello-menu2">
+                            </div>
+                            <div class="trello2">
+                                <img src="imagens/87e1af770a49ce8e84e3.gif" alt="">
+                            </div>
                         </div>
                     </a>
-                    <li><div id="mais">
-                        <p>Mais</p>
-                        <div id="mostrar-mais">
-                            <img src="imagens/down-arrow.png" alt="mostrar-mais">
-                        </div>
-                        <div id="btn-mais">
-                            <img src="imagens/plus.png" alt="button-mais">
-                        </div>
-                        </div>
-                        
-                    <li><div id="pequisa-sino-conta">
-                        <div id="pesquisa">
-                            <img src="imagens/search-interface-symbol.png" alt="icon-pesquisa">
-                        </div>
-                        <div id="sino">
-                            <img src="imagens/bell.png" alt="sino-icon">
-                        </div>
-                        <div id="conta">
-                            <h1>SL</h1>
-                        </div>
-                    </div>
                 </ul>
             </menu>
         </header>
@@ -120,11 +103,55 @@
             </div>
         </div>
     </section>
-    <div class="pop-up">
-
-    </div>
+    <div id="modal-container"></div>
+    <section id="task">
+        
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"  id="task-diaria" class="dropzone">
+                <button id="btn-addtask1">Adicionar um cartão</button>
+                <h2 id="td">Tasks diárias</h2>
+        </div>
+        
+        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="task-ongoing" class="dropzone">
+            <button 
+            id="btn-addtask2">Adicionar um cartão</button>
+            <h2 id="tog">Tasks On-going</h2>
+        </div>
+       
+        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="task-concluida" class="dropzone">
+            <button id="btn-addtask3">Adicionar um cartão</button>
+            <h2 id="tc">Tasks Concluidas</h2>
+        </div>
+    </section>
+    <button id="btn-ExcluirAlltask" onclick="excluirTodasTarefas()">Excluir todas as tarefas</button>
     </main>
     <script src="JavaScript/pagina-trello.js"></script>
     <script src="JavaScript/task.js"></script>
+    <script>
+    function allowDrop(ev){
+      ev.preventDefault();
+      
+    }
+
+    function drag(ev){
+      ev.dataTransfer.setData("divId", ev.target.id);
+      ev.dataTransfer.effectAllowed = "move";
+    }
+
+    function dragEnd(ev){
+        this.style.opacity = "0.5";
+    }
+   
+    function drop(ev){
+    ev.preventDefault();
+    var divId = ev.dataTransfer.getData("divId");
+    var div = document.getElementById(divId);
+    ev.target.appendChild(div);
+    if (ev.target !== divId){
+        
+    }else{
+
+    }
+}
+    </script>
 </body>
 </html>
