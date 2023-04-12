@@ -127,30 +127,48 @@
     <script src="JavaScript/pagina-trello.js"></script>
     <script src="JavaScript/task.js"></script>
     <script>
-    function allowDrop(ev){
-      ev.preventDefault();
-      
-    }
+   function allowDrop(ev){
+  ev.preventDefault(); 
+}
 
-    function drag(ev){
-      ev.dataTransfer.setData("divId", ev.target.id);
-      ev.dataTransfer.effectAllowed = "move";
-    }
+function drag(ev){
+  ev.dataTransfer.setData("divId", ev.target.id);
+  ev.dataTransfer.effectAllowed = "move";
+}
 
-    function dragEnd(ev){
-        this.style.opacity = "0.5";
-    }
-   
-    function drop(ev){
-    ev.preventDefault();
-    var divId = ev.dataTransfer.getData("divId");
-    var div = document.getElementById(divId);
+function dragEnd(ev){
+  this.style.opacity = "0.5";
+}
+
+function dragEnter(ev) {
+  ev.preventDefault();
+  if (ev.target.classList.contains('dropzone') || ev.target.id === 'task-diaria' || ev.target.id == 'task-ongoing' || ev.target.id === 'task-concluida') {
+    ev.target.classList.add('drag-over');
+  }
+}
+
+function dragLeave(ev) {
+  ev.preventDefault();
+  if (ev.target.classList.contains('dropzone') || ev.target.id === 'task-diaria' || ev.target.id == 'task-ongoing' || ev.target.id === 'task-concluida') {
+    ev.target.classList.remove('drag-over');
+  }
+}
+
+function drop(ev){
+  ev.preventDefault();
+  var divId = ev.dataTransfer.getData("divId");
+  var div = document.getElementById(divId);
+  
+  if (ev.target.classList.contains('no-drop')) {
+    return;
+  }
+
+  if (ev.target.classList.contains("dropzone") || ev.target.id === "task-diaria" || ev.target.id === "task-ongoing" || ev.target.id === "task-concluida") {
     ev.target.appendChild(div);
-    if (ev.target !== divId){
-        
-    }else{
-
-    }
+  } else {
+    var dropzone = document.getElementById(div.dataset.dropzone);
+    dropzone.appendChild(div);
+  }
 }
     </script>
 </body>
