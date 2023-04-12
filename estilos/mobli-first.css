@@ -503,3 +503,27 @@ header{
     background-size: cover;
 }
 
+.tema-claro:hover{
+    opacity: 0.5;
+}
+.tema-escuro:hover{
+    opacity: 0.5;
+}
+
+
+.opcao1ModalAfterClick{
+    display: flex;
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 9px solid rgb(0, 119, 255);
+    background-color: #011754;
+    cursor: pointer;
+
+    background: url(/imagens/pexels-lukas-574070.jpg);
+    background-position: center center;
+    background-size: cover;
+}

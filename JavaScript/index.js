@@ -86,10 +86,11 @@ function criarQuadro() {
     const opcao2 = document.createElement("div")
     opcao2.classList.add("opcaomodal2")
 
-
+    let selectButton = null;
 
     const opWhite = document.createElement("button")
     opWhite.textContent = "Tema claro";
+    opWhite.classList.add("tema-claro")
     opWhite.style.display = "block";
     opWhite.style.position = "absolute";
     opWhite.style.top  = "55%";
@@ -101,6 +102,18 @@ function criarQuadro() {
     opWhite.style.border = "none";
     opWhite.style.borderRadius = "5px";
     opWhite.style.cursor = "pointer";
+    opWhite.addEventListener("click", () => {
+    if (selectButton !== opWhite) {
+        opcao1.style.border = "solid"
+        opcao1.style.borderColor = "black"
+        opcao1.style.borderWidth = "10px"
+
+        selectButton = opWhite
+    }
+    })
+    
+
+
 
     const opBlack = document.createElement("button")
     opBlack.classList.add("tema-escuro")
@@ -116,9 +129,21 @@ function criarQuadro() {
     opBlack.style.border = "none";
     opBlack.style.borderRadius = "5px";
     opBlack.style.cursor = "pointer";
-
-
+    opBlack.addEventListener("click", () => {
     
+    if (selectButton === opBlack){ 
+      opcao2.style.border = "solid"
+      opcao2.style.borderColor = "rgb(165, 165, 165)"
+      opcao2.style.borderWidth = "10px"
+      selectButton = opBlack;
+    }
+    })
+
+
+
+
+
+  
 
     const cor = gerarCorAleatoria();
     const quadro = document.createElement("div");
