@@ -534,3 +534,12 @@ header{
 .selected2{
     border: 9px solid rgb(146, 146, 146);
 }
+.btnOpen{
+    display: flex;
+    position: absolute;
+    left: 10px;
+    background-color: #006400;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}

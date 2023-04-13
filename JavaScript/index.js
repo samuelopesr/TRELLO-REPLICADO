@@ -166,14 +166,12 @@ function criarQuadro() {
     quadro.style.height = "130px";
     quadro.style.marginLeft = "5px";
     quadro.style.backgroundColor = cor; 
-    quadro.addEventListener("click", () => {
-      if (divSelect === opcao1){
-        window.location.replace("página do trello.html")
-      }else if(divSelect === opcao2){
-          window.location.replace("página do trello DARK VERSION.html")
-      }
-    })
     
+    const btnOpen = document.createElement("button")
+    btnOpen.classList.add("btnOpen")
+    btnOpen.addEventListener("click", () => {
+        window.location.replace("página do trello.html")
+    })
   
     const botaoFechar = document.createElement("button");
     botaoFechar.textContent = "X";
@@ -197,6 +195,8 @@ function criarQuadro() {
     });
 
     quadro.appendChild(botaoExcluir);
+
+    quadro.appendChild(btnOpen)
 
     const titulo = document.createElement("h2");
     titulo.textContent = texto;
@@ -236,6 +236,12 @@ function renderizarQuadros() {
     quadro.style.height = "130px";
     quadro.style.marginLeft = "5px";
     quadro.style.backgroundColor = quadroInfo.cor;
+
+    const btnOpen = document.createElement("button")
+    btnOpen.classList.add("btnOpen")
+    btnOpen.addEventListener("click", () => {
+        window.location.replace("página do trello.html")
+    })
     
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "Excluir quadro";
@@ -251,6 +257,7 @@ function renderizarQuadros() {
 
     quadro.appendChild(botaoExcluir);
     quadro.appendChild(titulo);
+    quadro.appendChild(btnOpen)
 
     container.appendChild(quadro);
   });
