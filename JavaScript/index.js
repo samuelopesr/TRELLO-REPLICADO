@@ -88,6 +88,7 @@ function criarQuadro() {
 
     let divSelect = null;
 
+    
     const opWhite = document.createElement("button")
     opWhite.textContent = "Tema claro";
     opWhite.classList.add("tema-claro")
@@ -108,6 +109,9 @@ function criarQuadro() {
         opcao1.classList.add("selected1")
         opcao2.classList.remove("selected2")
       }
+    })
+    opWhite.addEventListener("click", () => {
+      opBlack.clicked = true
     })
     
     const opBlack = document.createElement("button")
@@ -131,6 +135,9 @@ function criarQuadro() {
         opcao1.classList.remove("selected1")
       }
     })
+    opBlack.addEventListener("click", () => {
+      opBlack.clicked = true
+    })
 
     const btnConfirm = document.createElement("button")
     btnConfirm.textContent = "CONFIRMAR"
@@ -144,6 +151,13 @@ function criarQuadro() {
     btnConfirm.style.backgroundColor = "#0d5d9ad8"
     btnConfirm.style.color = "white"
     btnConfirm.style.cursor = "pointer"
+    btnConfirm.addEventListener("click", () => {
+      if (divSelect === opcao1){
+        window.location.replace("página do trello.html")
+     }if(divSelect === opcao2){
+      window.location.replace("página do trello DARK VERSION.html")
+     }
+    })
     
     modal.appendChild(btnConfirm);
 
@@ -153,9 +167,20 @@ function criarQuadro() {
     quadro.style.width = "210px";
     quadro.style.height = "130px";
     quadro.style.marginLeft = "5px";
-    quadro.style.backgroundColor = cor;
+    quadro.style.backgroundColor = cor; 
+    if(divSelect === opcao1){
+      quadro.style.cursor = "pointer"
+      quadro.addEventListener("click", () => {
+        window.location.assign("página do trello.html")
+      })
+    }else if(divSelect === opcao2){
+      quadro.style.cursor = "pointer"
+      quadro.addEventListener("click", () => {
+        window.location.assign("página do trello DARK VERSION.html")
+      })
+    }
     
-
+  
     const botaoFechar = document.createElement("button");
     botaoFechar.textContent = "X";
     botaoFechar.style.position = "relative";
