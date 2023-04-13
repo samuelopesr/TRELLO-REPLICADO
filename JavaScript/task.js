@@ -70,7 +70,8 @@ function criarTarefa(containerId) {
   divCentro.style.left = "50%";
   divCentro.style.transform = "translate(-50%, -50%)";
   divCentro.style.zIndex = "9999"; 
-  divCentro.style.overflow = "hidden";
+  divCentro.style.overflowX = "hidden";
+  divCentro.style.overflowY = "scroll"
     
   const btnCriarInput = document.createElement("button");
   btnCriarInput.textContent = "Criar Atividade";
