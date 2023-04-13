@@ -110,10 +110,7 @@ function criarQuadro() {
         opcao2.classList.remove("selected2")
       }
     })
-    opWhite.addEventListener("click", () => {
-      opBlack.clicked = true
-    })
-    
+
     const opBlack = document.createElement("button")
     opBlack.classList.add("tema-escuro")
     opBlack.textContent = "Tema escuro";
@@ -139,9 +136,6 @@ function criarQuadro() {
       opBlack.clicked = true
     })
 
-    const estiloOpcao1 = window.location.replace("página do trello.html")
-    const estiloOpcao2 = window.location.replace("página do trello DARK VERSION.html")
-
     const btnConfirm = document.createElement("button")
     btnConfirm.textContent = "CONFIRMAR"
     btnConfirm.style.width = "200px"
@@ -156,9 +150,10 @@ function criarQuadro() {
     btnConfirm.style.cursor = "pointer"
     btnConfirm.addEventListener("click", () => {
       if (divSelect === opcao1){
-          estiloOpcao1
+        window.location.replace("página do trello.html")
+
      }if(divSelect === opcao2){
-          estiloOpcao2
+      window.location.replace("página do trello DARK VERSION.html")
      }
     })
     
@@ -171,17 +166,11 @@ function criarQuadro() {
     quadro.style.height = "130px";
     quadro.style.marginLeft = "5px";
     quadro.style.backgroundColor = cor; 
-    if(divSelect === opcao1){
-      quadro.addEventListener("click", () => {
-        const save = localStorage.getItem("")
-        window.location.assign("página do trello.html")
-      })
-    }else if(divSelect === opcao2){
-      quadro.style.cursor = "pointer"
-      quadro.addEventListener("click", () => {
-        window.location.assign("página do trello DARK VERSION.html")
-      })
-    }
+    quadro.addEventListener("click", () => {
+      if(divSelect === opcao1){
+        window.location.replace("página do trello.html")
+      }
+    })
     
   
     const botaoFechar = document.createElement("button");
