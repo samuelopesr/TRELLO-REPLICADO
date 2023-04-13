@@ -74,6 +74,7 @@ function criarTarefa(containerId) {
     
   const btnCriarInput = document.createElement("button");
   btnCriarInput.textContent = "Criar Atividade";
+  btnCriarInput.classList.add("btnCriarIn")
   btnCriarInput.style.marginLeft = "20px";
   btnCriarInput.style.marginTop = "25px";
   btnCriarInput.addEventListener("click", criarAtividade)
@@ -99,10 +100,11 @@ function criarAtividade(){
     atividades.style.width = "100vw";
 
     const inputTexto = document.createElement("textarea")
+    inputTexto.classList.add("textarea")
     inputTexto.style.display = "flex";
     inputTexto.style.position = "relative";
     inputTexto.style.width = "72vw";
-    inputTexto.style.height = "95px";
+    inputTexto.style.height = "50px";
     inputTexto.style.resize = "none";
     inputTexto.style.marginLeft = "40px";
     inputTexto.addEventListener("input", () => {
@@ -127,6 +129,7 @@ const mainTitle =  document.createElement("h2");
   const btnRemoveInput = document.createElement("button");
   btnRemoveInput.textContent = "Remover Atividade";
   btnRemoveInput.style.marginLeft = "25px";
+  btnRemoveInput.classList.add("btnRemoveInput")
   btnRemoveInput.style.marginTop = "25px";
   btnRemoveInput.addEventListener("click", () =>{
        atividades.remove();

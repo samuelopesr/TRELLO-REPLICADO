@@ -714,4 +714,30 @@ border-radius: 0px 0px 5px 5px;
     margin-top: 5px;
     
 }
+.btnCriarIn{
+    cursor: pointer;
+    background-color: cornsilk;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    font-weight: bolder;
+    width: 100px;
+    height: 35px;
+}
+.btnCriarIn:hover{
+    background-color: rgb(145, 145, 144);
+}
+.textarea{
+    border-radius: 5px;
+}
+.btnRemoveInput{
+    cursor: pointer;
+    background-color: cornsilk;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    font-weight: bolder;
+    width: 100px;
+    height: 35px;
+}
 
