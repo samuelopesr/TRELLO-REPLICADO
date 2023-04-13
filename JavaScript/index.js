@@ -87,7 +87,6 @@ function criarQuadro() {
     opcao2.classList.add("opcaomodal2")
 
     let divSelect = null;
-
     
     const opWhite = document.createElement("button")
     opWhite.textContent = "Tema claro";
@@ -106,6 +105,7 @@ function criarQuadro() {
     opWhite.addEventListener("click", () => {
     if (divSelect !== opcao1) {
         divSelect = opcao1;
+        localStorage.setItem("divSelect", divSelect)
         opcao1.classList.add("selected1")
         opcao2.classList.remove("selected2")
       }
@@ -128,6 +128,7 @@ function criarQuadro() {
     opBlack.addEventListener("click", () => {
       if (divSelect !== opcao2){
         divSelect = opcao2
+        localStorage.setItem("divSelect", divSelect)
         opcao2.classList.add("selected2")
         opcao1.classList.remove("selected1")
       }
@@ -153,7 +154,7 @@ function criarQuadro() {
         window.location.replace("página do trello.html")
 
      }if(divSelect === opcao2){
-      window.location.replace("página do trello DARK VERSION.html")
+        window.location.replace("página do trello DARK VERSION.html")
      }
     })
     
@@ -166,13 +167,17 @@ function criarQuadro() {
     quadro.style.height = "130px";
     quadro.style.marginLeft = "5px";
     quadro.style.backgroundColor = cor; 
-    quadro.addEventListener("click", () => {
-      if(divSelect === opcao1){
-        window.location.replace("página do trello.html")
-      }
-    })
     
-  
+    const btnAbrirEscolha = document.createElement("button")
+    btnAbrirEscolha.textContent = "Abrir quadro"
+    btnAbrirEscolha.style.position = "relative"
+    btnAbrirEscolha.style.height = "40px"   
+    btnAbrirEscolha.style.width = "100px"
+    btnAbrirEscolha.style.backgroundColor = "green"
+    btnAbrirEscolha.addEventListener("click", () => {
+
+    })
+
     const botaoFechar = document.createElement("button");
     botaoFechar.textContent = "X";
     botaoFechar.style.position = "relative";
@@ -195,6 +200,8 @@ function criarQuadro() {
     });
 
     quadro.appendChild(botaoExcluir);
+
+    quadro.appendChild(btnAbrirEscolha)
 
     const titulo = document.createElement("h2");
     titulo.textContent = texto;
@@ -234,6 +241,16 @@ function renderizarQuadros() {
     quadro.style.height = "130px";
     quadro.style.marginLeft = "5px";
     quadro.style.backgroundColor = quadroInfo.cor;
+
+    const btnAbrirEscolha = document.createElement("button")
+    btnAbrirEscolha.textContent = "Abrir quadro"
+    btnAbrirEscolha.style.position = "relative"
+    btnAbrirEscolha.style.height = "40px"   
+    btnAbrirEscolha.style.width = "100px"
+    btnAbrirEscolha.style.backgroundColor = "green"
+    btnAbrirEscolha.addEventListener("click", () => {
+        
+    })
     
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "Excluir quadro";
