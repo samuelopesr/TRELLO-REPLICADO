@@ -1,0 +1,19 @@
+
+         function allowDrop(ev){
+      ev.preventDefault();
+    }
+
+    function drag(ev){
+      ev.dataTransfer.setData("div", ev.target.outerHTML);
+      ev.dataTransfer.effectAllowed = "move";
+    }
+   
+    function drop(ev){
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("div");
+      ev.target.appendChild(document.createRange().createContextualFragment(data));
+    
+    }
+
+    //ondrop="drop(event)" ondragover="allowDrop(event)"
+    

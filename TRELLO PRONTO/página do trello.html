@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua página | Trello | Tema Claro</title>
+    <link rel="stylesheet" href="estilos/estilo-pagina-trello.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main id="main">
+        <header id="header">
+            <menu>
+                <ul id="lista" >
+                    <li><div id="trello-menu1" >
+                        <img src="imagens/dots-menu.png" alt="trello-menu">
+                    </div>
+                    <li><a href="index.html" id="link-home">
+                        <div id="trello-menu-principal">
+                            <div class="trello1" id="divMenuTrello">
+                                <img src="imagens/trelloIMG.PNG" alt="trello-menu2">
+                            </div>
+                            <div class="trello2">
+                                <img src="imagens/87e1af770a49ce8e84e3.gif" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </ul>
+            </menu>
+        </header>
+        <div id="par">
+            <p>Abrir menu lateral</p>
+        </div>
+        <button id="abrirMenu">
+            <a href="#" id="btn-abrir" onclick="abrirMenu()">&#9776;</a>
+        </button>
+        <nav id="menu-abrir-fechar">
+
+            <p id="closewin">
+                Fechar menu lateral
+            </p>
+            <button id="buttonFechar"><a href="#" id="btn-fechar" onclick="fecharMenu()">&#9776;</a></button>
+            <div id="containSuaPagina">
+                <p id="SuaPagina">SP</p> <p id="write">SUA PÁGINA</p>
+            </div>
+            <h2>Seus quadros</h2>
+            <div onclick="fecharMenu()" id="h3">
+                <p>SP</p>
+                <h3>Sua página</h3>
+            </div>
+        </nav>
+
+    <section id="secao-info">
+        <div id="info">
+            <div id="infoin-1">
+                <div id="fav-title">
+                    <h1>PROGRAMAÇÃO PROJETO EDUCERE</h1>
+                    <div id="fav">
+                        <img class="star1" src="imagens/star.png" alt="favorito"> 
+                        <img class="star2" src="imagens/starfull.png" alt="starfull">
+                    </div>
+                </div>
+                <div id="work-visible">
+                 <div id="visible-area"> 
+                    <img src="imagens/group.png" alt=""><p onclick="abrirJanelaAreaDeTrbalho()">visivel a área de trabalho</p> 
+                </div>
+                 <div id="abrir-janela-visivel-area-de-trabalho">
+                        <span id="x-workarea" onclick="fecharJanelaAreaDeTrbalho()">X</span>
+                        <h1>visibilidade</h1>
+                        <h2>Particular</h2>
+                        <p>Somente membros do quadro podem ver e editar este quadro.
+                        </p>
+                        <h2>Área de trabalho</h2>
+                        <p>Todos os membros da Área de trabalho podem ver e editar este quadro.</p>
+                        <h2>Organização</h2>
+                        <p>Todos os membros da organização podem ver este quadro. O quadro precisa ser adicionado a uma Área de trabalho da empresa para possibilitar isso.</p>
+                        <h2>Público</h2>
+                        <p>Todos na internet podem ver este quadro. Somente membros do quadro podem editá-lo.</p>
+                </div>
+                <div id="quadrodiv">
+
+                    <button id="quadro" onclick="abrirPopUpQuadro()"><img src="imagens/settings.png" alt="arrow-show"><p>Quadro</p></button>
+                </div>
+                <div id="pop-up-quadro">
+                    <span onclick="fecharPopUpQuadro()">X</span>
+                    <p id="p-popup">Veja seu trabalho de novas maneiras</p>
+
+                     <p class="st"> &#9781; &#9745; Quadro 🔓</p>
+                     <p> &#9781; Tabela 🔒</p>
+                     <p> &#9781; Calendário 🔒</p> 
+                     <p> &#9781; Cronograma 🔒</p> 
+                     <p> &#9781; Painel 🔒</p> 
+                     <p> &#9781; Mapa 🔒</p> 
+
+                </div>
+            </div>
+            <div id="infoin-2">
+                <button id="powerup"> <img src="imagens/startup.png" alt="powerup"> <p>Power-Ups</p></button>
+                <button id="auto"> <img src="imagens/light.png" alt="automação"> <p>Auto</p></button>
+                <button id="filter"><img src="imagens/sort.png" alt="filtro"><p>Filtro</p></button>
+                <button id="share"><img src="imagens/share.png" alt="share"><p>Compartilhar</p></button>
+                <button id="mostrar-mais"><img src="imagens/more.png" alt="mostrar"></button>
+            </div>
+        </div>
+    </section>
+
+    <button id="btn-ExcluirAlltask" onclick="excluirTodasTarefas()">Excluir todas as tarefas</button>
+    <div id="modal-container"></div>
+    <section id="task">
+        
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"  id="task-diaria" class="dropzone">
+                <button id="btn-addtask1">Adicionar um cartão</button>
+                <h2 id="td">Tasks diárias</h2>
+        </div>
+        
+        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="task-ongoing" class="dropzone">
+            <button 
+            id="btn-addtask2">Adicionar um cartão</button>
+            <h2 id="tog">Tasks On-going</h2>
+        </div>
+       
+        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="task-concluida" class="dropzone">
+            <button id="btn-addtask3">Adicionar um cartão</button>
+            <h2 id="tc">Tasks Concluidas</h2>
+        </div>
+    </section>
+   
+    </main>
+    <script src="JavaScript/pagina-trello.js"></script>
+    <script src="JavaScript/task.js"></script>
+    <script>
+   function allowDrop(ev){
+  ev.preventDefault(); 
+}
+
+function drag(ev){
+  ev.dataTransfer.setData("divId", ev.target.id);
+  ev.dataTransfer.effectAllowed = "move";
+}
+
+function dragEnd(ev){
+  this.style.opacity = "0.5";
+}
+
+function dragEnter(ev) {
+  ev.preventDefault();
+  if (ev.target.classList.contains('dropzone') || ev.target.id === 'task-diaria' || ev.target.id == 'task-ongoing' || ev.target.id === 'task-concluida') {
+    ev.target.classList.add('drag-over');
+  }
+}
+
+function dragLeave(ev) {
+  ev.preventDefault();
+  if (ev.target.classList.contains('dropzone') || ev.target.id === 'task-diaria' || ev.target.id == 'task-ongoing' || ev.target.id === 'task-concluida') {
+    ev.target.classList.remove('drag-over');
+  }
+}
+
+function drop(ev){
+  ev.preventDefault();
+  var divId = ev.dataTransfer.getData("divId");
+  var div = document.getElementById(divId);
+  
+  if (ev.target.classList.contains('no-drop')) {
+    return;
+  }
+
+  if (ev.target.classList.contains("dropzone") || ev.target.id === "task-diaria" || ev.target.id === "task-ongoing" || ev.target.id === "task-concluida") {
+    ev.target.appendChild(div);
+  } else {
+    var dropzone = document.getElementById(div.dataset.dropzone);
+    dropzone.appendChild(div);
+  }
+}
+    </script>
+</body>
+</html>
