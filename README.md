@@ -41,5 +41,6 @@
     <li> Possibilidade de criação das atividades
     <li> Possibilidade de excluir as atividades
     <img src="imagens/captureREADME/tarefac.png">
+    <img src="imagens/captureREADME/tarefab.png">
 </ul>
  
