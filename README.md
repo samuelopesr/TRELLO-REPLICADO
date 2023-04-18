@@ -16,7 +16,7 @@
 
 # FUNCIONALIDADES
 
-### Index
+### 🗂️ Index
 <ul>
     <li>Criação dos quadros na página inicial
     <li>Funcionalidade de excluir todos os quadros, ao criar vários.
@@ -24,7 +24,7 @@
     <img src="imagens/captureREADME/index.png"><br>
 </ul>
 
-### Criação de tarefas
+### 📑 Criação de tarefas
 <ul>
     <li>
     <img src="">
