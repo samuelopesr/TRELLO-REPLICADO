@@ -10,7 +10,7 @@
 
 <ul>
     <li>Criação dos quadros na página inicial
-    <img src="imagens/">
+    <img src="imagens/captureREADME/index.png">
 </ul>
 
  
