@@ -10,7 +10,7 @@
 
 <ul>
     <li>Criação dos quadros na página inicial
-    <img src="">
+    <img src="imagens/">
 </ul>
 
  
