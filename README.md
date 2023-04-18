@@ -26,7 +26,15 @@
 
 ### 🔖 Criação de tarefas
 <ul>
-    <li>
+    <li> Criação de tarefas dinâmicas.
+    <li> Se o botão de "adiconar um cartão" estiver veiculado a div que está, então, a tarefas será criada dentro do mesmo.
+    <li> Mais possibilidades de interação.
+    <li> Possibilidade de excluir todas as tarefas.
+    <li> Possibilidade de excluir as tarefas individualmente
+    <li> Possibilidade de edição da tarefa criada
+    <li> Ao clicar no botão editar pode-se ter acesso a área de criação de atividades
+    <li> Possibilidade de criação das atividades
+    <li> Possibilidade de excluir as atividades
     <img src="">
 </ul>
  
