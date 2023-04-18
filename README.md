@@ -20,8 +20,12 @@
 <ul>
     <li>Criação dos quadros na página inicial
     <li>Funcionalidade de excluir todos os quadros, ao criar vários.
-    <li>Algumas possibilidades de interação.
+    <li>Algumas possibilidades de interação.<br>
+    <li>Possibilidade de estilização ao criar o quadro (tema escuro/tema claro)
+    <li>Quadro fica salvo após recarregar a página
+    <li>Possibilidade de acessar o quadro depois da página recarregada, porém, não guarda opção de escolha do usuário.
     <img src="imagens/captureREADME/index.png"><br>
+    <img src="">
 </ul>
 
 ### 🔖 Criação de tarefas
