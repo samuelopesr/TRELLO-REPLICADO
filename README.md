@@ -1,5 +1,7 @@
 # TRELLO-REPLICADO
 
+<a href="https://samuelopesribeiro.github.io/TRELLO-REPLICADO/">TRELLO REPLICADO</a>
+
 <p align="center">Esse projeto replica as principais funções do Trello, como a criação de quadros e tarefas. Esse projeto foi uma proposta de projeto e teve seu deadline de um mês, foi o tempo hábil para faze-lo</p>
 
 ## 🏗️ EM CONSTRUÇÃO...
