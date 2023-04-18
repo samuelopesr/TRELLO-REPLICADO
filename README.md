@@ -8,9 +8,13 @@
 <ul>
     <li> Uma das funcionalidades que irei implementar será a função de "vizualizado recentemente", ou seja, quando um quadro criado, esse mesmo quadro irá como um indicação recente;<br>
     <li> Para um maior efeito de comparação com a plataforma original colocaquei várias camadas nos botões do Header;
-    <li> Maior gama de opções em sua personalização
-    <li> Melhor construção de certos elementos do site, como posicionamento de conteúdos
+    <li> Maior gama de opções em sua personalização;
+    <li> Melhor construção de certos elementos do site, como posicionamento de conteúdos;
+    <li> Maior possibilidade de interação;
+    <li> Melhorias na interface;
 </ul>
+
+<p font-weight="bolder" font-size="2em">As principais mudanças seriam essas</p>
 
 # FUNCIONALIDADES
 
