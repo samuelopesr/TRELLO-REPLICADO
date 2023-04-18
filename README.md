@@ -6,4 +6,10 @@
 
 <p align="center">Certas funcionalidade do projeto ainda não estão 100%, como o salvamento dos conteúdos dos quadros/tarefas e os próprios quadros e tarefas</p>
 
+# FUNCIONALIDADES
+
+<ul>
+    <li>Criação dos quadros na página inicial
+</ul>
+
  
