@@ -43,5 +43,6 @@
     <img src="imagens/captureREADME/tarefac.png">
     <img src="imagens/captureREADME/tarefabb.png">
     <img src="imagens/captureREADME/tarefaquadro.png">
+    <img src="imagens/captureREADME/opa.png">
 </ul>
  
