@@ -24,8 +24,9 @@
     <li>Possibilidade de estilização ao criar o quadro (tema escuro/tema claro)
     <li>Quadro fica salvo após recarregar a página
     <li>Possibilidade de acessar o quadro depois da página recarregada, porém, não guarda opção de escolha do usuário.
+    <li>Possibilidade de excluir cada quadro individualmente
     <img src="imagens/captureREADME/index.png"><br>
-    <img src="">
+    <img src="imagens/captureREADME/index2.png"><br>
 </ul>
 
 ### 🔖 Criação de tarefas
