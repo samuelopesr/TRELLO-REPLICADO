@@ -40,6 +40,6 @@
     <li> Ao clicar no botão editar pode-se ter acesso a área de criação de atividades
     <li> Possibilidade de criação das atividades
     <li> Possibilidade de excluir as atividades
-    <img src="">
+    <img src="imagens/captureREADME/tarefac.png">
 </ul>
  
