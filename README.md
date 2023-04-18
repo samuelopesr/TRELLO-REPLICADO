@@ -42,6 +42,6 @@
     <li> Possibilidade de excluir as atividades
     <img src="imagens/captureREADME/tarefac.png">
     <img src="imagens/captureREADME/tarefabb.png">
-    <video src="imagens/captureREADME/trello.mp4">
+    <video src="imagens/captureREADME/trello.mp4" controls>Seu navegador não suporta</video>
 </ul>
  
