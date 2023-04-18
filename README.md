@@ -14,7 +14,7 @@
     <li> Melhorias na interface;
 </ul>
 
-<p font-weight="bolder" font-size="2em">As principais mudanças seriam essas</p>
+<p font-weight="700" font-size="40px">As principais mudanças seriam essas</p>
 
 # FUNCIONALIDADES
 
