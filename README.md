@@ -4,7 +4,7 @@
 
 ## 🏗️ EM CONSTRUÇÃO...
 
-<p align="center">Certas funcionalidade do projeto ainda não estão 100%, como o salvamento dos conteúdos dos quadros/tarefas e os próprios quadros e tarefas</p>
+### Certas funcionalidade do projeto ainda não estão 100%, como o salvamento dos conteúdos dos quadros/tarefas e os próprios quadros e tarefas
 <ul>
     <li> Uma das funcionalidades que irei implementar será a função de "vizualizado recentemente", ou seja, quando um quadro criado, esse mesmo quadro irá como um indicação recente;<br>
     <li> Para um maior efeito de comparação com a plataforma original colocaquei várias camadas nos botões do Header
