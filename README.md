@@ -14,14 +14,13 @@
     <li> Melhorias na interface;
 </ul>
 
-<p font-weight="700" font-size="40px">As principais mudanças seriam essas</p>
-
 # FUNCIONALIDADES
 
 <ul>
     <li>Criação dos quadros na página inicial
+    <li>Funcionalidade de excluir todos os quadros, ao criar vários.
     <img src="imagens/captureREADME/index.png"><br>
-    <li>Funcionalidade de excluir todos os quadros, ao criar vários
+    
 </ul>
 
  
