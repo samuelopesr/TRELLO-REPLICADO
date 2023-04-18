@@ -482,7 +482,7 @@ header{
     background-color: #011754;
     cursor: pointer;
 
-    background: url(/imagens/pexels-lukas-574070.jpg);
+    background-image: url(../imagens/pexels-lukas-574070.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -498,7 +498,7 @@ header{
     background-color: #011754;
     cursor: pointer;
 
-    background: url(/imagens/pexels-neo-2653362.jpg);
+    background-image: url(../imagens/pexels-neo-2653362.jpg);
     background-position: center center;
     background-size: cover;
 }
