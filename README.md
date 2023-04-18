@@ -24,7 +24,7 @@
     <img src="imagens/captureREADME/index.png"><br>
 </ul>
 
-### 📑 Criação de tarefas
+### 🔖 Criação de tarefas
 <ul>
     <li>
     <img src="">
