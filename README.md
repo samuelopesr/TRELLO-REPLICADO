@@ -20,23 +20,21 @@
 
 ### 🗂️ Index
 <ul>
-    <li>Criação dos quadros na página inicial
+    <li>Criação dos quadros na página inicial.
     <li>Funcionalidade de excluir todos os quadros, ao criar vários.
-    <li>Algumas possibilidades de interação.<br>
-    <li>Possibilidade de estilização ao criar o quadro (tema escuro/tema claro)
-    <li>Quadro fica salvo após recarregar a página
+    <li>Algumas possibilidades de interação através de click e hover.<br>
+    <li>Possibilidade de estilização ao criar o quadro (tema escuro/claro).
     <li>Possibilidade de acessar o quadro depois da página recarregada, porém, não guarda opção de escolha do usuário.
-    <li>Possibilidade de excluir cada quadro individualmente
+    <li>Possibilidade de excluir cada quadro individualmente.
     <img src="imagens/captureREADME/index.png"><br>
     <img src="imagens/captureREADME/index2.png"><br>
 </ul>
 
 ### 🔖 Criação de tarefas
 <ul>
-    <li> Criação de tarefas dinâmicas.
-    <li> Se o botão de "adiconar um cartão" estiver veiculado a div que está, então, a tarefas será criada dentro do mesmo.
-    <li> Mais possibilidades de interação.
-    <li> Possibilidade de excluir todas as tarefas.
+    <li> Criação de tarefas dinâmicas
+    <li> Possibilidades de interação através hover e click
+    <li> Possibilidade de excluir todas as tarefas
     <li> Possibilidade de excluir as tarefas individualmente
     <li> Possibilidade de edição da tarefa criada
     <li> Ao clicar no botão editar pode-se ter acesso a área de criação de atividades
