@@ -36,10 +36,7 @@ window.addEventListener("resize", () => {
     }
 });
 
-
-let quadros = [];
-let numQuadros = 0;
-
+quadros = [];
 function gerarCorAleatoria() {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
@@ -263,10 +260,14 @@ function renderizarQuadros() {
   });
 }
 
+//A função salvarQuadros() converte o array quadros em uma string JSON usando o método JSON.stringify(). Em seguida, ela usa o método localStorage.setItem() e armazena a string JSON no armazenamento local no JSON.Isso permite que os dados do array quadros sejam salvos localmente e fique acesssível usuário depois que página é fechada ou recarregada. Quando a página é carregada novamente, a função carregarQuadros() é chamada para carregar os dados do armazenamento local de volta para o array quadros.
+
 function salvarQuadros() {
   const json = JSON.stringify(quadros);
   localStorage.setItem("quadros", json);
 }
+
+//A função carregarQuadros() carrega os dados dos quadros de um arquivo JSON através do método fetch, ou seja, ele busca o aquivo quadros.json, que retém as informações dos quadros. Depois que os dados são recuperados o metodo .then armazena os dados recuperados e chama a função renderizarQuadros() para exibir os quadros na tela, também é usado o comando para ver se tem algum quadro armazenado no navegador localStorage.getItem("quadros"), se tiver, a variável quadros será atualizada com o método JSON.parse() e a numQuadros será atualizada com e depois a função renderizarQuadros() é chamada para renderizar os quadros na tela.
 
 function carregarQuadros() {
   fetch('quadros.json')
@@ -296,7 +297,6 @@ function excluirTodosQuadros() {
     for (let i = 0; i < quadros.length; i++) {
       quadros[i].remove();
     }
-    numQuadros = 0;
     quadros.length = 0; 
     localStorage.clear();
   }
