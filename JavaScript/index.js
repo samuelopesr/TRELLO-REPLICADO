@@ -222,7 +222,7 @@ function criarQuadro() {
   }
 }
 
-//Esta função é responsável por renderizar todos os quadros salvos na página inicial. Primeiro, ela seleciona o elemento HTML onde os quadros serão exibidos, utilizando o método querySelector. Em seguida, ela percorre o array quadros utilizando o método forEach e para cada objeto quadroInfo, cria um elemento div e adiciona a classe quadro, que define algumas propriedades de estilo. O título do quadro é adicionado como um elemento h2 dentro da div.Além disso, a função cria um botão de excluir quadro, que é adicionado como um elemento button dentro da div. Quando o botão de excluir quadro é clicado, o quadro é removido do elemento HTML e da lista quadros, e a função salvarQuadros() é chamada para salvar a nova lista de quadros no armazenamento local.Também é criado um botão para abrir o quadro, que quando clicado, redireciona o usuário para a página do quadro.Por fim, a função adiciona o elemento div de cada quadro dentro do elemento HTML selecionado no início da função, utilizando o método appendChild.
+//Esta função é responsável por renderizar todos os quadros salvos na página inicial. É selecionado o elemento HTML onde os quadros serão exibidos através do query Selector, verifica o array quadros através do forEach e para cada cria um elemento div e adiciona a classe quadro. Quando o botão de excluir quadro é clicado, o quadro é removido do elemento HTML e da lista quadros e é acionado salvarQuadros() para salvar a lista atualizada de quadros no armazenamento local.
 
 function renderizarQuadros() {
   const container = document.querySelector("#criar-quadro");
