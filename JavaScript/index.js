@@ -1,3 +1,27 @@
+//Neste aquivo JS é retratado as features na página index
+//--EXPLICANDO FUNÇÕES--
+//function indInspo()
+//Essa função coloca um alert na tela avisando que a página não está disponível
+
+//function diminuirMenu()
+//Essa função começa declarando duas variáveis que iram receber uma nova largura e altura
+//depois temos uma variável da viewport que representa o tamanho da página
+//depois temos uma variável que é a Media Query, que apresenta uma largura mínima de 769px
+//É selecionado um menu lateral através de uma variável da prórpria página utilizando querySelector 
+//Ele faz uma verificação e se a largura for conferida o menu lateral aparece
+
+//function gerarCorAleatoria()
+//Gera uma cor aleatória para cada tarefa através usando math.floor para arredondar para baixo e math.random para seleção de cores
+//Então retorna uma string em formato rgb e atribui ao parâmetro background color do quadro
+
+//function criarQuado()
+//Declaração de duas variáveis
+//quadros = [] armazena os quadros criados dentro do vetor
+//numQuadros = 0 contabiliza o número de quadros
+//É ativado um prompt com a variável "texto"
+//Se esse prompt estiver algum conteúdo é gerado os quadro, um overlay com opção de um modal para escolha de temas (claro/escuro)
+//
+
 function indIspo()
 {
     alert('página indisponível');
