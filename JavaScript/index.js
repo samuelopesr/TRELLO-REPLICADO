@@ -264,7 +264,7 @@ function renderizarQuadros() {
   });
 }
 
-//A função salvarQuadros() converte o array quadros em uma string JSON usando o método JSON.stringify(). Em seguida, ela usa o método localStorage.setItem() e armazena a string JSON no armazenamento local no JSON.Isso permite que os dados do array quadros sejam salvos localmente e fique acesssível usuário depois que página é fechada ou recarregada. Quando a página é carregada novamente, a função carregarQuadros() é chamada para carregar os dados do armazenamento local de volta para o array quadros.
+//A função salvarQuadros() converte o array quadros em uma string JSON usando o método JSON.stringify(). Em seguida, ela usa o método localStorage.setItem() e armazena a string JSON no armazenamento local no JSON. Isso permite que os dados do array quadros sejam salvos localmente e fique acesssível usuário depois que página é fechada ou recarregada. Quando a página é carregada novamente, a função carregarQuadros() é chamada para carregar os dados do armazenamento local de volta para o array quadros.
 
 function salvarQuadros() {
   const json = JSON.stringify(quadros);

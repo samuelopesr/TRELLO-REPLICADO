@@ -1,4 +1,4 @@
-let tarefas = {};
+let tarefas = [];
 let numTarefas = 0;
 
 
@@ -90,7 +90,6 @@ function criarTarefa(containerId) {
   }
 //codigo base de exemplo -- inicio
 let atividade = [];
-let numAtividade = 0;
 
 function criarAtividade(){
   const tituloH2 = prompt("digite o titulo da atividade:")
