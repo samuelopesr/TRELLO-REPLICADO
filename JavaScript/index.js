@@ -60,8 +60,8 @@ window.addEventListener("resize", () => {
     }
 });
 
-quadros = [];
-numQuadros = 0
+let quadros = [];
+let numQuadros = 0
 
 function gerarCorAleatoria() {
   const r = Math.floor(Math.random() * 256);
