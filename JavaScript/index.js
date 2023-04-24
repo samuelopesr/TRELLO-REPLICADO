@@ -175,9 +175,11 @@ function criarQuadro() {
     btnConfirm.addEventListener("click", () => {
       if (divSelect === opcao1){
         window.location.replace("página do trello.html")
-
+        salvaTema('claro')
+       
      }if(divSelect === opcao2){
         window.location.replace("página do trello DARK VERSION.html")
+        salvaTema('escuro')
      }
     })
     
@@ -255,6 +257,8 @@ function renderizarQuadros() {
   const container = document.querySelector("#criar-quadro");
   container.style.flexWrap = "wrap";
 
+ 
+
   quadros.forEach((quadroInfo) => {
     const quadro = document.createElement("div");
     quadro.classList.add("quadro");
@@ -266,7 +270,14 @@ function renderizarQuadros() {
     const btnOpen = document.createElement("button")
     btnOpen.classList.add("btnOpen")
     btnOpen.addEventListener("click", () => {
+      const temaSalvo = localStorage.getItem('tema')
+
+      if (temaSalvo === 'claro'){
         window.location.replace("página do trello.html")
+      }
+      else if (temaSalvo === 'escuro'){
+        window.location.replace("página do trello DARK VERSION.html")
+      }
     })
     
     const botaoExcluir = document.createElement("button");
@@ -295,6 +306,12 @@ function salvarQuadros() {
   const json = JSON.stringify(quadros);
   localStorage.setItem("quadros", json);
 }
+
+
+function salvaTema(tema){
+  localStorage.setItem('tema', tema)
+}
+
 
 //A função carregarQuadros() carrega os dados dos quadros de um arquivo JSON através do método fetch, ou seja, ele busca o aquivo quadros.json, que retém as informações dos quadros. Depois que os dados são recuperados o metodo .then armazena os dados recuperados e chama a função renderizarQuadros() para exibir os quadros na tela, também é usado o comando para ver se tem algum quadro armazenado no navegador localStorage.getItem("quadros"), se tiver, a variável quadros será atualizada com o método JSON.parse() e a numQuadros será atualizada com e depois a função renderizarQuadros() é chamada para renderizar os quadros na tela.
 
