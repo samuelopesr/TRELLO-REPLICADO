@@ -175,11 +175,11 @@ function criarQuadro() {
     btnConfirm.addEventListener("click", () => {
       if (divSelect === opcao1){
         window.location.replace("página do trello.html")
-        salvaTema('claro')
+        
        
      }if(divSelect === opcao2){
         window.location.replace("página do trello DARK VERSION.html")
-        salvaTema('escuro')
+        
      }
     })
     
@@ -270,8 +270,8 @@ function renderizarQuadros() {
     const btnOpen = document.createElement("button")
     btnOpen.classList.add("btnOpen")
     btnOpen.addEventListener("click", () => {
-      const temaSalvo = localStorage.getItem('tema')
-      
+      const temaSalvo = localStorage.getItem('tema')//ira ser um bjeto identificando o quadro
+
       if (temaSalvo === 'claro'){
         window.location.replace("página do trello.html")
       }
@@ -307,7 +307,7 @@ function salvarQuadros() {
   localStorage.setItem("quadros", json);
 }
 
-
+//vai ser uma função que 
 function salvaTema(tema){
   localStorage.setItem('tema', tema)
 }
