@@ -271,7 +271,7 @@ function renderizarQuadros() {
     btnOpen.classList.add("btnOpen")
     btnOpen.addEventListener("click", () => {
       const temaSalvo = localStorage.getItem('tema')
-
+      
       if (temaSalvo === 'claro'){
         window.location.replace("página do trello.html")
       }
