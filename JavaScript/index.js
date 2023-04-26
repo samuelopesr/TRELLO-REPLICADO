@@ -114,8 +114,6 @@ function criarQuadro() {
 
     let divSelect = null;
   
-    let escolha = {}
-    
     const opWhite = document.createElement("button")
     opWhite.textContent = "Tema claro";
     opWhite.classList.add("tema-claro")
@@ -178,10 +176,11 @@ function criarQuadro() {
     btnConfirm.addEventListener("click", () => {
       if (divSelect === opcao1){
         window.location.replace("página do trello.html")
-        
+        salvaTema('claro')
        
      }if(divSelect === opcao2){
         window.location.replace("página do trello DARK VERSION.html")
+        salvaTema('escuro')
         
      }
     })
