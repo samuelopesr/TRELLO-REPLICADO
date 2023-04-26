@@ -64,6 +64,7 @@ window.addEventListener("resize", () => {
 let quadros = [];
 let numQuadros = 0
 
+
 function gerarCorAleatoria() {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
@@ -112,6 +113,8 @@ function criarQuadro() {
     opcao2.classList.add("opcaomodal2")
 
     let divSelect = null;
+  
+    let escolha = {}
     
     const opWhite = document.createElement("button")
     opWhite.textContent = "Tema claro";
@@ -197,6 +200,7 @@ function criarQuadro() {
     btnOpen.classList.add("btnOpen")
     btnOpen.addEventListener("click", () => {
         window.location.replace("página do trello.html")
+
     })
   
     const botaoFechar = document.createElement("button");
