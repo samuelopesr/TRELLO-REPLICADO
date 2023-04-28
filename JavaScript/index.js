@@ -88,16 +88,16 @@ function criarQuadro() {
   
     const modal = document.createElement("div");
     modal.classList.add("modal")
-    modal.style.height = "600px";
-    modal.style.width = "500px";
-    modal.style.backgroundColor = "rgb(208, 208, 209)";
-    modal.style.position = "fixed";
-    modal.style.top = "50%";
-    modal.style.left = "50%";
-    modal.style.transform = "translate(-50%, -50%";
-    modal.style.textAlign = "center";
-    modal.style.borderRadius = "10px";
-    modal.style.boxShadow = "1px 2px 6px rgb(143, 142, 142)";
+    // modal.style.height = "600px";
+    // modal.style.width = "500px";
+    // modal.style.backgroundColor = "rgb(208, 208, 209)";
+    // modal.style.position = "fixed";
+    // modal.style.top = "50%";
+    // modal.style.left = "50%";
+    // modal.style.transform = "translate(-50%, -50%";
+    // modal.style.textAlign = "center";
+    // modal.style.borderRadius = "10px";
+    // modal.style.boxShadow = "1px 2px 6px rgb(143, 142, 142)";
 
     overlay.appendChild(modal);
 
@@ -116,6 +116,7 @@ function criarQuadro() {
     let divSelect = null;
   
     const opWhite = document.createElement("button")
+    opWhite.classList.add("opWhite")
     opWhite.textContent = "Tema claro";
     opWhite.classList.add("tema-claro")
     opWhite.style.display = "block";
@@ -138,6 +139,7 @@ function criarQuadro() {
     })
 
     const opBlack = document.createElement("button")
+    opBlack.classList.add("opBlack")
     opBlack.classList.add("tema-escuro")
     opBlack.textContent = "Tema escuro";
     opBlack.style.display = "block";
