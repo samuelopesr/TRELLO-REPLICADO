@@ -87,6 +87,7 @@ function criarQuadro() {
     
   
     const modal = document.createElement("div");
+    modal.classList.add("modal")
     modal.style.height = "600px";
     modal.style.width = "500px";
     modal.style.backgroundColor = "rgb(208, 208, 209)";
