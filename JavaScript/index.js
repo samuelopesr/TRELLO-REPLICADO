@@ -64,6 +64,7 @@ window.addEventListener("resize", () => {
 let quadros = [];
 let numQuadros = 0
 
+
 function gerarCorAleatoria() {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
@@ -112,7 +113,7 @@ function criarQuadro() {
     opcao2.classList.add("opcaomodal2")
 
     let divSelect = null;
-    
+  
     const opWhite = document.createElement("button")
     opWhite.textContent = "Tema claro";
     opWhite.classList.add("tema-claro")
@@ -175,10 +176,11 @@ function criarQuadro() {
     btnConfirm.addEventListener("click", () => {
       if (divSelect === opcao1){
         window.location.replace("página do trello.html")
-        
+        salvaTema('claro')
        
      }if(divSelect === opcao2){
         window.location.replace("página do trello DARK VERSION.html")
+        salvaTema('escuro')
         
      }
     })
@@ -197,6 +199,7 @@ function criarQuadro() {
     btnOpen.classList.add("btnOpen")
     btnOpen.addEventListener("click", () => {
         window.location.replace("página do trello.html")
+
     })
   
     const botaoFechar = document.createElement("button");
