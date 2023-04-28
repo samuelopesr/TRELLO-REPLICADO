@@ -16,15 +16,11 @@
     height: 0;
 }
 main{
-    background-color: #011754;
     width: 100%;
-
-
+    overflow: hidden;
 }
 body, html{
-    background-color: bisque;
     width: 100%;
-
 }
 header{
     background-color: #026AA7;
