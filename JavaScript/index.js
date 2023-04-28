@@ -116,19 +116,18 @@ function criarQuadro() {
     let divSelect = null;
   
     const opWhite = document.createElement("button")
-    opWhite.classList.add("opWhite")
     opWhite.textContent = "Tema claro";
     opWhite.classList.add("tema-claro")
-    opWhite.style.display = "block";
-    opWhite.style.position = "absolute";
-    opWhite.style.top  = "55%";
-    opWhite.style.left  = "15%";
-    opWhite.style.width = "100px";
-    opWhite.style.height = "30px"
-    opWhite.style.backgroundColor = "rgb(165, 165, 165)";
-    opWhite.style.color = "black";
-    opWhite.style.border = "none";
-    opWhite.style.borderRadius = "5px";
+    // opWhite.style.display = "block";
+    // opWhite.style.position = "absolute";
+    // opWhite.style.top  = "55%";
+    // opWhite.style.left  = "15%";
+    // opWhite.style.width = "100px";
+    // opWhite.style.height = "30px"
+    // opWhite.style.backgroundColor = "rgb(165, 165, 165)";
+    // opWhite.style.color = "black";
+    // opWhite.style.border = "none";
+    // opWhite.style.borderRadius = "5px";
     opWhite.style.cursor = "pointer";
     opWhite.addEventListener("click", () => {
     if (divSelect !== opcao1) {
@@ -142,16 +141,16 @@ function criarQuadro() {
     opBlack.classList.add("opBlack")
     opBlack.classList.add("tema-escuro")
     opBlack.textContent = "Tema escuro";
-    opBlack.style.display = "block";
-    opBlack.style.position = "absolute";
-    opBlack.style.right = "15%";
-    opBlack.style.top = "55%";
-    opBlack.style.width = "100px";
-    opBlack.style.height = "30px"
-    opBlack.style.backgroundColor = "black";
-    opBlack.style.color = "white"
-    opBlack.style.border = "none";
-    opBlack.style.borderRadius = "5px";
+    // opBlack.style.display = "block";
+    // opBlack.style.position = "absolute";
+    // opBlack.style.right = "15%";
+    // opBlack.style.top = "55%";
+    // opBlack.style.width = "100px";
+    // opBlack.style.height = "30px"
+    // opBlack.style.backgroundColor = "black";
+    // opBlack.style.color = "white"
+    // opBlack.style.border = "none";
+    // opBlack.style.borderRadius = "5px";
     opBlack.style.cursor = "pointer";
     opBlack.addEventListener("click", () => {
       if (divSelect !== opcao2){
@@ -165,16 +164,17 @@ function criarQuadro() {
     })
 
     const btnConfirm = document.createElement("button")
+    btnConfirm.classList.add("btnConfirm")
     btnConfirm.textContent = "CONFIRMAR"
-    btnConfirm.style.width = "200px"
-    btnConfirm.style.height = "90px"
-    btnConfirm.style.display = "block"
-    btnConfirm.style.position = "absolute"
-    btnConfirm.style.bottom = "40px"
-    btnConfirm.style.left = "150px"
-    btnConfirm.style.borderRadius = "9px"
-    btnConfirm.style.backgroundColor = "#0d5d9ad8"
-    btnConfirm.style.color = "white"
+    // btnConfirm.style.width = "200px"
+    // btnConfirm.style.height = "90px"
+    // btnConfirm.style.display = "block"
+    // btnConfirm.style.position = "absolute"
+    // btnConfirm.style.bottom = "40px"
+    // btnConfirm.style.left = "150px"
+    // btnConfirm.style.borderRadius = "9px"
+    // btnConfirm.style.backgroundColor = "#0d5d9ad8"
+    // btnConfirm.style.color = "white"
     btnConfirm.style.cursor = "pointer"
     btnConfirm.addEventListener("click", () => {
       if (divSelect === opcao1){

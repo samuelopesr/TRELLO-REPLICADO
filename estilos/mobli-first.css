@@ -491,8 +491,8 @@ header{
 .opcaomodal1{
     display: flex;
     float: left;
-    width: 200px;
-    height: 200px;
+    width: 140px;
+    height: 140px;
     margin-left: 20px;
     margin-top: 30px;
     border-radius: 10px;
@@ -507,8 +507,8 @@ header{
 .opcaomodal2{
     display: flex;
     float: right;
-    width: 200px;
-    height: 200px;
+    width: 140px;
+    height: 140px;
     margin-right: 20px;
     margin-top: 30px;
     border-radius: 10px;
@@ -520,30 +520,35 @@ header{
     background-position: center center;
     background-size: cover;
 }
-
+.tema-claro{
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    top: 44%;
+    left: 10%;
+    background-color: rgb(165, 165, 165);
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
 .tema-claro:hover{
     opacity: 0.5;
 }
+.tema-escuro{
+    display: block;
+    position: absolute;
+    left: 62%;
+    top: 44%;
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
 .tema-escuro:hover{
     opacity: 0.5;
-}
-
-
-.opcao1ModalAfterClick{
-    display: flex;
-    float: left;
-    width: 200px;
-    height: 200px;
-    margin-left: 20px;
-    margin-top: 30px;
-    border-radius: 10px;
-    border: 9px solid rgb(0, 119, 255);
-    background-color: #011754;
-    cursor: pointer;
-
-    background: url(/imagens/pexels-lukas-574070.jpg);
-    background-position: center center;
-    background-size: cover;
 }
 
 .selected1{
@@ -560,4 +565,16 @@ header{
     width: 25px;
     height: 25px;
     border-radius: 50%;
+}
+.btnConfirm{
+    display: block;
+    position: absolute;
+    background-color: #0d5d9ad8;
+    color: white;
+    width: 200px;
+    height: 90px;
+    border: none;
+    border-radius: 5px;
+    bottom: 20%;
+    left: 23%;
 }
