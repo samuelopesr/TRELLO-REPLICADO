@@ -85,7 +85,7 @@ function criarQuadro() {
     overlay.style.zIndex = "9999"; 
     document.body.appendChild(overlay);
     
-  
+    
     const modal = document.createElement("div");
     modal.style.height = "600px";
     modal.style.width = "500px";
