@@ -12,17 +12,25 @@
     
 }
 ::-webkit-scrollbar{
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
 }
 main{
-    height: 100vh;
-    width: 100vw;
+    background-color: #011754;
+    width: 100%;
+
+
+}
+body, html{
+    background-color: bisque;
+    width: 100%;
 
 }
 header{
     background-color: #026AA7;
-    width: 100vw;
+    display: flex;
+    width: 100%;
+    height: 60px;
     position: fixed;
     top: 0;
     left: 0;
