@@ -28,10 +28,10 @@ body,html{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 main{
-    height: 100vh;
-    width: 100vw;
+    overflow: hidden;
 }
 header{
     background: rgba(54, 127, 211, 0.582);
@@ -677,7 +677,7 @@ border-radius: 0px 0px 10px 10px;
   }
   #btn-ExcluirAlltask{
     position: relative;
-    top: 8%;
+    margin-top: 3%;
     cursor: pointer;
     height: 60px;
     width: 200px;
@@ -706,7 +706,6 @@ border-radius: 0px 0px 10px 10px;
 
 
 .tituloModal{
-    
     display: block;
     position: static;
     width: 100%;
