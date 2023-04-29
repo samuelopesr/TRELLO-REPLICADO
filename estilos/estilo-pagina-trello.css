@@ -17,7 +17,6 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: Helvetica, sans-serif, Arial
-    
 }
 ::-webkit-scrollbar{
     width: 0px;
@@ -47,10 +46,10 @@ header{
     
 }
 #lista{
+    
     display: flex;
     list-style: none;  
     width: 70vw;  
-
 }
 #trello-menu1{
     display: block;
