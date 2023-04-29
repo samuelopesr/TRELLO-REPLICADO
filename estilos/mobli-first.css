@@ -383,7 +383,7 @@ header{
 #criar-quadro{
     flex-wrap: wrap;
     display: flex;
-    height: 290px;
+    height: 390px;
     width: 100%;
 }
 #criar-quadro > #quadro-fundac{
@@ -403,7 +403,7 @@ header{
 }
 #criar-novo-quadro{
     background-color: rgb(173, 173, 173);
-    width: 110px;
+    width: 150px;
     height: 90px;
     border-radius: 3%;
     box-shadow: 2px 2px 5px rgb(156, 156, 156);
@@ -430,7 +430,7 @@ header{
     display: none;
 }
 .quadro {
-    width: 110px;
+    width: 150px;
     height: 90px;
     margin-left: 10px;
     border-radius: 4px;
