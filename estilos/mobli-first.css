@@ -483,18 +483,18 @@ header{
     background-color: rgb(208, 208, 209);
     text-align: center;
     height: 600px;
-    width: 90%;
+    width: 400px;
     border-radius: 10px;
     box-shadow: 1px 2px 6px rgb(143, 142, 142);
 
 }
 .opcaomodal1{
-    display: flex;
+    position: absolute;
+    top: 20%;
+    left: 10%;
     float: left;
     width: 140px;
     height: 140px;
-    margin-left: 20px;
-    margin-top: 30px;
     border-radius: 10px;
     border: 3px solid black;
     background-color: #011754;
@@ -505,12 +505,12 @@ header{
     background-size: cover;
 }
 .opcaomodal2{
-    display: flex;
+    position: absolute;
+    top: 20%;
+    right: 10%;
     float: right;
     width: 140px;
     height: 140px;
-    margin-right: 20px;
-    margin-top: 30px;
     border-radius: 10px;
     border: 3px solid black;
     background-color: #011754;
@@ -521,12 +521,13 @@ header{
     background-size: cover;
 }
 .tema-claro{
-    display: block;
+    
     position: absolute;
     width: 100px;
     height: 30px;
-    top: 44%;
-    left: 10%;
+    top: 55%;
+    left: 35%;
+    transform: translate(-50%, 5%);
     background-color: rgb(165, 165, 165);
     color: black;
     border: none;
@@ -536,10 +537,11 @@ header{
     opacity: 0.5;
 }
 .tema-escuro{
-    display: block;
+   
     position: absolute;
-    left: 62%;
-    top: 44%;
+    left: 65%;
+    top: 55%;
+    transform: translate(-50%, 5%);
     width: 100px;
     height: 30px;
     background-color: black;
@@ -575,6 +577,7 @@ header{
     height: 90px;
     border: none;
     border-radius: 5px;
-    bottom: 20%;
-    left: 23%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
