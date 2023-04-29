@@ -262,6 +262,9 @@ header{
     border: none;
     color: #131b31;
 }
+#par{
+    width: 100%;
+}
 #par > p{
     text-shadow: 1px 1px 5px #131b31;
     position: absolute;
@@ -431,17 +434,17 @@ header{
     margin-top: 13px;
 }
 #secao-info{
-    
     display: flex;
     position: relative;
 }
 #infoin-2{
+    background-color: #015405;
     display: flex;
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 70px;
     top: 105px;
-    left: 7px;
+    left: 2px;
     
 }
 #infoin-2 > button{
