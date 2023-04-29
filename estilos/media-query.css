@@ -7,6 +7,26 @@
 
 
 @media screen and (min-width: 769px) and (max-width: 992px){
+    #criar-novo-quadro{
+        width: 210px;
+        height: 130px;
+    }
+    #criar-novo-quadro > p{
+        font-size: 1.3em;
+        text-align: center;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .btnOpen{
+        display: flex;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        background-color: #006400;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
     .quadro {
     
         width: 210px;
@@ -268,6 +288,16 @@
 }
 
 @media screen and (min-width: 993px){
+    #criar-novo-quadro > p{
+        font-size: 1.3em;
+        text-align: center;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    #criar-novo-quadro{
+        width: 210px;
+        height: 130px;
+    }
     .quadro {
     
         width: 210px;
@@ -277,9 +307,21 @@
         position: relative;
         overflow: hidden;
       }
+
+      .btnOpen{
+        display: flex;
+        position: absolute;
+        left: 5px;
+        top: 95px;
+        background-color: #006400;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
       
       .quadro h2 {
         position: absolute;
+        font-size: 1.2em;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
