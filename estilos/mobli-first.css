@@ -479,6 +479,7 @@ header{
     display: none;
 }
 .modal{
+    transition: 500ms;
     position: fixed;
     top: 50%;
     left: 50%;

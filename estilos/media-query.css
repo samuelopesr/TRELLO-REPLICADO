@@ -59,14 +59,15 @@
         background-color: #006400;
       }
     .modal{
+        transition: 500ms;
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: rgb(208, 208, 209);
         text-align: center;
-        height: 600px;
-        width: 500px;
+        height: 700px;
+        width: 600px;
         border-radius: 10px;
         box-shadow: 1px 2px 6px rgb(143, 142, 142);
     
@@ -342,14 +343,15 @@
         background-color: #006400;
       }
     .modal{
+        transition: 500ms;
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: rgb(208, 208, 209);
         text-align: center;
-        height: 600px;
-        width: 500px;
+        height: 800px;
+        width: 700px;
         border-radius: 10px;
         box-shadow: 1px 2px 6px rgb(143, 142, 142);
     
@@ -390,26 +392,11 @@
     .tema-claro:hover{
         opacity: 0.5;
     }
+    .tema-claro{
+        left: 28%;
+    }
     .tema-escuro:hover{
         opacity: 0.5;
-    }
-    
-    
-    .opcao1ModalAfterClick{
-        display: flex;
-        float: left;
-        width: 200px;
-        height: 200px;
-        margin-left: 20px;
-        margin-top: 30px;
-        border-radius: 10px;
-        border: 9px solid rgb(0, 119, 255);
-        background-color: #011754;
-        cursor: pointer;
-    
-        background: url(/imagens/pexels-lukas-574070.jpg);
-        background-position: center center;
-        background-size: cover;
     }
     
     .selected1{
