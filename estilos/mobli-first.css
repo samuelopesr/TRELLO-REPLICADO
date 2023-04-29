@@ -16,7 +16,7 @@
     height: 0;
 }
 main{
-    width: 100%;
+    width: 95%;
     overflow: hidden;
 }
 body, html{
@@ -381,10 +381,10 @@ header{
     height: 30vh;
 }
 #criar-quadro{
-   
+    flex-wrap: wrap;
     display: flex;
     height: 290px;
-    width: 950px;
+    width: 100%;
 }
 #criar-quadro > #quadro-fundac{
     background-color: #89609E;
@@ -403,8 +403,8 @@ header{
 }
 #criar-novo-quadro{
     background-color: rgb(173, 173, 173);
-    width: 210px;
-    height: 130px;
+    width: 110px;
+    height: 90px;
     border-radius: 3%;
     box-shadow: 2px 2px 5px rgb(156, 156, 156);
     cursor: pointer;
@@ -413,12 +413,14 @@ header{
     background-color: #3a5975;
 }
 #criar-novo-quadro > p{
+    font-size: 12px;
     text-align: center;
-    margin-top: 35px;
+    margin-top: 10px;
     font-weight: 700;
 }
 #criar-novo-quadro > #criarquadroimg{
-    margin-left: 85px;
+    display: flex;
+    margin: auto;
     margin-top: 10px;
 }
 #menu-lateral{
@@ -428,9 +430,9 @@ header{
     display: none;
 }
 .quadro {
-    
-    width: 210px;
-    height: 130px;
+    width: 110px;
+    height: 90px;
+    margin-left: 10px;
     border-radius: 4px;
     background-color: #ccc;
     position: relative;
@@ -438,8 +440,9 @@ header{
   }
   
   .quadro h2 {
+    font-size: 14px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -447,7 +450,7 @@ header{
   .quadro button {
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    right: 5px;
     background-color: green;
     color: white;
     border: 1px solid black;
@@ -521,7 +524,6 @@ header{
     background-size: cover;
 }
 .tema-claro{
-    
     position: absolute;
     width: 100px;
     height: 30px;
@@ -537,7 +539,6 @@ header{
     opacity: 0.5;
 }
 .tema-escuro{
-   
     position: absolute;
     left: 65%;
     top: 55%;
@@ -562,10 +563,11 @@ header{
 .btnOpen{
     display: flex;
     position: absolute;
-    left: 10px;
+    left: 5px;
+    top: 5px;
     background-color: #006400;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
 }
 .btnConfirm{

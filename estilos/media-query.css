@@ -7,6 +7,37 @@
 
 
 @media screen and (min-width: 769px) and (max-width: 992px){
+    .quadro {
+    
+        width: 210px;
+        height: 130px;
+        border-radius: 4px;
+        background-color: #ccc;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .quadro h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      .quadro button {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: green;
+        color: white;
+        border: 1px solid black;
+        padding: 5px;
+        cursor: pointer;
+      }
+      
+      .quadro button:hover {
+        background-color: #006400;
+      }
     .modal{
         position: fixed;
         top: 50%;
@@ -237,6 +268,37 @@
 }
 
 @media screen and (min-width: 993px){
+    .quadro {
+    
+        width: 210px;
+        height: 130px;
+        border-radius: 4px;
+        background-color: #ccc;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .quadro h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      .quadro button {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: green;
+        color: white;
+        border: 1px solid black;
+        padding: 5px;
+        cursor: pointer;
+      }
+      
+      .quadro button:hover {
+        background-color: #006400;
+      }
     .modal{
         position: fixed;
         top: 50%;

@@ -193,9 +193,6 @@ function criarQuadro() {
     const cor = gerarCorAleatoria();
     const quadro = document.createElement("div");
     quadro.classList.add("quadro");
-    quadro.style.width = "210px";
-    quadro.style.height = "130px";
-    quadro.style.marginLeft = "5px";
     quadro.style.backgroundColor = cor; 
     
     const btnOpen = document.createElement("button")
