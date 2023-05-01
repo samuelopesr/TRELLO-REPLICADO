@@ -1,1 +1,18 @@
 @charset "UTF-8";
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .trello1, .trello2{
+        position: relative;
+    }
+    .trello1 > img{
+        margin-left: -8px;
+        margin-top: 6px;
+        height: 37px;
+        width: 111px;
+    }
+    .trello2 > img{
+        margin-top: 13px;
+        height: 20px;
+        width: 90px;
+    }
+}
