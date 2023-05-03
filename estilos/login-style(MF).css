@@ -6,16 +6,52 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+body, html{
+    background-color: rgb(29, 80, 128);
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    line-height: 70px;
+}
+#form > label{
+    font-weight: 900;
+}
 #login{
-    background-color: rgb(30, 123, 210);
+    background-color: rgb(174, 201, 226);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
     align-items: center;
     width: 70%;
-    height: 55%;
+    height: 60%;
     margin-left: 15%;
+    margin-top: 20%;
+    border-radius: 10px;
+}
+#login > form > #ilogin{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 5px solid black;
+    border-radius: 3px;
+    width: 100%;
+    height: 40px;
+}
+#login > form > #isenha{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 5px solid black;
+    border-radius: 3px;
+    width: 100%;
+    height: 40px;
 }
 #signup{
     background-color: darkcyan;
@@ -27,4 +63,14 @@
     width: 70%;
     height: 55%;
     margin-left: 15%;
+}
+#enviar{
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+}
+footer{
+
 }
