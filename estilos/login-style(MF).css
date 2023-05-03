@@ -12,8 +12,13 @@ body, html{
 main{
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(3, 25, 37);
     overflow: hidden;
 }
+
 form{
     display: flex;
     flex-direction: column;
@@ -31,8 +36,6 @@ form > label{
     align-items: center;
     width: 70%;
     height: 60%;
-    margin-left: 15%;
-    margin-top: 20%;
     border-radius: 10px;
 }
 #login > form > #ilogin{
@@ -71,8 +74,6 @@ form > label{
     align-items: center;
     width: 70%;
     height: 60%;
-    margin-left: 15%;
-    margin-top: 20%;
     border-radius: 10px;
    
 }
@@ -96,4 +97,11 @@ form > label{
     border: none;
     height: 30px;
     border-bottom: 3px solid black;
+}
+h1{
+  
+}
+img{
+    width: 150px;
+    
 }
