@@ -16,8 +16,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body, html{
-    overflow-x: scroll;
-    background:url(../imagens/formas-de-papel-psicodelico-multicoloridas.jpg) ;
+    background: url(../imagens/formas-de-papel-psicodelico-multicoloridas.jpg);
+    overflow: hidden;
     background-repeat: repeat;
     background-size: cover;
     background-position: center center;
@@ -29,7 +29,7 @@ main{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: linear-gradient(-45deg, #2a56e6b4, #3b7ca8f2, #3cb2d2);
+    background: linear-gradient(-45deg, #2a56e6eb, #3b7ca8f7, #3cb2d2ee);
 }
 
 form{
@@ -46,8 +46,14 @@ form > label{
 
 img{
     width: 190px;
-    
+    margin-top: 10px;
 }
 footer{
+    
+    color: white;
     text-align: center;
+}
+footer > a{
+    text-decoration: none;
+    color: #270713;
 }
