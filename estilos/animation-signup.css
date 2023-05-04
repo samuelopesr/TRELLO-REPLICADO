@@ -11,7 +11,7 @@
     align-content: center;
     align-items: center;
     width: 350px;
-    height: 620px;
+    height: 700px;
     border-radius: 10px;
    
 }
@@ -24,7 +24,7 @@
 
 #submit {
     font-family: k;
-    margin-top: 30px;
+    margin-top: 25px;
     z-index: 99999;
     min-width: 300px;
     min-height: 60px;
@@ -114,4 +114,12 @@ select{
    background-color: #b8ebe6;
    border-radius: 4px;
     
+}
+#data{
+    font-family: ts;
+    font-weight: 900;
+    border: none;
+    background-color: #b8ebe6;
+    border-radius: 4px;
+     
 }
