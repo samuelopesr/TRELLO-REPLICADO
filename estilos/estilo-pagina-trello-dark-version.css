@@ -6,7 +6,7 @@
 }
 @font-face {
     font-family: "kiona";
-    src: url(../font/kiona/Kiona-Regular.ttf) format('truetype');
+    src: url(../font/kiona/Kiona-Regular.ttf) format( );
 }
 @font-face {
     font-family: "keepcalm";
