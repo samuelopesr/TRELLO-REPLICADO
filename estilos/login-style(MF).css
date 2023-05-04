@@ -4,6 +4,10 @@
     font-family: "k";
     src: url(../font/kiona/Kiona-Regular.ttf) format('truetype');
 }
+@font-face {
+    font-family: ts;
+    src: url(../font/tommy-soft/MADE\ Tommy\ Soft\ Light\ Outline\ PERSONAL\ USE.otf) format(opentype);
+}
 
 *{
     margin: 0;

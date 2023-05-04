@@ -19,9 +19,8 @@
     display: flex;
     flex-direction: column;
     line-height: 45px;
-    width: 90%;
+    width: 305px;
 }
-
 
 #submit {
     font-family: k;
@@ -106,4 +105,13 @@
     height: 40px;
     border-bottom: 5px solid rgb(33, 83, 221);
     border-image:linear-gradient(to right, #7e4157, #ee8497, #FF9D8E) 10;
+}
+
+select{
+   font-family: ts;
+   font-weight: 900;
+   border: none;
+   background-color: #b8ebe6;
+   border-radius: 4px;
+    
 }
