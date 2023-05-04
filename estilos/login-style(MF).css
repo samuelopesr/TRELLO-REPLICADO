@@ -7,7 +7,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body, html{
-    background-color: rgb(29, 80, 128);
+    background:url(../imagens/curvilineos-efeitos-ondulados-abstratos-criativos-curvas-de-cor-fluem-luxo-minimalista-elegante-na-moda-colorido-wav.jpg) ;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center center;
+    
 }
 main{
     width: 100vw;
@@ -15,8 +19,8 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(3, 25, 37);
     overflow: hidden;
+    background: linear-gradient(-45deg, #2a56e6ed, #3b7ca8e5 30%, #3cb1d2);
 }
 
 form{
