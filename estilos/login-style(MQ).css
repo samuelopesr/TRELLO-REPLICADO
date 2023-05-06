@@ -2,12 +2,17 @@
 
 
 @media screen and (min-width: 769px) and (max-width: 992px){
+    div#signup{
+        width: 700px;
+        transition: .5s;   
+    }
     div#login{
         width: 700px;
         transition: .5s;
     }
     form{
         margin-right: 50%;
+    
     }
     #h1{
         text-align: center;
@@ -35,6 +40,10 @@
 
 @media screen and (min-width: 993px){
     
+    div#signup{
+        width: 1100px;
+        transition: .5s;   
+    }
     div#login{
         width: 1100px;
         transition: .5s;
