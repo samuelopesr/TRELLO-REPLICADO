@@ -43,7 +43,9 @@ form > label{
     font-family: k;
 }
 
-
+#h1{
+    text-align: center;
+}
 img{
     width: 190px;
     margin-top: 10px;
@@ -60,4 +62,6 @@ footer > a{
 
 #animation{
    display: none; 
+   
+
 }

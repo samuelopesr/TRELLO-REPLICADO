@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 #login{
+  transition: .5s;
     z-index: 99999;
     background: rgba( 127, 205, 210, 0.1 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
