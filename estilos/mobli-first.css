@@ -4,11 +4,16 @@
     font-family: "tommy";
     src: url(../font/tommy-soft/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf) format('opentype');
 }
+
+@font-face {
+    font-family: ts;
+    src: url(../font/tommy-soft/MADE\ Tommy\ Soft\ Regular\ PERSONAL\ USE.otf) format(opentype);
+}
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Helvetica, sans-serif, Arial
+    font-family: ts;
     
 }
 ::-webkit-scrollbar{
