@@ -1,7 +1,6 @@
 let tarefas = [];
 let numTarefas = 0;
 
-
 function gerarCorAleatoria() {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
@@ -21,11 +20,10 @@ function criarTarefa(containerId) {
     tarefa.style.cursor = "move";
     tarefa.style.height = "50px";
     tarefa.style.backgroundColor = cor;
-    tarefa.setAttribute("draggable","true");
+    tarefa.setAttribute("draggable", "true");
     tarefa.id = "tarefa-" + Date.now();
-    tarefa.addEventListener('dragstart', drag)
-    
-    
+    tarefa.addEventListener("dragstart", drag);
+
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "X";
     botaoExcluir.classList.add("btn-excluirTarefa");
@@ -42,141 +40,135 @@ function criarTarefa(containerId) {
     botaoEditar.classList.add("btnEditar");
     let isDivCentroOpen = false;
     botaoEditar.addEventListener("click", () => {
+      if (!isDivCentroOpen) {
+        isDivCentroOpen = true;
+        botaoEditar.disabled = true;
 
-  if (!isDivCentroOpen) {
-    isDivCentroOpen = true;
-    botaoEditar.disabled = true;
+        const overlay = document.createElement("div");
+        overlay.style.position = "fixed";
+        overlay.style.top = "0";
+        overlay.style.left = "0";
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        overlay.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+        overlay.style.zIndex = "100";
+        document.body.appendChild(overlay);
 
-    const overlay = document.createElement("div");
-    overlay.style.position = "fixed";
-    overlay.style.top = "0";
-    overlay.style.left = "0";
-    overlay.style.width = "100%";
-    overlay.style.height = "100%";
-    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-    overlay.style.zIndex = "100"; 
-    document.body.appendChild(overlay);
+        const divCentro = document.createElement("div");
+        divCentro.style.background = "#19233d9a";
+        divCentro.style.boxShadow = "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )";
+        divCentro.style.backdropFilter = "blur( 10px )";
+        divCentro.style.border =
+          "border: 1px solid rgba( 255, 255, 255, 0.18 )";
+        divCentro.style.borderRadius = "10px";
+        divCentro.style.position = "fixed";
+        divCentro.style.height = "90vh";
+        divCentro.style.width = "80vw";
+        divCentro.style.top = "50%";
+        divCentro.style.left = "50%";
+        divCentro.style.transform = "translate(-50%, -50%)";
+        divCentro.style.zIndex = "9999";
+        divCentro.style.overflowX = "hidden";
+        divCentro.style.overflowY = "scroll";
 
-  const divCentro = document.createElement("div");
-  divCentro.style.background = "#19233d9a";
-  divCentro.style.boxShadow = "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )";
-  divCentro.style.backdropFilter = "blur( 10px )";
-  divCentro.style.border = "border: 1px solid rgba( 255, 255, 255, 0.18 )";
-  divCentro.style.borderRadius = "10px";
-  divCentro.style.position = "fixed";
-  divCentro.style.height = "90vh";
-  divCentro.style.width = "80vw";
-  divCentro.style.top = "50%";
-  divCentro.style.left = "50%";
-  divCentro.style.transform = "translate(-50%, -50%)";
-  divCentro.style.zIndex = "9999"; 
-  divCentro.style.overflowX = "hidden";
-  divCentro.style.overflowY = "scroll"
-    
-  const btnCriarInput = document.createElement("button");
-  btnCriarInput.textContent = "Criar Atividade";
-  btnCriarInput.classList.add("btnCriarIn")
-  btnCriarInput.style.marginLeft = "20px";
-  btnCriarInput.style.marginTop = "25px";
-  btnCriarInput.addEventListener("click", criarAtividade)
+        const btnCriarInput = document.createElement("button");
+        btnCriarInput.textContent = "Criar Atividade";
+        btnCriarInput.classList.add("btnCriarIn");
+        btnCriarInput.style.marginLeft = "20px";
+        btnCriarInput.style.marginTop = "25px";
+        btnCriarInput.addEventListener("click", criarAtividade);
 
-  function closeDivCentro() {
-    if (isDivCentroOpen) {
-      isDivCentroOpen = false;
-      document.body.removeChild(divCentro);
-      botaoEditar.disabled = false;
-      overlay.remove();
-    }
-  }
-//codigo base de exemplo -- inicio
-let atividade = [];
+        function closeDivCentro() {
+          if (isDivCentroOpen) {
+            isDivCentroOpen = false;
+            document.body.removeChild(divCentro);
+            botaoEditar.disabled = false;
+            overlay.remove();
+          }
+        }
+        //codigo base de exemplo -- inicio
+        let atividade = [];
 
-function criarAtividade(){
-  const tituloH2 = prompt("digite o titulo da atividade:")
+        function criarAtividade() {
+          const tituloH2 = prompt("digite o titulo da atividade:");
 
-    const atividades = document.createElement("div");
-    atividades.style.display = "block";
-    atividades.style.height = "none";
-    atividades.style.width = "100vw";
+          const atividades = document.createElement("div");
+          atividades.style.display = "block";
+          atividades.style.height = "none";
+          atividades.style.width = "100vw";
 
-    const inputTexto = document.createElement("textarea")
-    inputTexto.classList.add("textarea")
-    inputTexto.style.display = "flex";
-    inputTexto.style.position = "relative";
-    inputTexto.style.width = "72vw";
-    inputTexto.style.height = "50px";
-    inputTexto.style.resize = "none";
-    inputTexto.style.marginLeft = "40px";
-    inputTexto.addEventListener("input", () => {
-      inputTexto.style.height = "auto";
-      inputTexto.style.height = `${inputTexto.scrollHeight}px`;
-    });
-    inputTexto.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        inputTexto.value += "\n";
+          const inputTexto = document.createElement("textarea");
+          inputTexto.classList.add("textarea");
+          inputTexto.style.display = "flex";
+          inputTexto.style.position = "relative";
+          inputTexto.style.width = "72vw";
+          inputTexto.style.height = "50px";
+          inputTexto.style.resize = "none";
+          inputTexto.style.marginLeft = "40px";
+          inputTexto.addEventListener("input", () => {
+            inputTexto.style.height = "auto";
+            inputTexto.style.height = `${inputTexto.scrollHeight}px`;
+          });
+          inputTexto.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              inputTexto.value += "\n";
+            }
+          });
+
+          const mainTitle = document.createElement("h2");
+          mainTitle.textContent = tituloH2;
+          mainTitle.style.position = "relative";
+          mainTitle.style.marginLeft = "38%";
+          mainTitle.style.fontSize = "0.9em";
+          mainTitle.style.color = "white";
+          mainTitle.style.marginBottom = "10px";
+
+          const btnRemoveInput = document.createElement("button");
+          btnRemoveInput.textContent = "Remover Atividade";
+          btnRemoveInput.style.marginLeft = "25px";
+          btnRemoveInput.classList.add("btnRemoveInput");
+          btnRemoveInput.style.marginTop = "25px";
+          btnRemoveInput.addEventListener("click", () => {
+            atividades.remove();
+          });
+
+          atividades.appendChild(mainTitle);
+          atividades.appendChild(inputTexto);
+          atividades.appendChild(btnRemoveInput);
+          atividade.push(atividades);
+          divCentro.appendChild(atividades);
+
+          numAtividade++;
+        }
+        //codigo base de exemplo -- final
+
+        const titulo = document.createElement("h1");
+        titulo.textContent = texto;
+        titulo.style.textAlign = "center";
+        titulo.style.fontSize = "1.6em";
+        titulo.style.color = "white";
+        titulo.style.marginTop = "20px";
+
+        const btnFechar = document.createElement("button");
+        btnFechar.textContent = "X";
+        btnFechar.style.float = "right";
+        btnFechar.style.margin = "10px";
+        btnFechar.style.cursor = "pointer";
+        btnFechar.addEventListener("click", closeDivCentro);
+
+        document.body.appendChild(divCentro);
+
+        divCentro.appendChild(btnFechar);
+
+        divCentro.appendChild(titulo);
+
+        divCentro.appendChild(btnCriarInput);
       }
-  });
+    });
 
-const mainTitle =  document.createElement("h2");
-  mainTitle.textContent = tituloH2;
-  mainTitle.style.position = "relative";
-  mainTitle.style.marginLeft = "38%";
-  mainTitle.style.fontSize = "0.9em";
-  mainTitle.style.color = "white";
-  mainTitle.style.marginBottom = "10px";
-
-  const btnRemoveInput = document.createElement("button");
-  btnRemoveInput.textContent = "Remover Atividade";
-  btnRemoveInput.style.marginLeft = "25px";
-  btnRemoveInput.classList.add("btnRemoveInput")
-  btnRemoveInput.style.marginTop = "25px";
-  btnRemoveInput.addEventListener("click", () =>{
-       atividades.remove();
-  })
-
-    atividades.appendChild(mainTitle);
-    atividades.appendChild(inputTexto);
-    atividades.appendChild(btnRemoveInput);
-    atividade.push(atividades);
-    divCentro.appendChild(atividades);
-
-    numAtividade++;
-}
-//codigo base de exemplo -- final
-
-  const titulo = document.createElement("h1");
-  titulo.textContent = texto;
-  titulo.style.textAlign = "center";
-  titulo.style.fontSize = "1.6em";
-  titulo.style.color = "white";
-  titulo.style.marginTop = "20px";
-
-  const btnFechar =  document.createElement("button");
-  btnFechar.textContent = "X";
-  btnFechar.style.float = "right";
-  btnFechar.style.margin = "10px";
-  btnFechar.style.cursor = "pointer";
-  btnFechar.addEventListener("click", closeDivCentro)
-
-  document.body.appendChild(divCentro);
-
-  divCentro.appendChild(btnFechar);
-
-  divCentro.appendChild(titulo);
-
-  divCentro.appendChild(btnCriarInput);
-
-
-
-  }
-
-
-
-});
-  
     tarefa.appendChild(botaoExcluir);
- 
+
     tarefa.appendChild(botaoEditar);
 
     const titulo = document.createElement("h2");
@@ -186,7 +178,7 @@ const mainTitle =  document.createElement("h2");
 
     container.appendChild(tarefa);
 
-    const id = Date.now().toString(); 
+    const id = Date.now().toString();
 
     tarefas[id] = { id, titulo: texto, cor: cor, div: containerId };
     numTarefas++;
@@ -221,7 +213,7 @@ function carregarTarefas() {
     } catch (error) {
       console.error("Erro ao carregar tarefas do localStorage:", error);
     }
-  localStorage.setItem("tarefas", JSON.stringify(tarefas));
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
   }
   renderizarTarefas();
 }
@@ -259,17 +251,15 @@ function renderizarTarefas() {
           console.debug(`Número de tarefas restantes: ${numTarefas}`);
         });
 
-
         const titulo = document.createElement("h2");
         titulo.textContent = tarefaInfo.titulo;
 
         tarefa.appendChild(botaoExcluir);
         tarefa.appendChild(titulo);
-    
+
         container.appendChild(tarefa);
       }
     });
-
   });
 }
 
@@ -282,15 +272,16 @@ function salvarTarefas() {
 
 function excluirTodasTarefas() {
   if (confirm("Tem certeza que deseja excluir todas as tarefas?")) {
-  const tasks = document.querySelectorAll(".tarefa");
-  for (let i = 0; i < tasks.length; i++) {
-  tasks[i].remove();
-  numTarefas = 0;
-  tarefas.length = 0;
-  localStorage.removeItem("tarefas");
-  }}
+    const tasks = document.querySelectorAll(".tarefa");
+    for (let i = 0; i < tasks.length; i++) {
+      tasks[i].remove();
+      numTarefas = 0;
+      tarefas.length = 0;
+      localStorage.removeItem("tarefas");
+    }
+  }
 
-  window.addEventListener("beforeunload", function() {
+  window.addEventListener("beforeunload", function () {
     salvarTarefas();
   });
 }

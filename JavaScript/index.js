@@ -7,7 +7,7 @@
 //Essa função começa declarando duas variáveis que iram receber uma nova largura e altura
 //depois temos uma variável da viewport que representa o tamanho da página
 //depois temos uma variável que é a Media Query, que apresenta uma largura mínima de 769px
-//É selecionado um menu lateral através de uma variável da prórpria página utilizando querySelector 
+//É selecionado um menu lateral através de uma variável da prórpria página utilizando querySelector
 //Ele faz uma verificação e se a largura for conferida o menu lateral aparece
 
 //function gerarCorAleatoria()
@@ -23,47 +23,45 @@
 //Dentro desse quadro temos dois conteúdos, um botão que excluir o quadro e atualiza o array do local storage verifica e retira o quadro
 //O outro botão acessa o quadro porém não guarda a escolha do usuário
 
-function indIspo()
-{
-    alert('página indisponível');
+function indIspo() {
+  alert("página indisponível");
 }
 
+function diminuirMenu() {
+  const novaLargura = window.innerWidth;
+  const novaAltura = window.innerHeight;
 
-function diminuirMenu(){
-    
-    const novaLargura = window.innerWidth  
-    const novaAltura = window.innerHeight 
+  const viewport = document.querySelector("meta[name=viewport]");
+  viewport.setAttribute(
+    "menu-lateral",
+    `width=${novaLargura}, height=${novaAltura}`
+  );
 
-    const viewport = document.querySelector("meta[name=viewport]");
-    viewport.setAttribute("menu-lateral",`width=${novaLargura}, height=${novaAltura}`);  
+  const menuLateral = document.querySelector("#menu-lateral");
+  if (novaLargura >= 769) {
+    menuLateral.style.overflow = "visible";
+  } else {
+    menuLateral.style.width = `${novaLargura}px`;
+    menuLateral.style.height = `${novaAltura}px`;
+    menuLateral.style.overflow = "hidden";
+  }
 
-    const menuLateral = document.querySelector("#menu-lateral");
-    if (novaLargura >= 769){
-        menuLateral.style.overflow = "visible";
-    } else {
-        menuLateral.style.width = `${novaLargura}px`;
-        menuLateral.style.height = `${novaAltura}px`;
-        menuLateral.style.overflow = "hidden";
-    }
-
-    console.log("a função foi chamada!");
-
+  console.log("a função foi chamada!");
 }
 
-const mediaQuery =  window.matchMedia("(min-width: 769px)");
-if(mediaQuery.matches){
-    diminuirMenu();
+const mediaQuery = window.matchMedia("(min-width: 769px)");
+if (mediaQuery.matches) {
+  diminuirMenu();
 }
 
 window.addEventListener("resize", () => {
-    if(mediaQuery.matches){
-        diminuirMenu();
-    }
+  if (mediaQuery.matches) {
+    diminuirMenu();
+  }
 });
 
 let quadros = [];
-let numQuadros = 0
-
+let numQuadros = 0;
 
 function gerarCorAleatoria() {
   const r = Math.floor(Math.random() * 256);
@@ -74,7 +72,6 @@ function gerarCorAleatoria() {
 function criarQuadro() {
   const texto = prompt("Digite o título do quadro:");
   if (texto) {
-
     const overlay = document.createElement("div");
     overlay.style.position = "fixed";
     overlay.style.top = "0";
@@ -82,12 +79,11 @@ function criarQuadro() {
     overlay.style.width = "100%";
     overlay.style.height = "100%";
     overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-    overlay.style.zIndex = "9999"; 
+    overlay.style.zIndex = "9999";
     document.body.appendChild(overlay);
-    
-    
+
     const modal = document.createElement("div");
-    modal.classList.add("modal")
+    modal.classList.add("modal");
     // modal.style.height = "600px";
     // modal.style.width = "500px";
     // modal.style.backgroundColor = "rgb(208, 208, 209)";
@@ -101,23 +97,23 @@ function criarQuadro() {
 
     overlay.appendChild(modal);
 
-    const tituloModal = document.createElement("h1")
-    tituloModal.classList.add("tituloModal")
+    const tituloModal = document.createElement("h1");
+    tituloModal.classList.add("tituloModal");
     tituloModal.textContent = "Personalize seu quadro";
 
     modal.appendChild(tituloModal);
 
-    const opcao1 = document.createElement("div")
-    opcao1.classList.add("opcaomodal1")
-    
-    const opcao2 = document.createElement("div")
-    opcao2.classList.add("opcaomodal2")
+    const opcao1 = document.createElement("div");
+    opcao1.classList.add("opcaomodal1");
+
+    const opcao2 = document.createElement("div");
+    opcao2.classList.add("opcaomodal2");
 
     let divSelect = null;
-  
-    const opWhite = document.createElement("button")
+
+    const opWhite = document.createElement("button");
     opWhite.textContent = "Tema claro";
-    opWhite.classList.add("tema-claro")
+    opWhite.classList.add("tema-claro");
     // opWhite.style.display = "block";
     // opWhite.style.position = "absolute";
     // opWhite.style.top  = "55%";
@@ -130,16 +126,16 @@ function criarQuadro() {
     // opWhite.style.borderRadius = "5px";
     opWhite.style.cursor = "pointer";
     opWhite.addEventListener("click", () => {
-    if (divSelect !== opcao1) {
+      if (divSelect !== opcao1) {
         divSelect = opcao1;
-        opcao1.classList.add("selected1")
-        opcao2.classList.remove("selected2")
+        opcao1.classList.add("selected1");
+        opcao2.classList.remove("selected2");
       }
-    })
+    });
 
-    const opBlack = document.createElement("button")
-    opBlack.classList.add("opBlack")
-    opBlack.classList.add("tema-escuro")
+    const opBlack = document.createElement("button");
+    opBlack.classList.add("opBlack");
+    opBlack.classList.add("tema-escuro");
     opBlack.textContent = "Tema escuro";
     // opBlack.style.display = "block";
     // opBlack.style.position = "absolute";
@@ -153,19 +149,19 @@ function criarQuadro() {
     // opBlack.style.borderRadius = "5px";
     opBlack.style.cursor = "pointer";
     opBlack.addEventListener("click", () => {
-      if (divSelect !== opcao2){
-        divSelect = opcao2
-        opcao2.classList.add("selected2")
-        opcao1.classList.remove("selected1")
+      if (divSelect !== opcao2) {
+        divSelect = opcao2;
+        opcao2.classList.add("selected2");
+        opcao1.classList.remove("selected1");
       }
-    })
+    });
     opBlack.addEventListener("click", () => {
-      opBlack.clicked = true
-    })
+      opBlack.clicked = true;
+    });
 
-    const btnConfirm = document.createElement("button")
-    btnConfirm.classList.add("btnConfirm")
-    btnConfirm.textContent = "CONFIRMAR"
+    const btnConfirm = document.createElement("button");
+    btnConfirm.classList.add("btnConfirm");
+    btnConfirm.textContent = "CONFIRMAR";
     // btnConfirm.style.width = "200px"
     // btnConfirm.style.height = "90px"
     // btnConfirm.style.display = "block"
@@ -175,33 +171,31 @@ function criarQuadro() {
     // btnConfirm.style.borderRadius = "9px"
     // btnConfirm.style.backgroundColor = "#0d5d9ad8"
     // btnConfirm.style.color = "white"
-    btnConfirm.style.cursor = "pointer"
+    btnConfirm.style.cursor = "pointer";
     btnConfirm.addEventListener("click", () => {
-      if (divSelect === opcao1){
-        window.location.replace("página do trello.html")
-        salvaTema('claro')
-       
-     }if(divSelect === opcao2){
-        window.location.replace("página do trello DARK VERSION.html")
-        salvaTema('escuro')
-        
-     }
-    })
-    
+      if (divSelect === opcao1) {
+        window.location.replace("página do trello.html");
+        salvaTema("claro");
+      }
+      if (divSelect === opcao2) {
+        window.location.replace("página do trello DARK VERSION.html");
+        salvaTema("escuro");
+      }
+    });
+
     modal.appendChild(btnConfirm);
 
     const cor = gerarCorAleatoria();
     const quadro = document.createElement("div");
     quadro.classList.add("quadro");
-    quadro.style.backgroundColor = cor; 
-    
-    const btnOpen = document.createElement("button")
-    btnOpen.classList.add("btnOpen")
-    btnOpen.addEventListener("click", () => {
-        window.location.replace("página do trello.html")
+    quadro.style.backgroundColor = cor;
 
-    })
-  
+    const btnOpen = document.createElement("button");
+    btnOpen.classList.add("btnOpen");
+    btnOpen.addEventListener("click", () => {
+      window.location.replace("página do trello.html");
+    });
+
     const botaoFechar = document.createElement("button");
     botaoFechar.textContent = "X";
     botaoFechar.style.position = "relative";
@@ -212,7 +206,6 @@ function criarQuadro() {
       modal.remove();
       overlay.remove();
     });
-    
 
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "Excluir quadro";
@@ -225,7 +218,7 @@ function criarQuadro() {
 
     quadro.appendChild(botaoExcluir);
 
-    quadro.appendChild(btnOpen)
+    quadro.appendChild(btnOpen);
 
     const titulo = document.createElement("h2");
     titulo.textContent = texto;
@@ -235,15 +228,15 @@ function criarQuadro() {
     const container = document.querySelector("#criar-quadro");
     container.style.flexWrap = "wrap";
 
-    modal.appendChild(opWhite)
+    modal.appendChild(opWhite);
 
-    modal.appendChild(opBlack)
+    modal.appendChild(opBlack);
 
     modal.appendChild(botaoFechar);
 
-    modal.appendChild(opcao1)
+    modal.appendChild(opcao1);
 
-    modal.appendChild(opcao2)
+    modal.appendChild(opcao2);
 
     container.appendChild(quadro);
 
@@ -260,26 +253,23 @@ function renderizarQuadros() {
   const container = document.querySelector("#criar-quadro");
   container.style.flexWrap = "wrap";
 
- 
-
   quadros.forEach((quadroInfo) => {
     const quadro = document.createElement("div");
     quadro.classList.add("quadro");
     quadro.style.backgroundColor = quadroInfo.cor;
 
-    const btnOpen = document.createElement("button")
-    btnOpen.classList.add("btnOpen")
+    const btnOpen = document.createElement("button");
+    btnOpen.classList.add("btnOpen");
     btnOpen.addEventListener("click", () => {
-      const temaSalvo = localStorage.getItem('tema')//ira ser um bjeto identificando o quadro
+      const temaSalvo = localStorage.getItem("tema"); //ira ser um bjeto identificando o quadro
 
-      if (temaSalvo === 'claro'){
-        window.location.replace("página do trello.html")
+      if (temaSalvo === "claro") {
+        window.location.replace("página do trello.html");
+      } else if (temaSalvo === "escuro") {
+        window.location.replace("página do trello DARK VERSION.html");
       }
-      else if (temaSalvo === 'escuro'){
-        window.location.replace("página do trello DARK VERSION.html")
-      }
-    })
-    
+    });
+
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "Excluir quadro";
     botaoExcluir.addEventListener("click", () => {
@@ -294,7 +284,7 @@ function renderizarQuadros() {
 
     quadro.appendChild(botaoExcluir);
     quadro.appendChild(titulo);
-    quadro.appendChild(btnOpen)
+    quadro.appendChild(btnOpen);
 
     container.appendChild(quadro);
   });
@@ -307,16 +297,15 @@ function salvarQuadros() {
   localStorage.setItem("quadros", json);
 }
 
-//vai ser uma função que 
-function salvaTema(tema){
-  localStorage.setItem('tema', tema)
+//vai ser uma função que
+function salvaTema(tema) {
+  localStorage.setItem("tema", tema);
 }
-
 
 //A função carregarQuadros() carrega os dados dos quadros de um arquivo JSON através do método fetch, ou seja, ele busca o aquivo quadros.json, que retém as informações dos quadros. Depois que os dados são recuperados o metodo .then armazena os dados recuperados e chama a função renderizarQuadros() para exibir os quadros na tela, também é usado o comando para ver se tem algum quadro armazenado no navegador localStorage.getItem("quadros"), se tiver, a variável quadros será atualizada com o método JSON.parse() e a numQuadros será atualizada com e depois a função renderizarQuadros() é chamada para renderizar os quadros na tela.
 
 function carregarQuadros() {
-  fetch('quadros.json')
+  fetch("quadros.json")
     .then((response) => response.json())
     .then((data) => {
       quadros = data;
@@ -343,23 +332,20 @@ function excluirTodosQuadros() {
     for (let i = 0; i < quadros.length; i++) {
       quadros[i].remove();
     }
-    quadros.length = 0; 
+    quadros.length = 0;
     localStorage.clear();
   }
 }
 
+const trello1 = document.querySelector(".trello1");
+const trello2 = document.querySelector(".trello2");
 
-const trello1 = document.querySelector('.trello1');
-const trello2 =  document.querySelector('.trello2');
+trello1.addEventListener("mouseenter", () => {
+  trello1.style.display = "none";
+  trello2.style.display = "block";
+});
 
-
-trello1.addEventListener('mouseenter', () => {
-    trello1.style.display = "none";
-    trello2.style.display = "block";
-})
-
-trello2.addEventListener('mouseleave', () => {
-    trello1.style.display = 'block';
-    trello2.style.display = 'none';
-    
-})
+trello2.addEventListener("mouseleave", () => {
+  trello1.style.display = "block";
+  trello2.style.display = "none";
+});
